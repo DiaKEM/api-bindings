@@ -1,6 +1,6 @@
 {
   "name": "@diakem/api-bindings",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "DiaKEM multi-purpose API bindings",
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
