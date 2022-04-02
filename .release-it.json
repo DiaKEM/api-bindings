@@ -12,6 +12,6 @@
     }
   },
   "hooks": {
-    "after:bump": "npm run build"
+    "before:bump": "npm run build"
   }
 }

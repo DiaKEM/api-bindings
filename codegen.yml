@@ -1,0 +1,72 @@
+overwrite: true
+schema: "http://localhost:4000/api/v1/graphql"
+#documents:
+#  - "queries.graphql"
+#  - "mutations.graphql"
+generates:
+  src/bindings/typescript.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-resolvers"
+  src/bindings/react-query.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-query"
+    config:
+      fetcher: "fetch"
+      withHooks: true
+  src/bindings/react-apollo-urql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+  src/bindings/react-apollo.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withHooks: true
+  src/bindings/urql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-urql"
+    config:
+      withHooks: true
+  src/bindings/vue-urql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-vue-urql
+  src/bindings/vue-apollo.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-vue-apollo-smart-ops
+  src/bindings/angular-apollo.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-apollo-angular
+  src/bindings/apollo-yoga.ts:
+    config:
+      useIndexSignature: true
+    plugins:
+      - typescript
+      - typescript-resolvers
+
+#  src/bindings/modules/:
+#    preset: graphql-modules
+#    presetConfig:
+#      baseTypesPath: ../generated-types/graphql.ts # Where to create the complete schema types
+#      filename: generated-types/module-types.ts # Where to create each module types
+#    plugins:
+#      - add:
+#          content: '/* eslint-disable */'
+#      - typescript
+#      - typescript-resolvers
+#  src/bindings/graphql.schema.json:
+#    plugins:
+#      - "introspection"
