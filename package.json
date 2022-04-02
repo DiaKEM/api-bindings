@@ -11,7 +11,7 @@
     "ts:type-check": "tsc --noEmit",
     "ts:type-check:watch": "npm run type-check -- --watch",
     "generate": "NODE_NO_WARNINGS=1 graphql-codegen --config codegen.yml",
-    "build": "npm run generate && npm run format && npm run build:types && npm run build:js",
+    "build": "npm run generate && npm run format && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "start": "babel-watch --extensions \".ts\" src/index.ts",
