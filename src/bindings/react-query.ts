@@ -1,8 +1,14 @@
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
-export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
+export type Exact<T extends { [key: string]: unknown }> = {
+  [K in keyof T]: T[K];
+};
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]?: Maybe<T[SubKey]>;
+};
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]: Maybe<T[SubKey]>;
+};
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -539,7 +545,7 @@ export enum EnumDKeyeventType {
   Pumpbattery = 'pumpbattery',
   Sensorchange = 'sensorchange',
   Smartphonebattery = 'smartphonebattery',
-  Weight = 'weight'
+  Weight = 'weight',
 }
 
 export enum EnumbloodsugarTendency {
@@ -551,47 +557,47 @@ export enum EnumbloodsugarTendency {
   Rising = 'RISING',
   RisingQuickly = 'RISING_QUICKLY',
   RisingSlightly = 'RISING_SLIGHTLY',
-  Steady = 'STEADY'
+  Steady = 'STEADY',
 }
 
 export enum EnumbolusMode {
   Auto = 'auto',
   ManualBolus = 'manual_bolus',
-  ManualFactor = 'manual_factor'
+  ManualFactor = 'manual_factor',
 }
 
 export enum EnumbolusUnitsType {
   Per100 = 'per100',
-  Portion = 'portion'
+  Portion = 'portion',
 }
 
 export enum EnumcatheterchangePlacement {
   Buttocks = 'buttocks',
   Leg = 'leg',
-  Stomach = 'stomach'
+  Stomach = 'stomach',
 }
 
 export enum EnumcatheterchangeSide {
   Left = 'left',
-  Right = 'right'
+  Right = 'right',
 }
 
 export enum EnumsensorchangePlacement {
   Arm = 'arm',
   Buttocks = 'buttocks',
   Leg = 'leg',
-  Stomach = 'stomach'
+  Stomach = 'stomach',
 }
 
 export enum EnumsensorchangeSide {
   Left = 'left',
-  Right = 'right'
+  Right = 'right',
 }
 
 export enum EnumuserRoles {
   Admin = 'admin',
   Reader = 'reader',
-  Writer = 'writer'
+  Writer = 'writer',
 }
 
 export type ErrorInterface = {
@@ -2616,39 +2622,32 @@ export type Mutation = {
   weightEventUpdateOne?: Maybe<UpdateOneweightPayload>;
 };
 
-
 export type MutationBasalEventCreateManyArgs = {
   records: Array<CreateManybasalInput>;
 };
-
 
 export type MutationBasalEventCreateOneArgs = {
   record: CreateOnebasalInput;
 };
 
-
 export type MutationBasalEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationBasalEventRemoveManyArgs = {
   filter: FilterRemoveManybasalInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationBasalEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnebasalInput>;
   sort?: InputMaybe<SortRemoveOnebasalInput>;
 };
 
-
 export type MutationBasalEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdbasalInput;
 };
-
 
 export type MutationBasalEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManybasalInput>;
@@ -2658,7 +2657,6 @@ export type MutationBasalEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManybasalInput>;
 };
 
-
 export type MutationBasalEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnebasalInput>;
   record: UpdateOnebasalInput;
@@ -2666,39 +2664,32 @@ export type MutationBasalEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnebasalInput>;
 };
 
-
 export type MutationBloodSugarEventCreateManyArgs = {
   records: Array<CreateManybloodsugarInput>;
 };
-
 
 export type MutationBloodSugarEventCreateOneArgs = {
   record: CreateOnebloodsugarInput;
 };
 
-
 export type MutationBloodSugarEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationBloodSugarEventRemoveManyArgs = {
   filter: FilterRemoveManybloodsugarInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationBloodSugarEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnebloodsugarInput>;
   sort?: InputMaybe<SortRemoveOnebloodsugarInput>;
 };
 
-
 export type MutationBloodSugarEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdbloodsugarInput;
 };
-
 
 export type MutationBloodSugarEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManybloodsugarInput>;
@@ -2708,7 +2699,6 @@ export type MutationBloodSugarEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManybloodsugarInput>;
 };
 
-
 export type MutationBloodSugarEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnebloodsugarInput>;
   record: UpdateOnebloodsugarInput;
@@ -2716,39 +2706,32 @@ export type MutationBloodSugarEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnebloodsugarInput>;
 };
 
-
 export type MutationBolusEventCreateManyArgs = {
   records: Array<CreateManybolusInput>;
 };
-
 
 export type MutationBolusEventCreateOneArgs = {
   record: CreateOnebolusInput;
 };
 
-
 export type MutationBolusEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationBolusEventRemoveManyArgs = {
   filter: FilterRemoveManybolusInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationBolusEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnebolusInput>;
   sort?: InputMaybe<SortRemoveOnebolusInput>;
 };
 
-
 export type MutationBolusEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdbolusInput;
 };
-
 
 export type MutationBolusEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManybolusInput>;
@@ -2758,7 +2741,6 @@ export type MutationBolusEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManybolusInput>;
 };
 
-
 export type MutationBolusEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnebolusInput>;
   record: UpdateOnebolusInput;
@@ -2766,39 +2748,32 @@ export type MutationBolusEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnebolusInput>;
 };
 
-
 export type MutationCatheterChangeEventCreateManyArgs = {
   records: Array<CreateManycatheterchangeInput>;
 };
-
 
 export type MutationCatheterChangeEventCreateOneArgs = {
   record: CreateOnecatheterchangeInput;
 };
 
-
 export type MutationCatheterChangeEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationCatheterChangeEventRemoveManyArgs = {
   filter: FilterRemoveManycatheterchangeInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationCatheterChangeEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnecatheterchangeInput>;
   sort?: InputMaybe<SortRemoveOnecatheterchangeInput>;
 };
 
-
 export type MutationCatheterChangeEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdcatheterchangeInput;
 };
-
 
 export type MutationCatheterChangeEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManycatheterchangeInput>;
@@ -2808,7 +2783,6 @@ export type MutationCatheterChangeEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManycatheterchangeInput>;
 };
 
-
 export type MutationCatheterChangeEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnecatheterchangeInput>;
   record: UpdateOnecatheterchangeInput;
@@ -2816,39 +2790,32 @@ export type MutationCatheterChangeEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnecatheterchangeInput>;
 };
 
-
 export type MutationCorrectionBolusEventCreateManyArgs = {
   records: Array<CreateManycorrectionbolusInput>;
 };
-
 
 export type MutationCorrectionBolusEventCreateOneArgs = {
   record: CreateOnecorrectionbolusInput;
 };
 
-
 export type MutationCorrectionBolusEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationCorrectionBolusEventRemoveManyArgs = {
   filter: FilterRemoveManycorrectionbolusInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationCorrectionBolusEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnecorrectionbolusInput>;
   sort?: InputMaybe<SortRemoveOnecorrectionbolusInput>;
 };
 
-
 export type MutationCorrectionBolusEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdcorrectionbolusInput;
 };
-
 
 export type MutationCorrectionBolusEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManycorrectionbolusInput>;
@@ -2858,7 +2825,6 @@ export type MutationCorrectionBolusEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManycorrectionbolusInput>;
 };
 
-
 export type MutationCorrectionBolusEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnecorrectionbolusInput>;
   record: UpdateOnecorrectionbolusInput;
@@ -2866,39 +2832,32 @@ export type MutationCorrectionBolusEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnecorrectionbolusInput>;
 };
 
-
 export type MutationHeightEventCreateManyArgs = {
   records: Array<CreateManyheightInput>;
 };
-
 
 export type MutationHeightEventCreateOneArgs = {
   record: CreateOneheightInput;
 };
 
-
 export type MutationHeightEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationHeightEventRemoveManyArgs = {
   filter: FilterRemoveManyheightInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationHeightEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOneheightInput>;
   sort?: InputMaybe<SortRemoveOneheightInput>;
 };
 
-
 export type MutationHeightEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdheightInput;
 };
-
 
 export type MutationHeightEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManyheightInput>;
@@ -2908,7 +2867,6 @@ export type MutationHeightEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManyheightInput>;
 };
 
-
 export type MutationHeightEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOneheightInput>;
   record: UpdateOneheightInput;
@@ -2916,45 +2874,37 @@ export type MutationHeightEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOneheightInput>;
 };
 
-
 export type MutationLoginArgs = {
   password: Scalars['String'];
   username: Scalars['String'];
 };
 
-
 export type MutationPumpBatteryEventCreateManyArgs = {
   records: Array<CreateManypumpbatteryInput>;
 };
-
 
 export type MutationPumpBatteryEventCreateOneArgs = {
   record: CreateOnepumpbatteryInput;
 };
 
-
 export type MutationPumpBatteryEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationPumpBatteryEventRemoveManyArgs = {
   filter: FilterRemoveManypumpbatteryInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationPumpBatteryEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnepumpbatteryInput>;
   sort?: InputMaybe<SortRemoveOnepumpbatteryInput>;
 };
 
-
 export type MutationPumpBatteryEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdpumpbatteryInput;
 };
-
 
 export type MutationPumpBatteryEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManypumpbatteryInput>;
@@ -2964,7 +2914,6 @@ export type MutationPumpBatteryEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManypumpbatteryInput>;
 };
 
-
 export type MutationPumpBatteryEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnepumpbatteryInput>;
   record: UpdateOnepumpbatteryInput;
@@ -2972,39 +2921,32 @@ export type MutationPumpBatteryEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnepumpbatteryInput>;
 };
 
-
 export type MutationSensorChangeEventCreateManyArgs = {
   records: Array<CreateManysensorchangeInput>;
 };
-
 
 export type MutationSensorChangeEventCreateOneArgs = {
   record: CreateOnesensorchangeInput;
 };
 
-
 export type MutationSensorChangeEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationSensorChangeEventRemoveManyArgs = {
   filter: FilterRemoveManysensorchangeInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationSensorChangeEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnesensorchangeInput>;
   sort?: InputMaybe<SortRemoveOnesensorchangeInput>;
 };
 
-
 export type MutationSensorChangeEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdsensorchangeInput;
 };
-
 
 export type MutationSensorChangeEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManysensorchangeInput>;
@@ -3014,7 +2956,6 @@ export type MutationSensorChangeEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManysensorchangeInput>;
 };
 
-
 export type MutationSensorChangeEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnesensorchangeInput>;
   record: UpdateOnesensorchangeInput;
@@ -3022,39 +2963,32 @@ export type MutationSensorChangeEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnesensorchangeInput>;
 };
 
-
 export type MutationSmartphoneBatteryEventCreateManyArgs = {
   records: Array<CreateManysmartphonebatteryInput>;
 };
-
 
 export type MutationSmartphoneBatteryEventCreateOneArgs = {
   record: CreateOnesmartphonebatteryInput;
 };
 
-
 export type MutationSmartphoneBatteryEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationSmartphoneBatteryEventRemoveManyArgs = {
   filter: FilterRemoveManysmartphonebatteryInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationSmartphoneBatteryEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnesmartphonebatteryInput>;
   sort?: InputMaybe<SortRemoveOnesmartphonebatteryInput>;
 };
 
-
 export type MutationSmartphoneBatteryEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdsmartphonebatteryInput;
 };
-
 
 export type MutationSmartphoneBatteryEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManysmartphonebatteryInput>;
@@ -3064,7 +2998,6 @@ export type MutationSmartphoneBatteryEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManysmartphonebatteryInput>;
 };
 
-
 export type MutationSmartphoneBatteryEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnesmartphonebatteryInput>;
   record: UpdateOnesmartphonebatteryInput;
@@ -3072,39 +3005,32 @@ export type MutationSmartphoneBatteryEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnesmartphonebatteryInput>;
 };
 
-
 export type MutationUserCreateManyArgs = {
   records: Array<CreateManyuserInput>;
 };
-
 
 export type MutationUserCreateOneArgs = {
   record: CreateOneuserInput;
 };
 
-
 export type MutationUserRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationUserRemoveManyArgs = {
   filter: FilterRemoveManyuserInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationUserRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOneuserInput>;
   sort?: InputMaybe<SortRemoveOneuserInput>;
 };
 
-
 export type MutationUserUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIduserInput;
 };
-
 
 export type MutationUserUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManyuserInput>;
@@ -3114,7 +3040,6 @@ export type MutationUserUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManyuserInput>;
 };
 
-
 export type MutationUserUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOneuserInput>;
   record: UpdateOneuserInput;
@@ -3122,39 +3047,32 @@ export type MutationUserUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOneuserInput>;
 };
 
-
 export type MutationWeightEventCreateManyArgs = {
   records: Array<CreateManyweightInput>;
 };
-
 
 export type MutationWeightEventCreateOneArgs = {
   record: CreateOneweightInput;
 };
 
-
 export type MutationWeightEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationWeightEventRemoveManyArgs = {
   filter: FilterRemoveManyweightInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationWeightEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOneweightInput>;
   sort?: InputMaybe<SortRemoveOneweightInput>;
 };
 
-
 export type MutationWeightEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdweightInput;
 };
-
 
 export type MutationWeightEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManyweightInput>;
@@ -3163,7 +3081,6 @@ export type MutationWeightEventUpdateManyArgs = {
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortUpdateManyweightInput>;
 };
-
 
 export type MutationWeightEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOneweightInput>;
@@ -3365,18 +3282,15 @@ export type Query = {
   weightEventPagination?: Maybe<WeightPagination>;
 };
 
-
 export type QueryBasalEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryBasalEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsbasalInput>;
 };
-
 
 export type QueryBasalEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3387,21 +3301,17 @@ export type QueryBasalEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionbasalEnum>;
 };
 
-
 export type QueryBasalEventCountArgs = {
   filter?: InputMaybe<FilterCountbasalInput>;
 };
-
 
 export type QueryBasalEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryBasalEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryBasalEventManyArgs = {
   filter?: InputMaybe<FilterFindManybasalInput>;
@@ -3410,13 +3320,11 @@ export type QueryBasalEventManyArgs = {
   sort?: InputMaybe<SortFindManybasalInput>;
 };
 
-
 export type QueryBasalEventOneArgs = {
   filter?: InputMaybe<FilterFindOnebasalInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnebasalInput>;
 };
-
 
 export type QueryBasalEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManybasalInput>;
@@ -3425,18 +3333,15 @@ export type QueryBasalEventPaginationArgs = {
   sort?: InputMaybe<SortFindManybasalInput>;
 };
 
-
 export type QueryBloodSugarEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryBloodSugarEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsbloodsugarInput>;
 };
-
 
 export type QueryBloodSugarEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3447,21 +3352,17 @@ export type QueryBloodSugarEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionbloodsugarEnum>;
 };
 
-
 export type QueryBloodSugarEventCountArgs = {
   filter?: InputMaybe<FilterCountbloodsugarInput>;
 };
-
 
 export type QueryBloodSugarEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryBloodSugarEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryBloodSugarEventManyArgs = {
   filter?: InputMaybe<FilterFindManybloodsugarInput>;
@@ -3470,13 +3371,11 @@ export type QueryBloodSugarEventManyArgs = {
   sort?: InputMaybe<SortFindManybloodsugarInput>;
 };
 
-
 export type QueryBloodSugarEventOneArgs = {
   filter?: InputMaybe<FilterFindOnebloodsugarInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnebloodsugarInput>;
 };
-
 
 export type QueryBloodSugarEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManybloodsugarInput>;
@@ -3485,18 +3384,15 @@ export type QueryBloodSugarEventPaginationArgs = {
   sort?: InputMaybe<SortFindManybloodsugarInput>;
 };
 
-
 export type QueryBolusEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryBolusEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsbolusInput>;
 };
-
 
 export type QueryBolusEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3507,21 +3403,17 @@ export type QueryBolusEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionbolusEnum>;
 };
 
-
 export type QueryBolusEventCountArgs = {
   filter?: InputMaybe<FilterCountbolusInput>;
 };
-
 
 export type QueryBolusEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryBolusEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryBolusEventManyArgs = {
   filter?: InputMaybe<FilterFindManybolusInput>;
@@ -3530,13 +3422,11 @@ export type QueryBolusEventManyArgs = {
   sort?: InputMaybe<SortFindManybolusInput>;
 };
 
-
 export type QueryBolusEventOneArgs = {
   filter?: InputMaybe<FilterFindOnebolusInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnebolusInput>;
 };
-
 
 export type QueryBolusEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManybolusInput>;
@@ -3545,18 +3435,15 @@ export type QueryBolusEventPaginationArgs = {
   sort?: InputMaybe<SortFindManybolusInput>;
 };
 
-
 export type QueryCatheterChangeEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryCatheterChangeEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdscatheterchangeInput>;
 };
-
 
 export type QueryCatheterChangeEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3567,21 +3454,17 @@ export type QueryCatheterChangeEventConnectionArgs = {
   sort?: InputMaybe<SortConnectioncatheterchangeEnum>;
 };
 
-
 export type QueryCatheterChangeEventCountArgs = {
   filter?: InputMaybe<FilterCountcatheterchangeInput>;
 };
-
 
 export type QueryCatheterChangeEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryCatheterChangeEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryCatheterChangeEventManyArgs = {
   filter?: InputMaybe<FilterFindManycatheterchangeInput>;
@@ -3590,13 +3473,11 @@ export type QueryCatheterChangeEventManyArgs = {
   sort?: InputMaybe<SortFindManycatheterchangeInput>;
 };
 
-
 export type QueryCatheterChangeEventOneArgs = {
   filter?: InputMaybe<FilterFindOnecatheterchangeInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnecatheterchangeInput>;
 };
-
 
 export type QueryCatheterChangeEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManycatheterchangeInput>;
@@ -3605,18 +3486,15 @@ export type QueryCatheterChangeEventPaginationArgs = {
   sort?: InputMaybe<SortFindManycatheterchangeInput>;
 };
 
-
 export type QueryCorrectionBolusEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryCorrectionBolusEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdscorrectionbolusInput>;
 };
-
 
 export type QueryCorrectionBolusEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3627,21 +3505,17 @@ export type QueryCorrectionBolusEventConnectionArgs = {
   sort?: InputMaybe<SortConnectioncorrectionbolusEnum>;
 };
 
-
 export type QueryCorrectionBolusEventCountArgs = {
   filter?: InputMaybe<FilterCountcorrectionbolusInput>;
 };
-
 
 export type QueryCorrectionBolusEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryCorrectionBolusEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryCorrectionBolusEventManyArgs = {
   filter?: InputMaybe<FilterFindManycorrectionbolusInput>;
@@ -3650,13 +3524,11 @@ export type QueryCorrectionBolusEventManyArgs = {
   sort?: InputMaybe<SortFindManycorrectionbolusInput>;
 };
 
-
 export type QueryCorrectionBolusEventOneArgs = {
   filter?: InputMaybe<FilterFindOnecorrectionbolusInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnecorrectionbolusInput>;
 };
-
 
 export type QueryCorrectionBolusEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManycorrectionbolusInput>;
@@ -3665,18 +3537,15 @@ export type QueryCorrectionBolusEventPaginationArgs = {
   sort?: InputMaybe<SortFindManycorrectionbolusInput>;
 };
 
-
 export type QueryHeightEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryHeightEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsheightInput>;
 };
-
 
 export type QueryHeightEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3687,21 +3556,17 @@ export type QueryHeightEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionheightEnum>;
 };
 
-
 export type QueryHeightEventCountArgs = {
   filter?: InputMaybe<FilterCountheightInput>;
 };
-
 
 export type QueryHeightEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryHeightEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryHeightEventManyArgs = {
   filter?: InputMaybe<FilterFindManyheightInput>;
@@ -3710,13 +3575,11 @@ export type QueryHeightEventManyArgs = {
   sort?: InputMaybe<SortFindManyheightInput>;
 };
 
-
 export type QueryHeightEventOneArgs = {
   filter?: InputMaybe<FilterFindOneheightInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOneheightInput>;
 };
-
 
 export type QueryHeightEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManyheightInput>;
@@ -3725,18 +3588,15 @@ export type QueryHeightEventPaginationArgs = {
   sort?: InputMaybe<SortFindManyheightInput>;
 };
 
-
 export type QueryPumpBatteryEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryPumpBatteryEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdspumpbatteryInput>;
 };
-
 
 export type QueryPumpBatteryEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3747,21 +3607,17 @@ export type QueryPumpBatteryEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionpumpbatteryEnum>;
 };
 
-
 export type QueryPumpBatteryEventCountArgs = {
   filter?: InputMaybe<FilterCountpumpbatteryInput>;
 };
-
 
 export type QueryPumpBatteryEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryPumpBatteryEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryPumpBatteryEventManyArgs = {
   filter?: InputMaybe<FilterFindManypumpbatteryInput>;
@@ -3770,13 +3626,11 @@ export type QueryPumpBatteryEventManyArgs = {
   sort?: InputMaybe<SortFindManypumpbatteryInput>;
 };
 
-
 export type QueryPumpBatteryEventOneArgs = {
   filter?: InputMaybe<FilterFindOnepumpbatteryInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnepumpbatteryInput>;
 };
-
 
 export type QueryPumpBatteryEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManypumpbatteryInput>;
@@ -3785,18 +3639,15 @@ export type QueryPumpBatteryEventPaginationArgs = {
   sort?: InputMaybe<SortFindManypumpbatteryInput>;
 };
 
-
 export type QuerySensorChangeEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QuerySensorChangeEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdssensorchangeInput>;
 };
-
 
 export type QuerySensorChangeEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3807,21 +3658,17 @@ export type QuerySensorChangeEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionsensorchangeEnum>;
 };
 
-
 export type QuerySensorChangeEventCountArgs = {
   filter?: InputMaybe<FilterCountsensorchangeInput>;
 };
-
 
 export type QuerySensorChangeEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QuerySensorChangeEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QuerySensorChangeEventManyArgs = {
   filter?: InputMaybe<FilterFindManysensorchangeInput>;
@@ -3830,13 +3677,11 @@ export type QuerySensorChangeEventManyArgs = {
   sort?: InputMaybe<SortFindManysensorchangeInput>;
 };
 
-
 export type QuerySensorChangeEventOneArgs = {
   filter?: InputMaybe<FilterFindOnesensorchangeInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnesensorchangeInput>;
 };
-
 
 export type QuerySensorChangeEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManysensorchangeInput>;
@@ -3845,18 +3690,15 @@ export type QuerySensorChangeEventPaginationArgs = {
   sort?: InputMaybe<SortFindManysensorchangeInput>;
 };
 
-
 export type QuerySmartphoneBatteryEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QuerySmartphoneBatteryEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdssmartphonebatteryInput>;
 };
-
 
 export type QuerySmartphoneBatteryEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3867,21 +3709,17 @@ export type QuerySmartphoneBatteryEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionsmartphonebatteryEnum>;
 };
 
-
 export type QuerySmartphoneBatteryEventCountArgs = {
   filter?: InputMaybe<FilterCountsmartphonebatteryInput>;
 };
-
 
 export type QuerySmartphoneBatteryEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QuerySmartphoneBatteryEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QuerySmartphoneBatteryEventManyArgs = {
   filter?: InputMaybe<FilterFindManysmartphonebatteryInput>;
@@ -3890,13 +3728,11 @@ export type QuerySmartphoneBatteryEventManyArgs = {
   sort?: InputMaybe<SortFindManysmartphonebatteryInput>;
 };
 
-
 export type QuerySmartphoneBatteryEventOneArgs = {
   filter?: InputMaybe<FilterFindOnesmartphonebatteryInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnesmartphonebatteryInput>;
 };
-
 
 export type QuerySmartphoneBatteryEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManysmartphonebatteryInput>;
@@ -3905,16 +3741,13 @@ export type QuerySmartphoneBatteryEventPaginationArgs = {
   sort?: InputMaybe<SortFindManysmartphonebatteryInput>;
 };
 
-
 export type QueryUserByIdArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryUserByIdLeanArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryUserByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
@@ -3922,13 +3755,11 @@ export type QueryUserByIdsArgs = {
   sort?: InputMaybe<SortFindByIdsuserInput>;
 };
 
-
 export type QueryUserByIdsLeanArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsuserInput>;
 };
-
 
 export type QueryUserConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3939,31 +3770,25 @@ export type QueryUserConnectionArgs = {
   sort?: InputMaybe<SortConnectionuserEnum>;
 };
 
-
 export type QueryUserCountArgs = {
   filter?: InputMaybe<FilterCountuserInput>;
 };
-
 
 export type QueryUserDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryUserDataLoaderLeanArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryUserDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
 
-
 export type QueryUserDataLoaderManyLeanArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryUserManyArgs = {
   filter?: InputMaybe<FilterFindManyuserInput>;
@@ -3972,7 +3797,6 @@ export type QueryUserManyArgs = {
   sort?: InputMaybe<SortFindManyuserInput>;
 };
 
-
 export type QueryUserManyLeanArgs = {
   filter?: InputMaybe<FilterFindManyuserInput>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -3980,20 +3804,17 @@ export type QueryUserManyLeanArgs = {
   sort?: InputMaybe<SortFindManyuserInput>;
 };
 
-
 export type QueryUserOneArgs = {
   filter?: InputMaybe<FilterFindOneuserInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOneuserInput>;
 };
 
-
 export type QueryUserOneLeanArgs = {
   filter?: InputMaybe<FilterFindOneuserInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOneuserInput>;
 };
-
 
 export type QueryUserPaginationArgs = {
   filter?: InputMaybe<FilterFindManyuserInput>;
@@ -4002,18 +3823,15 @@ export type QueryUserPaginationArgs = {
   sort?: InputMaybe<SortFindManyuserInput>;
 };
 
-
 export type QueryWeightEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryWeightEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsweightInput>;
 };
-
 
 export type QueryWeightEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -4024,21 +3842,17 @@ export type QueryWeightEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionweightEnum>;
 };
 
-
 export type QueryWeightEventCountArgs = {
   filter?: InputMaybe<FilterCountweightInput>;
 };
-
 
 export type QueryWeightEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryWeightEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryWeightEventManyArgs = {
   filter?: InputMaybe<FilterFindManyweightInput>;
@@ -4047,13 +3861,11 @@ export type QueryWeightEventManyArgs = {
   sort?: InputMaybe<SortFindManyweightInput>;
 };
 
-
 export type QueryWeightEventOneArgs = {
   filter?: InputMaybe<FilterFindOneweightInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOneweightInput>;
 };
-
 
 export type QueryWeightEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManyweightInput>;
@@ -4378,387 +4190,387 @@ export type RuntimeError = ErrorInterface & {
 
 export enum SortConnectionbasalEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionbloodsugarEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionbolusEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectioncatheterchangeEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectioncorrectionbolusEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionheightEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionpumpbatteryEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionsensorchangeEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionsmartphonebatteryEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionuserEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionweightEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsbasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsbloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdscatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdscorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdspumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdssensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdssmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManybasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManybloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManybolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManycatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManycorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManyheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManypumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManysensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManysmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManyuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManyweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnebasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnebloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnebolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnecatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnecorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOneheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnepumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnesensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnesmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOneuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOneweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnebasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnebloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnebolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnecatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnecorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOneheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnepumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnesensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnesmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOneuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOneweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManybasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManybloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManybolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManycatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManycorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManyheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManypumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManysensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManysmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManyuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManyweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnebasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnebloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnebolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnecatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnecorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOneheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnepumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnesensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnesmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOneuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOneweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export type UpdateByIdbasalInput = {

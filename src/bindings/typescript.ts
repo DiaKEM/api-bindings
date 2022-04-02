@@ -1,10 +1,23 @@
-import { GraphQLResolveInfo, GraphQLScalarType, GraphQLScalarTypeConfig } from 'graphql';
+import {
+  GraphQLResolveInfo,
+  GraphQLScalarType,
+  GraphQLScalarTypeConfig,
+} from 'graphql';
+
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
-export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
-export type RequireFields<T, K extends keyof T> = Omit<T, K> & { [P in K]-?: NonNullable<T[P]> };
+export type Exact<T extends { [key: string]: unknown }> = {
+  [K in keyof T]: T[K];
+};
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]?: Maybe<T[SubKey]>;
+};
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]: Maybe<T[SubKey]>;
+};
+export type RequireFields<T, K extends keyof T> = Omit<T, K> & {
+  [P in K]-?: NonNullable<T[P]>;
+};
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -541,7 +554,7 @@ export enum EnumDKeyeventType {
   Pumpbattery = 'pumpbattery',
   Sensorchange = 'sensorchange',
   Smartphonebattery = 'smartphonebattery',
-  Weight = 'weight'
+  Weight = 'weight',
 }
 
 export enum EnumbloodsugarTendency {
@@ -553,47 +566,47 @@ export enum EnumbloodsugarTendency {
   Rising = 'RISING',
   RisingQuickly = 'RISING_QUICKLY',
   RisingSlightly = 'RISING_SLIGHTLY',
-  Steady = 'STEADY'
+  Steady = 'STEADY',
 }
 
 export enum EnumbolusMode {
   Auto = 'auto',
   ManualBolus = 'manual_bolus',
-  ManualFactor = 'manual_factor'
+  ManualFactor = 'manual_factor',
 }
 
 export enum EnumbolusUnitsType {
   Per100 = 'per100',
-  Portion = 'portion'
+  Portion = 'portion',
 }
 
 export enum EnumcatheterchangePlacement {
   Buttocks = 'buttocks',
   Leg = 'leg',
-  Stomach = 'stomach'
+  Stomach = 'stomach',
 }
 
 export enum EnumcatheterchangeSide {
   Left = 'left',
-  Right = 'right'
+  Right = 'right',
 }
 
 export enum EnumsensorchangePlacement {
   Arm = 'arm',
   Buttocks = 'buttocks',
   Leg = 'leg',
-  Stomach = 'stomach'
+  Stomach = 'stomach',
 }
 
 export enum EnumsensorchangeSide {
   Left = 'left',
-  Right = 'right'
+  Right = 'right',
 }
 
 export enum EnumuserRoles {
   Admin = 'admin',
   Reader = 'reader',
-  Writer = 'writer'
+  Writer = 'writer',
 }
 
 export type ErrorInterface = {
@@ -2618,39 +2631,32 @@ export type Mutation = {
   weightEventUpdateOne?: Maybe<UpdateOneweightPayload>;
 };
 
-
 export type MutationBasalEventCreateManyArgs = {
   records: Array<CreateManybasalInput>;
 };
-
 
 export type MutationBasalEventCreateOneArgs = {
   record: CreateOnebasalInput;
 };
 
-
 export type MutationBasalEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationBasalEventRemoveManyArgs = {
   filter: FilterRemoveManybasalInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationBasalEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnebasalInput>;
   sort?: InputMaybe<SortRemoveOnebasalInput>;
 };
 
-
 export type MutationBasalEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdbasalInput;
 };
-
 
 export type MutationBasalEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManybasalInput>;
@@ -2660,7 +2666,6 @@ export type MutationBasalEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManybasalInput>;
 };
 
-
 export type MutationBasalEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnebasalInput>;
   record: UpdateOnebasalInput;
@@ -2668,39 +2673,32 @@ export type MutationBasalEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnebasalInput>;
 };
 
-
 export type MutationBloodSugarEventCreateManyArgs = {
   records: Array<CreateManybloodsugarInput>;
 };
-
 
 export type MutationBloodSugarEventCreateOneArgs = {
   record: CreateOnebloodsugarInput;
 };
 
-
 export type MutationBloodSugarEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationBloodSugarEventRemoveManyArgs = {
   filter: FilterRemoveManybloodsugarInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationBloodSugarEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnebloodsugarInput>;
   sort?: InputMaybe<SortRemoveOnebloodsugarInput>;
 };
 
-
 export type MutationBloodSugarEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdbloodsugarInput;
 };
-
 
 export type MutationBloodSugarEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManybloodsugarInput>;
@@ -2710,7 +2708,6 @@ export type MutationBloodSugarEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManybloodsugarInput>;
 };
 
-
 export type MutationBloodSugarEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnebloodsugarInput>;
   record: UpdateOnebloodsugarInput;
@@ -2718,39 +2715,32 @@ export type MutationBloodSugarEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnebloodsugarInput>;
 };
 
-
 export type MutationBolusEventCreateManyArgs = {
   records: Array<CreateManybolusInput>;
 };
-
 
 export type MutationBolusEventCreateOneArgs = {
   record: CreateOnebolusInput;
 };
 
-
 export type MutationBolusEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationBolusEventRemoveManyArgs = {
   filter: FilterRemoveManybolusInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationBolusEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnebolusInput>;
   sort?: InputMaybe<SortRemoveOnebolusInput>;
 };
 
-
 export type MutationBolusEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdbolusInput;
 };
-
 
 export type MutationBolusEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManybolusInput>;
@@ -2760,7 +2750,6 @@ export type MutationBolusEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManybolusInput>;
 };
 
-
 export type MutationBolusEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnebolusInput>;
   record: UpdateOnebolusInput;
@@ -2768,39 +2757,32 @@ export type MutationBolusEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnebolusInput>;
 };
 
-
 export type MutationCatheterChangeEventCreateManyArgs = {
   records: Array<CreateManycatheterchangeInput>;
 };
-
 
 export type MutationCatheterChangeEventCreateOneArgs = {
   record: CreateOnecatheterchangeInput;
 };
 
-
 export type MutationCatheterChangeEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationCatheterChangeEventRemoveManyArgs = {
   filter: FilterRemoveManycatheterchangeInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationCatheterChangeEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnecatheterchangeInput>;
   sort?: InputMaybe<SortRemoveOnecatheterchangeInput>;
 };
 
-
 export type MutationCatheterChangeEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdcatheterchangeInput;
 };
-
 
 export type MutationCatheterChangeEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManycatheterchangeInput>;
@@ -2810,7 +2792,6 @@ export type MutationCatheterChangeEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManycatheterchangeInput>;
 };
 
-
 export type MutationCatheterChangeEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnecatheterchangeInput>;
   record: UpdateOnecatheterchangeInput;
@@ -2818,39 +2799,32 @@ export type MutationCatheterChangeEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnecatheterchangeInput>;
 };
 
-
 export type MutationCorrectionBolusEventCreateManyArgs = {
   records: Array<CreateManycorrectionbolusInput>;
 };
-
 
 export type MutationCorrectionBolusEventCreateOneArgs = {
   record: CreateOnecorrectionbolusInput;
 };
 
-
 export type MutationCorrectionBolusEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationCorrectionBolusEventRemoveManyArgs = {
   filter: FilterRemoveManycorrectionbolusInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationCorrectionBolusEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnecorrectionbolusInput>;
   sort?: InputMaybe<SortRemoveOnecorrectionbolusInput>;
 };
 
-
 export type MutationCorrectionBolusEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdcorrectionbolusInput;
 };
-
 
 export type MutationCorrectionBolusEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManycorrectionbolusInput>;
@@ -2860,7 +2834,6 @@ export type MutationCorrectionBolusEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManycorrectionbolusInput>;
 };
 
-
 export type MutationCorrectionBolusEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnecorrectionbolusInput>;
   record: UpdateOnecorrectionbolusInput;
@@ -2868,39 +2841,32 @@ export type MutationCorrectionBolusEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnecorrectionbolusInput>;
 };
 
-
 export type MutationHeightEventCreateManyArgs = {
   records: Array<CreateManyheightInput>;
 };
-
 
 export type MutationHeightEventCreateOneArgs = {
   record: CreateOneheightInput;
 };
 
-
 export type MutationHeightEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationHeightEventRemoveManyArgs = {
   filter: FilterRemoveManyheightInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationHeightEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOneheightInput>;
   sort?: InputMaybe<SortRemoveOneheightInput>;
 };
 
-
 export type MutationHeightEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdheightInput;
 };
-
 
 export type MutationHeightEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManyheightInput>;
@@ -2910,7 +2876,6 @@ export type MutationHeightEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManyheightInput>;
 };
 
-
 export type MutationHeightEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOneheightInput>;
   record: UpdateOneheightInput;
@@ -2918,45 +2883,37 @@ export type MutationHeightEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOneheightInput>;
 };
 
-
 export type MutationLoginArgs = {
   password: Scalars['String'];
   username: Scalars['String'];
 };
 
-
 export type MutationPumpBatteryEventCreateManyArgs = {
   records: Array<CreateManypumpbatteryInput>;
 };
-
 
 export type MutationPumpBatteryEventCreateOneArgs = {
   record: CreateOnepumpbatteryInput;
 };
 
-
 export type MutationPumpBatteryEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationPumpBatteryEventRemoveManyArgs = {
   filter: FilterRemoveManypumpbatteryInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationPumpBatteryEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnepumpbatteryInput>;
   sort?: InputMaybe<SortRemoveOnepumpbatteryInput>;
 };
 
-
 export type MutationPumpBatteryEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdpumpbatteryInput;
 };
-
 
 export type MutationPumpBatteryEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManypumpbatteryInput>;
@@ -2966,7 +2923,6 @@ export type MutationPumpBatteryEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManypumpbatteryInput>;
 };
 
-
 export type MutationPumpBatteryEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnepumpbatteryInput>;
   record: UpdateOnepumpbatteryInput;
@@ -2974,39 +2930,32 @@ export type MutationPumpBatteryEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnepumpbatteryInput>;
 };
 
-
 export type MutationSensorChangeEventCreateManyArgs = {
   records: Array<CreateManysensorchangeInput>;
 };
-
 
 export type MutationSensorChangeEventCreateOneArgs = {
   record: CreateOnesensorchangeInput;
 };
 
-
 export type MutationSensorChangeEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationSensorChangeEventRemoveManyArgs = {
   filter: FilterRemoveManysensorchangeInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationSensorChangeEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnesensorchangeInput>;
   sort?: InputMaybe<SortRemoveOnesensorchangeInput>;
 };
 
-
 export type MutationSensorChangeEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdsensorchangeInput;
 };
-
 
 export type MutationSensorChangeEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManysensorchangeInput>;
@@ -3016,7 +2965,6 @@ export type MutationSensorChangeEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManysensorchangeInput>;
 };
 
-
 export type MutationSensorChangeEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnesensorchangeInput>;
   record: UpdateOnesensorchangeInput;
@@ -3024,39 +2972,32 @@ export type MutationSensorChangeEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnesensorchangeInput>;
 };
 
-
 export type MutationSmartphoneBatteryEventCreateManyArgs = {
   records: Array<CreateManysmartphonebatteryInput>;
 };
-
 
 export type MutationSmartphoneBatteryEventCreateOneArgs = {
   record: CreateOnesmartphonebatteryInput;
 };
 
-
 export type MutationSmartphoneBatteryEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationSmartphoneBatteryEventRemoveManyArgs = {
   filter: FilterRemoveManysmartphonebatteryInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationSmartphoneBatteryEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOnesmartphonebatteryInput>;
   sort?: InputMaybe<SortRemoveOnesmartphonebatteryInput>;
 };
 
-
 export type MutationSmartphoneBatteryEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdsmartphonebatteryInput;
 };
-
 
 export type MutationSmartphoneBatteryEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManysmartphonebatteryInput>;
@@ -3066,7 +3007,6 @@ export type MutationSmartphoneBatteryEventUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManysmartphonebatteryInput>;
 };
 
-
 export type MutationSmartphoneBatteryEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOnesmartphonebatteryInput>;
   record: UpdateOnesmartphonebatteryInput;
@@ -3074,39 +3014,32 @@ export type MutationSmartphoneBatteryEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnesmartphonebatteryInput>;
 };
 
-
 export type MutationUserCreateManyArgs = {
   records: Array<CreateManyuserInput>;
 };
-
 
 export type MutationUserCreateOneArgs = {
   record: CreateOneuserInput;
 };
 
-
 export type MutationUserRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationUserRemoveManyArgs = {
   filter: FilterRemoveManyuserInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationUserRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOneuserInput>;
   sort?: InputMaybe<SortRemoveOneuserInput>;
 };
 
-
 export type MutationUserUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIduserInput;
 };
-
 
 export type MutationUserUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManyuserInput>;
@@ -3116,7 +3049,6 @@ export type MutationUserUpdateManyArgs = {
   sort?: InputMaybe<SortUpdateManyuserInput>;
 };
 
-
 export type MutationUserUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOneuserInput>;
   record: UpdateOneuserInput;
@@ -3124,39 +3056,32 @@ export type MutationUserUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOneuserInput>;
 };
 
-
 export type MutationWeightEventCreateManyArgs = {
   records: Array<CreateManyweightInput>;
 };
-
 
 export type MutationWeightEventCreateOneArgs = {
   record: CreateOneweightInput;
 };
 
-
 export type MutationWeightEventRemoveByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type MutationWeightEventRemoveManyArgs = {
   filter: FilterRemoveManyweightInput;
   limit?: InputMaybe<Scalars['Int']>;
 };
 
-
 export type MutationWeightEventRemoveOneArgs = {
   filter?: InputMaybe<FilterRemoveOneweightInput>;
   sort?: InputMaybe<SortRemoveOneweightInput>;
 };
 
-
 export type MutationWeightEventUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIdweightInput;
 };
-
 
 export type MutationWeightEventUpdateManyArgs = {
   filter?: InputMaybe<FilterUpdateManyweightInput>;
@@ -3165,7 +3090,6 @@ export type MutationWeightEventUpdateManyArgs = {
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortUpdateManyweightInput>;
 };
-
 
 export type MutationWeightEventUpdateOneArgs = {
   filter?: InputMaybe<FilterUpdateOneweightInput>;
@@ -3367,18 +3291,15 @@ export type Query = {
   weightEventPagination?: Maybe<WeightPagination>;
 };
 
-
 export type QueryBasalEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryBasalEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsbasalInput>;
 };
-
 
 export type QueryBasalEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3389,21 +3310,17 @@ export type QueryBasalEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionbasalEnum>;
 };
 
-
 export type QueryBasalEventCountArgs = {
   filter?: InputMaybe<FilterCountbasalInput>;
 };
-
 
 export type QueryBasalEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryBasalEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryBasalEventManyArgs = {
   filter?: InputMaybe<FilterFindManybasalInput>;
@@ -3412,13 +3329,11 @@ export type QueryBasalEventManyArgs = {
   sort?: InputMaybe<SortFindManybasalInput>;
 };
 
-
 export type QueryBasalEventOneArgs = {
   filter?: InputMaybe<FilterFindOnebasalInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnebasalInput>;
 };
-
 
 export type QueryBasalEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManybasalInput>;
@@ -3427,18 +3342,15 @@ export type QueryBasalEventPaginationArgs = {
   sort?: InputMaybe<SortFindManybasalInput>;
 };
 
-
 export type QueryBloodSugarEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryBloodSugarEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsbloodsugarInput>;
 };
-
 
 export type QueryBloodSugarEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3449,21 +3361,17 @@ export type QueryBloodSugarEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionbloodsugarEnum>;
 };
 
-
 export type QueryBloodSugarEventCountArgs = {
   filter?: InputMaybe<FilterCountbloodsugarInput>;
 };
-
 
 export type QueryBloodSugarEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryBloodSugarEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryBloodSugarEventManyArgs = {
   filter?: InputMaybe<FilterFindManybloodsugarInput>;
@@ -3472,13 +3380,11 @@ export type QueryBloodSugarEventManyArgs = {
   sort?: InputMaybe<SortFindManybloodsugarInput>;
 };
 
-
 export type QueryBloodSugarEventOneArgs = {
   filter?: InputMaybe<FilterFindOnebloodsugarInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnebloodsugarInput>;
 };
-
 
 export type QueryBloodSugarEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManybloodsugarInput>;
@@ -3487,18 +3393,15 @@ export type QueryBloodSugarEventPaginationArgs = {
   sort?: InputMaybe<SortFindManybloodsugarInput>;
 };
 
-
 export type QueryBolusEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryBolusEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsbolusInput>;
 };
-
 
 export type QueryBolusEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3509,21 +3412,17 @@ export type QueryBolusEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionbolusEnum>;
 };
 
-
 export type QueryBolusEventCountArgs = {
   filter?: InputMaybe<FilterCountbolusInput>;
 };
-
 
 export type QueryBolusEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryBolusEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryBolusEventManyArgs = {
   filter?: InputMaybe<FilterFindManybolusInput>;
@@ -3532,13 +3431,11 @@ export type QueryBolusEventManyArgs = {
   sort?: InputMaybe<SortFindManybolusInput>;
 };
 
-
 export type QueryBolusEventOneArgs = {
   filter?: InputMaybe<FilterFindOnebolusInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnebolusInput>;
 };
-
 
 export type QueryBolusEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManybolusInput>;
@@ -3547,18 +3444,15 @@ export type QueryBolusEventPaginationArgs = {
   sort?: InputMaybe<SortFindManybolusInput>;
 };
 
-
 export type QueryCatheterChangeEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryCatheterChangeEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdscatheterchangeInput>;
 };
-
 
 export type QueryCatheterChangeEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3569,21 +3463,17 @@ export type QueryCatheterChangeEventConnectionArgs = {
   sort?: InputMaybe<SortConnectioncatheterchangeEnum>;
 };
 
-
 export type QueryCatheterChangeEventCountArgs = {
   filter?: InputMaybe<FilterCountcatheterchangeInput>;
 };
-
 
 export type QueryCatheterChangeEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryCatheterChangeEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryCatheterChangeEventManyArgs = {
   filter?: InputMaybe<FilterFindManycatheterchangeInput>;
@@ -3592,13 +3482,11 @@ export type QueryCatheterChangeEventManyArgs = {
   sort?: InputMaybe<SortFindManycatheterchangeInput>;
 };
 
-
 export type QueryCatheterChangeEventOneArgs = {
   filter?: InputMaybe<FilterFindOnecatheterchangeInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnecatheterchangeInput>;
 };
-
 
 export type QueryCatheterChangeEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManycatheterchangeInput>;
@@ -3607,18 +3495,15 @@ export type QueryCatheterChangeEventPaginationArgs = {
   sort?: InputMaybe<SortFindManycatheterchangeInput>;
 };
 
-
 export type QueryCorrectionBolusEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryCorrectionBolusEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdscorrectionbolusInput>;
 };
-
 
 export type QueryCorrectionBolusEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3629,21 +3514,17 @@ export type QueryCorrectionBolusEventConnectionArgs = {
   sort?: InputMaybe<SortConnectioncorrectionbolusEnum>;
 };
 
-
 export type QueryCorrectionBolusEventCountArgs = {
   filter?: InputMaybe<FilterCountcorrectionbolusInput>;
 };
-
 
 export type QueryCorrectionBolusEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryCorrectionBolusEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryCorrectionBolusEventManyArgs = {
   filter?: InputMaybe<FilterFindManycorrectionbolusInput>;
@@ -3652,13 +3533,11 @@ export type QueryCorrectionBolusEventManyArgs = {
   sort?: InputMaybe<SortFindManycorrectionbolusInput>;
 };
 
-
 export type QueryCorrectionBolusEventOneArgs = {
   filter?: InputMaybe<FilterFindOnecorrectionbolusInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnecorrectionbolusInput>;
 };
-
 
 export type QueryCorrectionBolusEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManycorrectionbolusInput>;
@@ -3667,18 +3546,15 @@ export type QueryCorrectionBolusEventPaginationArgs = {
   sort?: InputMaybe<SortFindManycorrectionbolusInput>;
 };
 
-
 export type QueryHeightEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryHeightEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsheightInput>;
 };
-
 
 export type QueryHeightEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3689,21 +3565,17 @@ export type QueryHeightEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionheightEnum>;
 };
 
-
 export type QueryHeightEventCountArgs = {
   filter?: InputMaybe<FilterCountheightInput>;
 };
-
 
 export type QueryHeightEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryHeightEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryHeightEventManyArgs = {
   filter?: InputMaybe<FilterFindManyheightInput>;
@@ -3712,13 +3584,11 @@ export type QueryHeightEventManyArgs = {
   sort?: InputMaybe<SortFindManyheightInput>;
 };
 
-
 export type QueryHeightEventOneArgs = {
   filter?: InputMaybe<FilterFindOneheightInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOneheightInput>;
 };
-
 
 export type QueryHeightEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManyheightInput>;
@@ -3727,18 +3597,15 @@ export type QueryHeightEventPaginationArgs = {
   sort?: InputMaybe<SortFindManyheightInput>;
 };
 
-
 export type QueryPumpBatteryEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryPumpBatteryEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdspumpbatteryInput>;
 };
-
 
 export type QueryPumpBatteryEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3749,21 +3616,17 @@ export type QueryPumpBatteryEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionpumpbatteryEnum>;
 };
 
-
 export type QueryPumpBatteryEventCountArgs = {
   filter?: InputMaybe<FilterCountpumpbatteryInput>;
 };
-
 
 export type QueryPumpBatteryEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryPumpBatteryEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryPumpBatteryEventManyArgs = {
   filter?: InputMaybe<FilterFindManypumpbatteryInput>;
@@ -3772,13 +3635,11 @@ export type QueryPumpBatteryEventManyArgs = {
   sort?: InputMaybe<SortFindManypumpbatteryInput>;
 };
 
-
 export type QueryPumpBatteryEventOneArgs = {
   filter?: InputMaybe<FilterFindOnepumpbatteryInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnepumpbatteryInput>;
 };
-
 
 export type QueryPumpBatteryEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManypumpbatteryInput>;
@@ -3787,18 +3648,15 @@ export type QueryPumpBatteryEventPaginationArgs = {
   sort?: InputMaybe<SortFindManypumpbatteryInput>;
 };
 
-
 export type QuerySensorChangeEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QuerySensorChangeEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdssensorchangeInput>;
 };
-
 
 export type QuerySensorChangeEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3809,21 +3667,17 @@ export type QuerySensorChangeEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionsensorchangeEnum>;
 };
 
-
 export type QuerySensorChangeEventCountArgs = {
   filter?: InputMaybe<FilterCountsensorchangeInput>;
 };
-
 
 export type QuerySensorChangeEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QuerySensorChangeEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QuerySensorChangeEventManyArgs = {
   filter?: InputMaybe<FilterFindManysensorchangeInput>;
@@ -3832,13 +3686,11 @@ export type QuerySensorChangeEventManyArgs = {
   sort?: InputMaybe<SortFindManysensorchangeInput>;
 };
 
-
 export type QuerySensorChangeEventOneArgs = {
   filter?: InputMaybe<FilterFindOnesensorchangeInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnesensorchangeInput>;
 };
-
 
 export type QuerySensorChangeEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManysensorchangeInput>;
@@ -3847,18 +3699,15 @@ export type QuerySensorChangeEventPaginationArgs = {
   sort?: InputMaybe<SortFindManysensorchangeInput>;
 };
 
-
 export type QuerySmartphoneBatteryEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QuerySmartphoneBatteryEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdssmartphonebatteryInput>;
 };
-
 
 export type QuerySmartphoneBatteryEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3869,21 +3718,17 @@ export type QuerySmartphoneBatteryEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionsmartphonebatteryEnum>;
 };
 
-
 export type QuerySmartphoneBatteryEventCountArgs = {
   filter?: InputMaybe<FilterCountsmartphonebatteryInput>;
 };
-
 
 export type QuerySmartphoneBatteryEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QuerySmartphoneBatteryEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QuerySmartphoneBatteryEventManyArgs = {
   filter?: InputMaybe<FilterFindManysmartphonebatteryInput>;
@@ -3892,13 +3737,11 @@ export type QuerySmartphoneBatteryEventManyArgs = {
   sort?: InputMaybe<SortFindManysmartphonebatteryInput>;
 };
 
-
 export type QuerySmartphoneBatteryEventOneArgs = {
   filter?: InputMaybe<FilterFindOnesmartphonebatteryInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOnesmartphonebatteryInput>;
 };
-
 
 export type QuerySmartphoneBatteryEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManysmartphonebatteryInput>;
@@ -3907,16 +3750,13 @@ export type QuerySmartphoneBatteryEventPaginationArgs = {
   sort?: InputMaybe<SortFindManysmartphonebatteryInput>;
 };
 
-
 export type QueryUserByIdArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryUserByIdLeanArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryUserByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
@@ -3924,13 +3764,11 @@ export type QueryUserByIdsArgs = {
   sort?: InputMaybe<SortFindByIdsuserInput>;
 };
 
-
 export type QueryUserByIdsLeanArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsuserInput>;
 };
-
 
 export type QueryUserConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -3941,31 +3779,25 @@ export type QueryUserConnectionArgs = {
   sort?: InputMaybe<SortConnectionuserEnum>;
 };
 
-
 export type QueryUserCountArgs = {
   filter?: InputMaybe<FilterCountuserInput>;
 };
-
 
 export type QueryUserDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryUserDataLoaderLeanArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryUserDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
 
-
 export type QueryUserDataLoaderManyLeanArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryUserManyArgs = {
   filter?: InputMaybe<FilterFindManyuserInput>;
@@ -3974,7 +3806,6 @@ export type QueryUserManyArgs = {
   sort?: InputMaybe<SortFindManyuserInput>;
 };
 
-
 export type QueryUserManyLeanArgs = {
   filter?: InputMaybe<FilterFindManyuserInput>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -3982,20 +3813,17 @@ export type QueryUserManyLeanArgs = {
   sort?: InputMaybe<SortFindManyuserInput>;
 };
 
-
 export type QueryUserOneArgs = {
   filter?: InputMaybe<FilterFindOneuserInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOneuserInput>;
 };
 
-
 export type QueryUserOneLeanArgs = {
   filter?: InputMaybe<FilterFindOneuserInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOneuserInput>;
 };
-
 
 export type QueryUserPaginationArgs = {
   filter?: InputMaybe<FilterFindManyuserInput>;
@@ -4004,18 +3832,15 @@ export type QueryUserPaginationArgs = {
   sort?: InputMaybe<SortFindManyuserInput>;
 };
 
-
 export type QueryWeightEventByIdArgs = {
   _id: Scalars['MongoID'];
 };
-
 
 export type QueryWeightEventByIdsArgs = {
   _ids: Array<Scalars['MongoID']>;
   limit?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindByIdsweightInput>;
 };
-
 
 export type QueryWeightEventConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
@@ -4026,21 +3851,17 @@ export type QueryWeightEventConnectionArgs = {
   sort?: InputMaybe<SortConnectionweightEnum>;
 };
 
-
 export type QueryWeightEventCountArgs = {
   filter?: InputMaybe<FilterCountweightInput>;
 };
-
 
 export type QueryWeightEventDataLoaderArgs = {
   _id: Scalars['MongoID'];
 };
 
-
 export type QueryWeightEventDataLoaderManyArgs = {
   _ids: Array<Scalars['MongoID']>;
 };
-
 
 export type QueryWeightEventManyArgs = {
   filter?: InputMaybe<FilterFindManyweightInput>;
@@ -4049,13 +3870,11 @@ export type QueryWeightEventManyArgs = {
   sort?: InputMaybe<SortFindManyweightInput>;
 };
 
-
 export type QueryWeightEventOneArgs = {
   filter?: InputMaybe<FilterFindOneweightInput>;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortFindOneweightInput>;
 };
-
 
 export type QueryWeightEventPaginationArgs = {
   filter?: InputMaybe<FilterFindManyweightInput>;
@@ -4380,387 +4199,387 @@ export type RuntimeError = ErrorInterface & {
 
 export enum SortConnectionbasalEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionbloodsugarEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionbolusEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectioncatheterchangeEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectioncorrectionbolusEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionheightEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionpumpbatteryEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionsensorchangeEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionsmartphonebatteryEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionuserEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortConnectionweightEnum {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsbasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsbloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdscatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdscorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdspumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdssensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdssmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindByIdsweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManybasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManybloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManybolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManycatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManycorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManyheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManypumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManysensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManysmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManyuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindManyweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnebasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnebloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnebolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnecatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnecorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOneheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnepumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnesensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOnesmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOneuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortFindOneweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnebasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnebloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnebolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnecatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnecorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOneheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnepumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnesensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOnesmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOneuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortRemoveOneweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManybasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManybloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManybolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManycatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManycorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManyheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManypumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManysensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManysmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManyuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateManyweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnebasalInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnebloodsugarInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnebolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnecatheterchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnecorrectionbolusInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOneheightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnepumpbatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnesensorchangeInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOnesmartphonebatteryInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOneuserInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export enum SortUpdateOneweightInput {
   IdAsc = '_ID_ASC',
-  IdDesc = '_ID_DESC'
+  IdDesc = '_ID_DESC',
 }
 
 export type UpdateByIdbasalInput = {
@@ -6130,15 +5949,14 @@ export type WeightPagination = {
   pageInfo: PaginationInfo;
 };
 
-
-
 export type ResolverTypeWrapper<T> = Promise<T> | T;
-
 
 export type ResolverWithResolve<TResult, TParent, TContext, TArgs> = {
   resolve: ResolverFn<TResult, TParent, TContext, TArgs>;
 };
-export type Resolver<TResult, TParent = {}, TContext = {}, TArgs = {}> = ResolverFn<TResult, TParent, TContext, TArgs> | ResolverWithResolve<TResult, TParent, TContext, TArgs>;
+export type Resolver<TResult, TParent = {}, TContext = {}, TArgs = {}> =
+  | ResolverFn<TResult, TParent, TContext, TArgs>
+  | ResolverWithResolve<TResult, TParent, TContext, TArgs>;
 
 export type ResolverFn<TResult, TParent, TContext, TArgs> = (
   parent: TParent,
@@ -6161,9 +5979,25 @@ export type SubscriptionResolveFn<TResult, TParent, TContext, TArgs> = (
   info: GraphQLResolveInfo
 ) => TResult | Promise<TResult>;
 
-export interface SubscriptionSubscriberObject<TResult, TKey extends string, TParent, TContext, TArgs> {
-  subscribe: SubscriptionSubscribeFn<{ [key in TKey]: TResult }, TParent, TContext, TArgs>;
-  resolve?: SubscriptionResolveFn<TResult, { [key in TKey]: TResult }, TContext, TArgs>;
+export interface SubscriptionSubscriberObject<
+  TResult,
+  TKey extends string,
+  TParent,
+  TContext,
+  TArgs
+> {
+  subscribe: SubscriptionSubscribeFn<
+    { [key in TKey]: TResult },
+    TParent,
+    TContext,
+    TArgs
+  >;
+  resolve?: SubscriptionResolveFn<
+    TResult,
+    { [key in TKey]: TResult },
+    TContext,
+    TArgs
+  >;
 }
 
 export interface SubscriptionResolverObject<TResult, TParent, TContext, TArgs> {
@@ -6171,12 +6005,26 @@ export interface SubscriptionResolverObject<TResult, TParent, TContext, TArgs> {
   resolve: SubscriptionResolveFn<TResult, any, TContext, TArgs>;
 }
 
-export type SubscriptionObject<TResult, TKey extends string, TParent, TContext, TArgs> =
+export type SubscriptionObject<
+  TResult,
+  TKey extends string,
+  TParent,
+  TContext,
+  TArgs
+> =
   | SubscriptionSubscriberObject<TResult, TKey, TParent, TContext, TArgs>
   | SubscriptionResolverObject<TResult, TParent, TContext, TArgs>;
 
-export type SubscriptionResolver<TResult, TKey extends string, TParent = {}, TContext = {}, TArgs = {}> =
-  | ((...args: any[]) => SubscriptionObject<TResult, TKey, TParent, TContext, TArgs>)
+export type SubscriptionResolver<
+  TResult,
+  TKey extends string,
+  TParent = {},
+  TContext = {},
+  TArgs = {}
+> =
+  | ((
+      ...args: any[]
+    ) => SubscriptionObject<TResult, TKey, TParent, TContext, TArgs>)
   | SubscriptionObject<TResult, TKey, TParent, TContext, TArgs>;
 
 export type TypeResolveFn<TTypes, TParent = {}, TContext = {}> = (
@@ -6185,11 +6033,20 @@ export type TypeResolveFn<TTypes, TParent = {}, TContext = {}> = (
   info: GraphQLResolveInfo
 ) => Maybe<TTypes> | Promise<Maybe<TTypes>>;
 
-export type IsTypeOfResolverFn<T = {}, TContext = {}> = (obj: T, context: TContext, info: GraphQLResolveInfo) => boolean | Promise<boolean>;
+export type IsTypeOfResolverFn<T = {}, TContext = {}> = (
+  obj: T,
+  context: TContext,
+  info: GraphQLResolveInfo
+) => boolean | Promise<boolean>;
 
 export type NextResolverFn<T> = () => Promise<T>;
 
-export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs = {}> = (
+export type DirectiveResolverFn<
+  TResult = {},
+  TParent = {},
+  TContext = {},
+  TArgs = {}
+> = (
   next: NextResolverFn<TResult>,
   parent: TParent,
   args: TArgs,
@@ -6255,7 +6112,10 @@ export type ResolversTypes = {
   EnumsensorchangePlacement: EnumsensorchangePlacement;
   EnumsensorchangeSide: EnumsensorchangeSide;
   EnumuserRoles: EnumuserRoles;
-  ErrorInterface: ResolversTypes['MongoError'] | ResolversTypes['RuntimeError'] | ResolversTypes['ValidationError'];
+  ErrorInterface:
+    | ResolversTypes['MongoError']
+    | ResolversTypes['RuntimeError']
+    | ResolversTypes['ValidationError'];
   FilterCountbasalInput: FilterCountbasalInput;
   FilterCountbloodsugarInput: FilterCountbloodsugarInput;
   FilterCountbolusCalculatedInput: FilterCountbolusCalculatedInput;
@@ -6612,7 +6472,18 @@ export type ResolversTypes = {
   correctionbolusEdge: ResolverTypeWrapper<CorrectionbolusEdge>;
   correctionbolusPagination: ResolverTypeWrapper<CorrectionbolusPagination>;
   event: ResolverTypeWrapper<Event>;
-  eventInterface: ResolversTypes['basal'] | ResolversTypes['bloodsugar'] | ResolversTypes['bolus'] | ResolversTypes['catheterchange'] | ResolversTypes['correctionbolus'] | ResolversTypes['event'] | ResolversTypes['height'] | ResolversTypes['pumpbattery'] | ResolversTypes['sensorchange'] | ResolversTypes['smartphonebattery'] | ResolversTypes['weight'];
+  eventInterface:
+    | ResolversTypes['basal']
+    | ResolversTypes['bloodsugar']
+    | ResolversTypes['bolus']
+    | ResolversTypes['catheterchange']
+    | ResolversTypes['correctionbolus']
+    | ResolversTypes['event']
+    | ResolversTypes['height']
+    | ResolversTypes['pumpbattery']
+    | ResolversTypes['sensorchange']
+    | ResolversTypes['smartphonebattery']
+    | ResolversTypes['weight'];
   height: ResolverTypeWrapper<Height>;
   heightConnection: ResolverTypeWrapper<HeightConnection>;
   heightEdge: ResolverTypeWrapper<HeightEdge>;
@@ -6690,7 +6561,10 @@ export type ResolversParentTypes = {
   CreateOneweightInput: CreateOneweightInput;
   CreateOneweightPayload: CreateOneweightPayload;
   Date: Scalars['Date'];
-  ErrorInterface: ResolversParentTypes['MongoError'] | ResolversParentTypes['RuntimeError'] | ResolversParentTypes['ValidationError'];
+  ErrorInterface:
+    | ResolversParentTypes['MongoError']
+    | ResolversParentTypes['RuntimeError']
+    | ResolversParentTypes['ValidationError'];
   FilterCountbasalInput: FilterCountbasalInput;
   FilterCountbloodsugarInput: FilterCountbloodsugarInput;
   FilterCountbolusCalculatedInput: FilterCountbolusCalculatedInput;
@@ -6970,7 +6844,18 @@ export type ResolversParentTypes = {
   correctionbolusEdge: CorrectionbolusEdge;
   correctionbolusPagination: CorrectionbolusPagination;
   event: Event;
-  eventInterface: ResolversParentTypes['basal'] | ResolversParentTypes['bloodsugar'] | ResolversParentTypes['bolus'] | ResolversParentTypes['catheterchange'] | ResolversParentTypes['correctionbolus'] | ResolversParentTypes['event'] | ResolversParentTypes['height'] | ResolversParentTypes['pumpbattery'] | ResolversParentTypes['sensorchange'] | ResolversParentTypes['smartphonebattery'] | ResolversParentTypes['weight'];
+  eventInterface:
+    | ResolversParentTypes['basal']
+    | ResolversParentTypes['bloodsugar']
+    | ResolversParentTypes['bolus']
+    | ResolversParentTypes['catheterchange']
+    | ResolversParentTypes['correctionbolus']
+    | ResolversParentTypes['event']
+    | ResolversParentTypes['height']
+    | ResolversParentTypes['pumpbattery']
+    | ResolversParentTypes['sensorchange']
+    | ResolversParentTypes['smartphonebattery']
+    | ResolversParentTypes['weight'];
   height: Height;
   heightConnection: HeightConnection;
   heightEdge: HeightEdge;
@@ -6999,875 +6884,2969 @@ export type ResolversParentTypes = {
   weightPagination: WeightPagination;
 };
 
-export type AuthTokenResolvers<ContextType = any, ParentType extends ResolversParentTypes['AuthToken'] = ResolversParentTypes['AuthToken']> = {
+export type AuthTokenResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['AuthToken'] = ResolversParentTypes['AuthToken']
+> = {
   email?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  roles?: Resolver<Maybe<Array<Maybe<ResolversTypes['String']>>>, ParentType, ContextType>;
+  roles?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['String']>>>,
+    ParentType,
+    ContextType
+  >;
   token?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   username?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManybasalPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManybasalPayload'] = ResolversParentTypes['CreateManybasalPayload']> = {
+export type CreateManybasalPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManybasalPayload'] = ResolversParentTypes['CreateManybasalPayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['basal']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['basal']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManybloodsugarPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManybloodsugarPayload'] = ResolversParentTypes['CreateManybloodsugarPayload']> = {
+export type CreateManybloodsugarPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManybloodsugarPayload'] = ResolversParentTypes['CreateManybloodsugarPayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['bloodsugar']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['bloodsugar']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManybolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManybolusPayload'] = ResolversParentTypes['CreateManybolusPayload']> = {
+export type CreateManybolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManybolusPayload'] = ResolversParentTypes['CreateManybolusPayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['bolus']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['bolus']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManycatheterchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManycatheterchangePayload'] = ResolversParentTypes['CreateManycatheterchangePayload']> = {
+export type CreateManycatheterchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManycatheterchangePayload'] = ResolversParentTypes['CreateManycatheterchangePayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['catheterchange']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['catheterchange']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManycorrectionbolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManycorrectionbolusPayload'] = ResolversParentTypes['CreateManycorrectionbolusPayload']> = {
+export type CreateManycorrectionbolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManycorrectionbolusPayload'] = ResolversParentTypes['CreateManycorrectionbolusPayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['correctionbolus']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['correctionbolus']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManyheightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManyheightPayload'] = ResolversParentTypes['CreateManyheightPayload']> = {
+export type CreateManyheightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManyheightPayload'] = ResolversParentTypes['CreateManyheightPayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['height']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['height']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManypumpbatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManypumpbatteryPayload'] = ResolversParentTypes['CreateManypumpbatteryPayload']> = {
+export type CreateManypumpbatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManypumpbatteryPayload'] = ResolversParentTypes['CreateManypumpbatteryPayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['pumpbattery']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['pumpbattery']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManysensorchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManysensorchangePayload'] = ResolversParentTypes['CreateManysensorchangePayload']> = {
+export type CreateManysensorchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManysensorchangePayload'] = ResolversParentTypes['CreateManysensorchangePayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['sensorchange']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['sensorchange']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManysmartphonebatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManysmartphonebatteryPayload'] = ResolversParentTypes['CreateManysmartphonebatteryPayload']> = {
+export type CreateManysmartphonebatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManysmartphonebatteryPayload'] = ResolversParentTypes['CreateManysmartphonebatteryPayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['smartphonebattery']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['smartphonebattery']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManyuserPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManyuserPayload'] = ResolversParentTypes['CreateManyuserPayload']> = {
+export type CreateManyuserPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManyuserPayload'] = ResolversParentTypes['CreateManyuserPayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['user']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['user']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateManyweightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateManyweightPayload'] = ResolversParentTypes['CreateManyweightPayload']> = {
+export type CreateManyweightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateManyweightPayload'] = ResolversParentTypes['CreateManyweightPayload']
+> = {
   createdCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  recordIds?: Resolver<Array<ResolversTypes['MongoID']>, ParentType, ContextType>;
-  records?: Resolver<Maybe<Array<ResolversTypes['weight']>>, ParentType, ContextType>;
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  recordIds?: Resolver<
+    Array<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
+  records?: Resolver<
+    Maybe<Array<ResolversTypes['weight']>>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOnebasalPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOnebasalPayload'] = ResolversParentTypes['CreateOnebasalPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type CreateOnebasalPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOnebasalPayload'] = ResolversParentTypes['CreateOnebasalPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['basal']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOnebloodsugarPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOnebloodsugarPayload'] = ResolversParentTypes['CreateOnebloodsugarPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['bloodsugar']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type CreateOnebloodsugarPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOnebloodsugarPayload'] = ResolversParentTypes['CreateOnebloodsugarPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['bloodsugar']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOnebolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOnebolusPayload'] = ResolversParentTypes['CreateOnebolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type CreateOnebolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOnebolusPayload'] = ResolversParentTypes['CreateOnebolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['bolus']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOnecatheterchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOnecatheterchangePayload'] = ResolversParentTypes['CreateOnecatheterchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['catheterchange']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type CreateOnecatheterchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOnecatheterchangePayload'] = ResolversParentTypes['CreateOnecatheterchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['catheterchange']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOnecorrectionbolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOnecorrectionbolusPayload'] = ResolversParentTypes['CreateOnecorrectionbolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['correctionbolus']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type CreateOnecorrectionbolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOnecorrectionbolusPayload'] = ResolversParentTypes['CreateOnecorrectionbolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['correctionbolus']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOneheightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOneheightPayload'] = ResolversParentTypes['CreateOneheightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type CreateOneheightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOneheightPayload'] = ResolversParentTypes['CreateOneheightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['height']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOnepumpbatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOnepumpbatteryPayload'] = ResolversParentTypes['CreateOnepumpbatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['pumpbattery']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type CreateOnepumpbatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOnepumpbatteryPayload'] = ResolversParentTypes['CreateOnepumpbatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['pumpbattery']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOnesensorchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOnesensorchangePayload'] = ResolversParentTypes['CreateOnesensorchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['sensorchange']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type CreateOnesensorchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOnesensorchangePayload'] = ResolversParentTypes['CreateOnesensorchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['sensorchange']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOnesmartphonebatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOnesmartphonebatteryPayload'] = ResolversParentTypes['CreateOnesmartphonebatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['smartphonebattery']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type CreateOnesmartphonebatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOnesmartphonebatteryPayload'] = ResolversParentTypes['CreateOnesmartphonebatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['smartphonebattery']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOneuserPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOneuserPayload'] = ResolversParentTypes['CreateOneuserPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type CreateOneuserPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOneuserPayload'] = ResolversParentTypes['CreateOneuserPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CreateOneweightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['CreateOneweightPayload'] = ResolversParentTypes['CreateOneweightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type CreateOneweightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['CreateOneweightPayload'] = ResolversParentTypes['CreateOneweightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['weight']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export interface DateScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['Date'], any> {
+export interface DateScalarConfig
+  extends GraphQLScalarTypeConfig<ResolversTypes['Date'], any> {
   name: 'Date';
 }
 
-export type ErrorInterfaceResolvers<ContextType = any, ParentType extends ResolversParentTypes['ErrorInterface'] = ResolversParentTypes['ErrorInterface']> = {
-  __resolveType: TypeResolveFn<'MongoError' | 'RuntimeError' | 'ValidationError', ParentType, ContextType>;
+export type ErrorInterfaceResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ErrorInterface'] = ResolversParentTypes['ErrorInterface']
+> = {
+  __resolveType: TypeResolveFn<
+    'MongoError' | 'RuntimeError' | 'ValidationError',
+    ParentType,
+    ContextType
+  >;
   message?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
 };
 
-export interface JsonScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['JSON'], any> {
+export interface JsonScalarConfig
+  extends GraphQLScalarTypeConfig<ResolversTypes['JSON'], any> {
   name: 'JSON';
 }
 
-export type MongoErrorResolvers<ContextType = any, ParentType extends ResolversParentTypes['MongoError'] = ResolversParentTypes['MongoError']> = {
+export type MongoErrorResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['MongoError'] = ResolversParentTypes['MongoError']
+> = {
   code?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   message?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export interface MongoIdScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['MongoID'], any> {
+export interface MongoIdScalarConfig
+  extends GraphQLScalarTypeConfig<ResolversTypes['MongoID'], any> {
   name: 'MongoID';
 }
 
-export type MutationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
-  basalEventCreateMany?: Resolver<Maybe<ResolversTypes['CreateManybasalPayload']>, ParentType, ContextType, RequireFields<MutationBasalEventCreateManyArgs, 'records'>>;
-  basalEventCreateOne?: Resolver<Maybe<ResolversTypes['CreateOnebasalPayload']>, ParentType, ContextType, RequireFields<MutationBasalEventCreateOneArgs, 'record'>>;
-  basalEventRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIdbasalPayload']>, ParentType, ContextType, RequireFields<MutationBasalEventRemoveByIdArgs, '_id'>>;
-  basalEventRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManybasalPayload']>, ParentType, ContextType, RequireFields<MutationBasalEventRemoveManyArgs, 'filter' | 'limit'>>;
-  basalEventRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOnebasalPayload']>, ParentType, ContextType, Partial<MutationBasalEventRemoveOneArgs>>;
-  basalEventUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIdbasalPayload']>, ParentType, ContextType, RequireFields<MutationBasalEventUpdateByIdArgs, '_id' | 'record'>>;
-  basalEventUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManybasalPayload']>, ParentType, ContextType, RequireFields<MutationBasalEventUpdateManyArgs, 'limit' | 'record'>>;
-  basalEventUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOnebasalPayload']>, ParentType, ContextType, RequireFields<MutationBasalEventUpdateOneArgs, 'record'>>;
-  bloodSugarEventCreateMany?: Resolver<Maybe<ResolversTypes['CreateManybloodsugarPayload']>, ParentType, ContextType, RequireFields<MutationBloodSugarEventCreateManyArgs, 'records'>>;
-  bloodSugarEventCreateOne?: Resolver<Maybe<ResolversTypes['CreateOnebloodsugarPayload']>, ParentType, ContextType, RequireFields<MutationBloodSugarEventCreateOneArgs, 'record'>>;
-  bloodSugarEventRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIdbloodsugarPayload']>, ParentType, ContextType, RequireFields<MutationBloodSugarEventRemoveByIdArgs, '_id'>>;
-  bloodSugarEventRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManybloodsugarPayload']>, ParentType, ContextType, RequireFields<MutationBloodSugarEventRemoveManyArgs, 'filter' | 'limit'>>;
-  bloodSugarEventRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOnebloodsugarPayload']>, ParentType, ContextType, Partial<MutationBloodSugarEventRemoveOneArgs>>;
-  bloodSugarEventUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIdbloodsugarPayload']>, ParentType, ContextType, RequireFields<MutationBloodSugarEventUpdateByIdArgs, '_id' | 'record'>>;
-  bloodSugarEventUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManybloodsugarPayload']>, ParentType, ContextType, RequireFields<MutationBloodSugarEventUpdateManyArgs, 'limit' | 'record'>>;
-  bloodSugarEventUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOnebloodsugarPayload']>, ParentType, ContextType, RequireFields<MutationBloodSugarEventUpdateOneArgs, 'record'>>;
-  bolusEventCreateMany?: Resolver<Maybe<ResolversTypes['CreateManybolusPayload']>, ParentType, ContextType, RequireFields<MutationBolusEventCreateManyArgs, 'records'>>;
-  bolusEventCreateOne?: Resolver<Maybe<ResolversTypes['CreateOnebolusPayload']>, ParentType, ContextType, RequireFields<MutationBolusEventCreateOneArgs, 'record'>>;
-  bolusEventRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIdbolusPayload']>, ParentType, ContextType, RequireFields<MutationBolusEventRemoveByIdArgs, '_id'>>;
-  bolusEventRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManybolusPayload']>, ParentType, ContextType, RequireFields<MutationBolusEventRemoveManyArgs, 'filter' | 'limit'>>;
-  bolusEventRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOnebolusPayload']>, ParentType, ContextType, Partial<MutationBolusEventRemoveOneArgs>>;
-  bolusEventUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIdbolusPayload']>, ParentType, ContextType, RequireFields<MutationBolusEventUpdateByIdArgs, '_id' | 'record'>>;
-  bolusEventUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManybolusPayload']>, ParentType, ContextType, RequireFields<MutationBolusEventUpdateManyArgs, 'limit' | 'record'>>;
-  bolusEventUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOnebolusPayload']>, ParentType, ContextType, RequireFields<MutationBolusEventUpdateOneArgs, 'record'>>;
-  catheterChangeEventCreateMany?: Resolver<Maybe<ResolversTypes['CreateManycatheterchangePayload']>, ParentType, ContextType, RequireFields<MutationCatheterChangeEventCreateManyArgs, 'records'>>;
-  catheterChangeEventCreateOne?: Resolver<Maybe<ResolversTypes['CreateOnecatheterchangePayload']>, ParentType, ContextType, RequireFields<MutationCatheterChangeEventCreateOneArgs, 'record'>>;
-  catheterChangeEventRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIdcatheterchangePayload']>, ParentType, ContextType, RequireFields<MutationCatheterChangeEventRemoveByIdArgs, '_id'>>;
-  catheterChangeEventRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManycatheterchangePayload']>, ParentType, ContextType, RequireFields<MutationCatheterChangeEventRemoveManyArgs, 'filter' | 'limit'>>;
-  catheterChangeEventRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOnecatheterchangePayload']>, ParentType, ContextType, Partial<MutationCatheterChangeEventRemoveOneArgs>>;
-  catheterChangeEventUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIdcatheterchangePayload']>, ParentType, ContextType, RequireFields<MutationCatheterChangeEventUpdateByIdArgs, '_id' | 'record'>>;
-  catheterChangeEventUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManycatheterchangePayload']>, ParentType, ContextType, RequireFields<MutationCatheterChangeEventUpdateManyArgs, 'limit' | 'record'>>;
-  catheterChangeEventUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOnecatheterchangePayload']>, ParentType, ContextType, RequireFields<MutationCatheterChangeEventUpdateOneArgs, 'record'>>;
-  correctionBolusEventCreateMany?: Resolver<Maybe<ResolversTypes['CreateManycorrectionbolusPayload']>, ParentType, ContextType, RequireFields<MutationCorrectionBolusEventCreateManyArgs, 'records'>>;
-  correctionBolusEventCreateOne?: Resolver<Maybe<ResolversTypes['CreateOnecorrectionbolusPayload']>, ParentType, ContextType, RequireFields<MutationCorrectionBolusEventCreateOneArgs, 'record'>>;
-  correctionBolusEventRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIdcorrectionbolusPayload']>, ParentType, ContextType, RequireFields<MutationCorrectionBolusEventRemoveByIdArgs, '_id'>>;
-  correctionBolusEventRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManycorrectionbolusPayload']>, ParentType, ContextType, RequireFields<MutationCorrectionBolusEventRemoveManyArgs, 'filter' | 'limit'>>;
-  correctionBolusEventRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOnecorrectionbolusPayload']>, ParentType, ContextType, Partial<MutationCorrectionBolusEventRemoveOneArgs>>;
-  correctionBolusEventUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIdcorrectionbolusPayload']>, ParentType, ContextType, RequireFields<MutationCorrectionBolusEventUpdateByIdArgs, '_id' | 'record'>>;
-  correctionBolusEventUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManycorrectionbolusPayload']>, ParentType, ContextType, RequireFields<MutationCorrectionBolusEventUpdateManyArgs, 'limit' | 'record'>>;
-  correctionBolusEventUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOnecorrectionbolusPayload']>, ParentType, ContextType, RequireFields<MutationCorrectionBolusEventUpdateOneArgs, 'record'>>;
-  heightEventCreateMany?: Resolver<Maybe<ResolversTypes['CreateManyheightPayload']>, ParentType, ContextType, RequireFields<MutationHeightEventCreateManyArgs, 'records'>>;
-  heightEventCreateOne?: Resolver<Maybe<ResolversTypes['CreateOneheightPayload']>, ParentType, ContextType, RequireFields<MutationHeightEventCreateOneArgs, 'record'>>;
-  heightEventRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIdheightPayload']>, ParentType, ContextType, RequireFields<MutationHeightEventRemoveByIdArgs, '_id'>>;
-  heightEventRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManyheightPayload']>, ParentType, ContextType, RequireFields<MutationHeightEventRemoveManyArgs, 'filter' | 'limit'>>;
-  heightEventRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOneheightPayload']>, ParentType, ContextType, Partial<MutationHeightEventRemoveOneArgs>>;
-  heightEventUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIdheightPayload']>, ParentType, ContextType, RequireFields<MutationHeightEventUpdateByIdArgs, '_id' | 'record'>>;
-  heightEventUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManyheightPayload']>, ParentType, ContextType, RequireFields<MutationHeightEventUpdateManyArgs, 'limit' | 'record'>>;
-  heightEventUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOneheightPayload']>, ParentType, ContextType, RequireFields<MutationHeightEventUpdateOneArgs, 'record'>>;
-  login?: Resolver<Maybe<ResolversTypes['AuthToken']>, ParentType, ContextType, RequireFields<MutationLoginArgs, 'password' | 'username'>>;
-  pumpBatteryEventCreateMany?: Resolver<Maybe<ResolversTypes['CreateManypumpbatteryPayload']>, ParentType, ContextType, RequireFields<MutationPumpBatteryEventCreateManyArgs, 'records'>>;
-  pumpBatteryEventCreateOne?: Resolver<Maybe<ResolversTypes['CreateOnepumpbatteryPayload']>, ParentType, ContextType, RequireFields<MutationPumpBatteryEventCreateOneArgs, 'record'>>;
-  pumpBatteryEventRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIdpumpbatteryPayload']>, ParentType, ContextType, RequireFields<MutationPumpBatteryEventRemoveByIdArgs, '_id'>>;
-  pumpBatteryEventRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManypumpbatteryPayload']>, ParentType, ContextType, RequireFields<MutationPumpBatteryEventRemoveManyArgs, 'filter' | 'limit'>>;
-  pumpBatteryEventRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOnepumpbatteryPayload']>, ParentType, ContextType, Partial<MutationPumpBatteryEventRemoveOneArgs>>;
-  pumpBatteryEventUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIdpumpbatteryPayload']>, ParentType, ContextType, RequireFields<MutationPumpBatteryEventUpdateByIdArgs, '_id' | 'record'>>;
-  pumpBatteryEventUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManypumpbatteryPayload']>, ParentType, ContextType, RequireFields<MutationPumpBatteryEventUpdateManyArgs, 'limit' | 'record'>>;
-  pumpBatteryEventUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOnepumpbatteryPayload']>, ParentType, ContextType, RequireFields<MutationPumpBatteryEventUpdateOneArgs, 'record'>>;
-  sensorChangeEventCreateMany?: Resolver<Maybe<ResolversTypes['CreateManysensorchangePayload']>, ParentType, ContextType, RequireFields<MutationSensorChangeEventCreateManyArgs, 'records'>>;
-  sensorChangeEventCreateOne?: Resolver<Maybe<ResolversTypes['CreateOnesensorchangePayload']>, ParentType, ContextType, RequireFields<MutationSensorChangeEventCreateOneArgs, 'record'>>;
-  sensorChangeEventRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIdsensorchangePayload']>, ParentType, ContextType, RequireFields<MutationSensorChangeEventRemoveByIdArgs, '_id'>>;
-  sensorChangeEventRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManysensorchangePayload']>, ParentType, ContextType, RequireFields<MutationSensorChangeEventRemoveManyArgs, 'filter' | 'limit'>>;
-  sensorChangeEventRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOnesensorchangePayload']>, ParentType, ContextType, Partial<MutationSensorChangeEventRemoveOneArgs>>;
-  sensorChangeEventUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIdsensorchangePayload']>, ParentType, ContextType, RequireFields<MutationSensorChangeEventUpdateByIdArgs, '_id' | 'record'>>;
-  sensorChangeEventUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManysensorchangePayload']>, ParentType, ContextType, RequireFields<MutationSensorChangeEventUpdateManyArgs, 'limit' | 'record'>>;
-  sensorChangeEventUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOnesensorchangePayload']>, ParentType, ContextType, RequireFields<MutationSensorChangeEventUpdateOneArgs, 'record'>>;
-  smartphoneBatteryEventCreateMany?: Resolver<Maybe<ResolversTypes['CreateManysmartphonebatteryPayload']>, ParentType, ContextType, RequireFields<MutationSmartphoneBatteryEventCreateManyArgs, 'records'>>;
-  smartphoneBatteryEventCreateOne?: Resolver<Maybe<ResolversTypes['CreateOnesmartphonebatteryPayload']>, ParentType, ContextType, RequireFields<MutationSmartphoneBatteryEventCreateOneArgs, 'record'>>;
-  smartphoneBatteryEventRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIdsmartphonebatteryPayload']>, ParentType, ContextType, RequireFields<MutationSmartphoneBatteryEventRemoveByIdArgs, '_id'>>;
-  smartphoneBatteryEventRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManysmartphonebatteryPayload']>, ParentType, ContextType, RequireFields<MutationSmartphoneBatteryEventRemoveManyArgs, 'filter' | 'limit'>>;
-  smartphoneBatteryEventRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOnesmartphonebatteryPayload']>, ParentType, ContextType, Partial<MutationSmartphoneBatteryEventRemoveOneArgs>>;
-  smartphoneBatteryEventUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIdsmartphonebatteryPayload']>, ParentType, ContextType, RequireFields<MutationSmartphoneBatteryEventUpdateByIdArgs, '_id' | 'record'>>;
-  smartphoneBatteryEventUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManysmartphonebatteryPayload']>, ParentType, ContextType, RequireFields<MutationSmartphoneBatteryEventUpdateManyArgs, 'limit' | 'record'>>;
-  smartphoneBatteryEventUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOnesmartphonebatteryPayload']>, ParentType, ContextType, RequireFields<MutationSmartphoneBatteryEventUpdateOneArgs, 'record'>>;
-  userCreateMany?: Resolver<Maybe<ResolversTypes['CreateManyuserPayload']>, ParentType, ContextType, RequireFields<MutationUserCreateManyArgs, 'records'>>;
-  userCreateOne?: Resolver<Maybe<ResolversTypes['CreateOneuserPayload']>, ParentType, ContextType, RequireFields<MutationUserCreateOneArgs, 'record'>>;
-  userRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIduserPayload']>, ParentType, ContextType, RequireFields<MutationUserRemoveByIdArgs, '_id'>>;
-  userRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManyuserPayload']>, ParentType, ContextType, RequireFields<MutationUserRemoveManyArgs, 'filter' | 'limit'>>;
-  userRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOneuserPayload']>, ParentType, ContextType, Partial<MutationUserRemoveOneArgs>>;
-  userUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIduserPayload']>, ParentType, ContextType, RequireFields<MutationUserUpdateByIdArgs, '_id' | 'record'>>;
-  userUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManyuserPayload']>, ParentType, ContextType, RequireFields<MutationUserUpdateManyArgs, 'limit' | 'record'>>;
-  userUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOneuserPayload']>, ParentType, ContextType, RequireFields<MutationUserUpdateOneArgs, 'record'>>;
-  weightEventCreateMany?: Resolver<Maybe<ResolversTypes['CreateManyweightPayload']>, ParentType, ContextType, RequireFields<MutationWeightEventCreateManyArgs, 'records'>>;
-  weightEventCreateOne?: Resolver<Maybe<ResolversTypes['CreateOneweightPayload']>, ParentType, ContextType, RequireFields<MutationWeightEventCreateOneArgs, 'record'>>;
-  weightEventRemoveById?: Resolver<Maybe<ResolversTypes['RemoveByIdweightPayload']>, ParentType, ContextType, RequireFields<MutationWeightEventRemoveByIdArgs, '_id'>>;
-  weightEventRemoveMany?: Resolver<Maybe<ResolversTypes['RemoveManyweightPayload']>, ParentType, ContextType, RequireFields<MutationWeightEventRemoveManyArgs, 'filter' | 'limit'>>;
-  weightEventRemoveOne?: Resolver<Maybe<ResolversTypes['RemoveOneweightPayload']>, ParentType, ContextType, Partial<MutationWeightEventRemoveOneArgs>>;
-  weightEventUpdateById?: Resolver<Maybe<ResolversTypes['UpdateByIdweightPayload']>, ParentType, ContextType, RequireFields<MutationWeightEventUpdateByIdArgs, '_id' | 'record'>>;
-  weightEventUpdateMany?: Resolver<Maybe<ResolversTypes['UpdateManyweightPayload']>, ParentType, ContextType, RequireFields<MutationWeightEventUpdateManyArgs, 'limit' | 'record'>>;
-  weightEventUpdateOne?: Resolver<Maybe<ResolversTypes['UpdateOneweightPayload']>, ParentType, ContextType, RequireFields<MutationWeightEventUpdateOneArgs, 'record'>>;
+export type MutationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']
+> = {
+  basalEventCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManybasalPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBasalEventCreateManyArgs, 'records'>
+  >;
+  basalEventCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOnebasalPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBasalEventCreateOneArgs, 'record'>
+  >;
+  basalEventRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIdbasalPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBasalEventRemoveByIdArgs, '_id'>
+  >;
+  basalEventRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManybasalPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBasalEventRemoveManyArgs, 'filter' | 'limit'>
+  >;
+  basalEventRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOnebasalPayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationBasalEventRemoveOneArgs>
+  >;
+  basalEventUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIdbasalPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBasalEventUpdateByIdArgs, '_id' | 'record'>
+  >;
+  basalEventUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManybasalPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBasalEventUpdateManyArgs, 'limit' | 'record'>
+  >;
+  basalEventUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOnebasalPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBasalEventUpdateOneArgs, 'record'>
+  >;
+  bloodSugarEventCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManybloodsugarPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBloodSugarEventCreateManyArgs, 'records'>
+  >;
+  bloodSugarEventCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOnebloodsugarPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBloodSugarEventCreateOneArgs, 'record'>
+  >;
+  bloodSugarEventRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIdbloodsugarPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBloodSugarEventRemoveByIdArgs, '_id'>
+  >;
+  bloodSugarEventRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManybloodsugarPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBloodSugarEventRemoveManyArgs, 'filter' | 'limit'>
+  >;
+  bloodSugarEventRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOnebloodsugarPayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationBloodSugarEventRemoveOneArgs>
+  >;
+  bloodSugarEventUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIdbloodsugarPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBloodSugarEventUpdateByIdArgs, '_id' | 'record'>
+  >;
+  bloodSugarEventUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManybloodsugarPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBloodSugarEventUpdateManyArgs, 'limit' | 'record'>
+  >;
+  bloodSugarEventUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOnebloodsugarPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBloodSugarEventUpdateOneArgs, 'record'>
+  >;
+  bolusEventCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManybolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBolusEventCreateManyArgs, 'records'>
+  >;
+  bolusEventCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOnebolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBolusEventCreateOneArgs, 'record'>
+  >;
+  bolusEventRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIdbolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBolusEventRemoveByIdArgs, '_id'>
+  >;
+  bolusEventRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManybolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBolusEventRemoveManyArgs, 'filter' | 'limit'>
+  >;
+  bolusEventRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOnebolusPayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationBolusEventRemoveOneArgs>
+  >;
+  bolusEventUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIdbolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBolusEventUpdateByIdArgs, '_id' | 'record'>
+  >;
+  bolusEventUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManybolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBolusEventUpdateManyArgs, 'limit' | 'record'>
+  >;
+  bolusEventUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOnebolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationBolusEventUpdateOneArgs, 'record'>
+  >;
+  catheterChangeEventCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManycatheterchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCatheterChangeEventCreateManyArgs, 'records'>
+  >;
+  catheterChangeEventCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOnecatheterchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCatheterChangeEventCreateOneArgs, 'record'>
+  >;
+  catheterChangeEventRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIdcatheterchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCatheterChangeEventRemoveByIdArgs, '_id'>
+  >;
+  catheterChangeEventRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManycatheterchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCatheterChangeEventRemoveManyArgs, 'filter' | 'limit'>
+  >;
+  catheterChangeEventRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOnecatheterchangePayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationCatheterChangeEventRemoveOneArgs>
+  >;
+  catheterChangeEventUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIdcatheterchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCatheterChangeEventUpdateByIdArgs, '_id' | 'record'>
+  >;
+  catheterChangeEventUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManycatheterchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCatheterChangeEventUpdateManyArgs, 'limit' | 'record'>
+  >;
+  catheterChangeEventUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOnecatheterchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCatheterChangeEventUpdateOneArgs, 'record'>
+  >;
+  correctionBolusEventCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManycorrectionbolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCorrectionBolusEventCreateManyArgs, 'records'>
+  >;
+  correctionBolusEventCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOnecorrectionbolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCorrectionBolusEventCreateOneArgs, 'record'>
+  >;
+  correctionBolusEventRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIdcorrectionbolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCorrectionBolusEventRemoveByIdArgs, '_id'>
+  >;
+  correctionBolusEventRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManycorrectionbolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<
+      MutationCorrectionBolusEventRemoveManyArgs,
+      'filter' | 'limit'
+    >
+  >;
+  correctionBolusEventRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOnecorrectionbolusPayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationCorrectionBolusEventRemoveOneArgs>
+  >;
+  correctionBolusEventUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIdcorrectionbolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCorrectionBolusEventUpdateByIdArgs, '_id' | 'record'>
+  >;
+  correctionBolusEventUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManycorrectionbolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<
+      MutationCorrectionBolusEventUpdateManyArgs,
+      'limit' | 'record'
+    >
+  >;
+  correctionBolusEventUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOnecorrectionbolusPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationCorrectionBolusEventUpdateOneArgs, 'record'>
+  >;
+  heightEventCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManyheightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationHeightEventCreateManyArgs, 'records'>
+  >;
+  heightEventCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOneheightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationHeightEventCreateOneArgs, 'record'>
+  >;
+  heightEventRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIdheightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationHeightEventRemoveByIdArgs, '_id'>
+  >;
+  heightEventRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManyheightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationHeightEventRemoveManyArgs, 'filter' | 'limit'>
+  >;
+  heightEventRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOneheightPayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationHeightEventRemoveOneArgs>
+  >;
+  heightEventUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIdheightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationHeightEventUpdateByIdArgs, '_id' | 'record'>
+  >;
+  heightEventUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManyheightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationHeightEventUpdateManyArgs, 'limit' | 'record'>
+  >;
+  heightEventUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOneheightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationHeightEventUpdateOneArgs, 'record'>
+  >;
+  login?: Resolver<
+    Maybe<ResolversTypes['AuthToken']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationLoginArgs, 'password' | 'username'>
+  >;
+  pumpBatteryEventCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManypumpbatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationPumpBatteryEventCreateManyArgs, 'records'>
+  >;
+  pumpBatteryEventCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOnepumpbatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationPumpBatteryEventCreateOneArgs, 'record'>
+  >;
+  pumpBatteryEventRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIdpumpbatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationPumpBatteryEventRemoveByIdArgs, '_id'>
+  >;
+  pumpBatteryEventRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManypumpbatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationPumpBatteryEventRemoveManyArgs, 'filter' | 'limit'>
+  >;
+  pumpBatteryEventRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOnepumpbatteryPayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationPumpBatteryEventRemoveOneArgs>
+  >;
+  pumpBatteryEventUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIdpumpbatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationPumpBatteryEventUpdateByIdArgs, '_id' | 'record'>
+  >;
+  pumpBatteryEventUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManypumpbatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationPumpBatteryEventUpdateManyArgs, 'limit' | 'record'>
+  >;
+  pumpBatteryEventUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOnepumpbatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationPumpBatteryEventUpdateOneArgs, 'record'>
+  >;
+  sensorChangeEventCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManysensorchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSensorChangeEventCreateManyArgs, 'records'>
+  >;
+  sensorChangeEventCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOnesensorchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSensorChangeEventCreateOneArgs, 'record'>
+  >;
+  sensorChangeEventRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIdsensorchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSensorChangeEventRemoveByIdArgs, '_id'>
+  >;
+  sensorChangeEventRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManysensorchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSensorChangeEventRemoveManyArgs, 'filter' | 'limit'>
+  >;
+  sensorChangeEventRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOnesensorchangePayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationSensorChangeEventRemoveOneArgs>
+  >;
+  sensorChangeEventUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIdsensorchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSensorChangeEventUpdateByIdArgs, '_id' | 'record'>
+  >;
+  sensorChangeEventUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManysensorchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSensorChangeEventUpdateManyArgs, 'limit' | 'record'>
+  >;
+  sensorChangeEventUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOnesensorchangePayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSensorChangeEventUpdateOneArgs, 'record'>
+  >;
+  smartphoneBatteryEventCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManysmartphonebatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSmartphoneBatteryEventCreateManyArgs, 'records'>
+  >;
+  smartphoneBatteryEventCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOnesmartphonebatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSmartphoneBatteryEventCreateOneArgs, 'record'>
+  >;
+  smartphoneBatteryEventRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIdsmartphonebatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSmartphoneBatteryEventRemoveByIdArgs, '_id'>
+  >;
+  smartphoneBatteryEventRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManysmartphonebatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<
+      MutationSmartphoneBatteryEventRemoveManyArgs,
+      'filter' | 'limit'
+    >
+  >;
+  smartphoneBatteryEventRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOnesmartphonebatteryPayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationSmartphoneBatteryEventRemoveOneArgs>
+  >;
+  smartphoneBatteryEventUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIdsmartphonebatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<
+      MutationSmartphoneBatteryEventUpdateByIdArgs,
+      '_id' | 'record'
+    >
+  >;
+  smartphoneBatteryEventUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManysmartphonebatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<
+      MutationSmartphoneBatteryEventUpdateManyArgs,
+      'limit' | 'record'
+    >
+  >;
+  smartphoneBatteryEventUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOnesmartphonebatteryPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationSmartphoneBatteryEventUpdateOneArgs, 'record'>
+  >;
+  userCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManyuserPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUserCreateManyArgs, 'records'>
+  >;
+  userCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOneuserPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUserCreateOneArgs, 'record'>
+  >;
+  userRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIduserPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUserRemoveByIdArgs, '_id'>
+  >;
+  userRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManyuserPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUserRemoveManyArgs, 'filter' | 'limit'>
+  >;
+  userRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOneuserPayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationUserRemoveOneArgs>
+  >;
+  userUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIduserPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUserUpdateByIdArgs, '_id' | 'record'>
+  >;
+  userUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManyuserPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUserUpdateManyArgs, 'limit' | 'record'>
+  >;
+  userUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOneuserPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationUserUpdateOneArgs, 'record'>
+  >;
+  weightEventCreateMany?: Resolver<
+    Maybe<ResolversTypes['CreateManyweightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationWeightEventCreateManyArgs, 'records'>
+  >;
+  weightEventCreateOne?: Resolver<
+    Maybe<ResolversTypes['CreateOneweightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationWeightEventCreateOneArgs, 'record'>
+  >;
+  weightEventRemoveById?: Resolver<
+    Maybe<ResolversTypes['RemoveByIdweightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationWeightEventRemoveByIdArgs, '_id'>
+  >;
+  weightEventRemoveMany?: Resolver<
+    Maybe<ResolversTypes['RemoveManyweightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationWeightEventRemoveManyArgs, 'filter' | 'limit'>
+  >;
+  weightEventRemoveOne?: Resolver<
+    Maybe<ResolversTypes['RemoveOneweightPayload']>,
+    ParentType,
+    ContextType,
+    Partial<MutationWeightEventRemoveOneArgs>
+  >;
+  weightEventUpdateById?: Resolver<
+    Maybe<ResolversTypes['UpdateByIdweightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationWeightEventUpdateByIdArgs, '_id' | 'record'>
+  >;
+  weightEventUpdateMany?: Resolver<
+    Maybe<ResolversTypes['UpdateManyweightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationWeightEventUpdateManyArgs, 'limit' | 'record'>
+  >;
+  weightEventUpdateOne?: Resolver<
+    Maybe<ResolversTypes['UpdateOneweightPayload']>,
+    ParentType,
+    ContextType,
+    RequireFields<MutationWeightEventUpdateOneArgs, 'record'>
+  >;
 };
 
-export type PageInfoResolvers<ContextType = any, ParentType extends ResolversParentTypes['PageInfo'] = ResolversParentTypes['PageInfo']> = {
-  endCursor?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+export type PageInfoResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['PageInfo'] = ResolversParentTypes['PageInfo']
+> = {
+  endCursor?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >;
   hasNextPage?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
-  hasPreviousPage?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
-  startCursor?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  hasPreviousPage?: Resolver<
+    ResolversTypes['Boolean'],
+    ParentType,
+    ContextType
+  >;
+  startCursor?: Resolver<
+    Maybe<ResolversTypes['String']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type PaginationInfoResolvers<ContextType = any, ParentType extends ResolversParentTypes['PaginationInfo'] = ResolversParentTypes['PaginationInfo']> = {
+export type PaginationInfoResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['PaginationInfo'] = ResolversParentTypes['PaginationInfo']
+> = {
   currentPage?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  hasNextPage?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
-  hasPreviousPage?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
+  hasNextPage?: Resolver<
+    Maybe<ResolversTypes['Boolean']>,
+    ParentType,
+    ContextType
+  >;
+  hasPreviousPage?: Resolver<
+    Maybe<ResolversTypes['Boolean']>,
+    ParentType,
+    ContextType
+  >;
   itemCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   pageCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   perPage?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
-  basalEventById?: Resolver<Maybe<ResolversTypes['basal']>, ParentType, ContextType, RequireFields<QueryBasalEventByIdArgs, '_id'>>;
-  basalEventByIds?: Resolver<Array<ResolversTypes['basal']>, ParentType, ContextType, RequireFields<QueryBasalEventByIdsArgs, '_ids' | 'limit'>>;
-  basalEventConnection?: Resolver<Maybe<ResolversTypes['basalConnection']>, ParentType, ContextType, RequireFields<QueryBasalEventConnectionArgs, 'sort'>>;
-  basalEventCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QueryBasalEventCountArgs>>;
-  basalEventDataLoader?: Resolver<Maybe<ResolversTypes['basal']>, ParentType, ContextType, RequireFields<QueryBasalEventDataLoaderArgs, '_id'>>;
-  basalEventDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['basal']>>, ParentType, ContextType, RequireFields<QueryBasalEventDataLoaderManyArgs, '_ids'>>;
-  basalEventMany?: Resolver<Array<ResolversTypes['basal']>, ParentType, ContextType, RequireFields<QueryBasalEventManyArgs, 'limit'>>;
-  basalEventOne?: Resolver<Maybe<ResolversTypes['basal']>, ParentType, ContextType, Partial<QueryBasalEventOneArgs>>;
-  basalEventPagination?: Resolver<Maybe<ResolversTypes['basalPagination']>, ParentType, ContextType, RequireFields<QueryBasalEventPaginationArgs, 'perPage'>>;
-  bloodSugarEventById?: Resolver<Maybe<ResolversTypes['bloodsugar']>, ParentType, ContextType, RequireFields<QueryBloodSugarEventByIdArgs, '_id'>>;
-  bloodSugarEventByIds?: Resolver<Array<ResolversTypes['bloodsugar']>, ParentType, ContextType, RequireFields<QueryBloodSugarEventByIdsArgs, '_ids' | 'limit'>>;
-  bloodSugarEventConnection?: Resolver<Maybe<ResolversTypes['bloodsugarConnection']>, ParentType, ContextType, RequireFields<QueryBloodSugarEventConnectionArgs, 'sort'>>;
-  bloodSugarEventCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QueryBloodSugarEventCountArgs>>;
-  bloodSugarEventDataLoader?: Resolver<Maybe<ResolversTypes['bloodsugar']>, ParentType, ContextType, RequireFields<QueryBloodSugarEventDataLoaderArgs, '_id'>>;
-  bloodSugarEventDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['bloodsugar']>>, ParentType, ContextType, RequireFields<QueryBloodSugarEventDataLoaderManyArgs, '_ids'>>;
-  bloodSugarEventMany?: Resolver<Array<ResolversTypes['bloodsugar']>, ParentType, ContextType, RequireFields<QueryBloodSugarEventManyArgs, 'limit'>>;
-  bloodSugarEventOne?: Resolver<Maybe<ResolversTypes['bloodsugar']>, ParentType, ContextType, Partial<QueryBloodSugarEventOneArgs>>;
-  bloodSugarEventPagination?: Resolver<Maybe<ResolversTypes['bloodsugarPagination']>, ParentType, ContextType, RequireFields<QueryBloodSugarEventPaginationArgs, 'perPage'>>;
-  bolusEventById?: Resolver<Maybe<ResolversTypes['bolus']>, ParentType, ContextType, RequireFields<QueryBolusEventByIdArgs, '_id'>>;
-  bolusEventByIds?: Resolver<Array<ResolversTypes['bolus']>, ParentType, ContextType, RequireFields<QueryBolusEventByIdsArgs, '_ids' | 'limit'>>;
-  bolusEventConnection?: Resolver<Maybe<ResolversTypes['bolusConnection']>, ParentType, ContextType, RequireFields<QueryBolusEventConnectionArgs, 'sort'>>;
-  bolusEventCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QueryBolusEventCountArgs>>;
-  bolusEventDataLoader?: Resolver<Maybe<ResolversTypes['bolus']>, ParentType, ContextType, RequireFields<QueryBolusEventDataLoaderArgs, '_id'>>;
-  bolusEventDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['bolus']>>, ParentType, ContextType, RequireFields<QueryBolusEventDataLoaderManyArgs, '_ids'>>;
-  bolusEventMany?: Resolver<Array<ResolversTypes['bolus']>, ParentType, ContextType, RequireFields<QueryBolusEventManyArgs, 'limit'>>;
-  bolusEventOne?: Resolver<Maybe<ResolversTypes['bolus']>, ParentType, ContextType, Partial<QueryBolusEventOneArgs>>;
-  bolusEventPagination?: Resolver<Maybe<ResolversTypes['bolusPagination']>, ParentType, ContextType, RequireFields<QueryBolusEventPaginationArgs, 'perPage'>>;
-  catheterChangeEventById?: Resolver<Maybe<ResolversTypes['catheterchange']>, ParentType, ContextType, RequireFields<QueryCatheterChangeEventByIdArgs, '_id'>>;
-  catheterChangeEventByIds?: Resolver<Array<ResolversTypes['catheterchange']>, ParentType, ContextType, RequireFields<QueryCatheterChangeEventByIdsArgs, '_ids' | 'limit'>>;
-  catheterChangeEventConnection?: Resolver<Maybe<ResolversTypes['catheterchangeConnection']>, ParentType, ContextType, RequireFields<QueryCatheterChangeEventConnectionArgs, 'sort'>>;
-  catheterChangeEventCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QueryCatheterChangeEventCountArgs>>;
-  catheterChangeEventDataLoader?: Resolver<Maybe<ResolversTypes['catheterchange']>, ParentType, ContextType, RequireFields<QueryCatheterChangeEventDataLoaderArgs, '_id'>>;
-  catheterChangeEventDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['catheterchange']>>, ParentType, ContextType, RequireFields<QueryCatheterChangeEventDataLoaderManyArgs, '_ids'>>;
-  catheterChangeEventMany?: Resolver<Array<ResolversTypes['catheterchange']>, ParentType, ContextType, RequireFields<QueryCatheterChangeEventManyArgs, 'limit'>>;
-  catheterChangeEventOne?: Resolver<Maybe<ResolversTypes['catheterchange']>, ParentType, ContextType, Partial<QueryCatheterChangeEventOneArgs>>;
-  catheterChangeEventPagination?: Resolver<Maybe<ResolversTypes['catheterchangePagination']>, ParentType, ContextType, RequireFields<QueryCatheterChangeEventPaginationArgs, 'perPage'>>;
-  correctionBolusEventById?: Resolver<Maybe<ResolversTypes['correctionbolus']>, ParentType, ContextType, RequireFields<QueryCorrectionBolusEventByIdArgs, '_id'>>;
-  correctionBolusEventByIds?: Resolver<Array<ResolversTypes['correctionbolus']>, ParentType, ContextType, RequireFields<QueryCorrectionBolusEventByIdsArgs, '_ids' | 'limit'>>;
-  correctionBolusEventConnection?: Resolver<Maybe<ResolversTypes['correctionbolusConnection']>, ParentType, ContextType, RequireFields<QueryCorrectionBolusEventConnectionArgs, 'sort'>>;
-  correctionBolusEventCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QueryCorrectionBolusEventCountArgs>>;
-  correctionBolusEventDataLoader?: Resolver<Maybe<ResolversTypes['correctionbolus']>, ParentType, ContextType, RequireFields<QueryCorrectionBolusEventDataLoaderArgs, '_id'>>;
-  correctionBolusEventDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['correctionbolus']>>, ParentType, ContextType, RequireFields<QueryCorrectionBolusEventDataLoaderManyArgs, '_ids'>>;
-  correctionBolusEventMany?: Resolver<Array<ResolversTypes['correctionbolus']>, ParentType, ContextType, RequireFields<QueryCorrectionBolusEventManyArgs, 'limit'>>;
-  correctionBolusEventOne?: Resolver<Maybe<ResolversTypes['correctionbolus']>, ParentType, ContextType, Partial<QueryCorrectionBolusEventOneArgs>>;
-  correctionBolusEventPagination?: Resolver<Maybe<ResolversTypes['correctionbolusPagination']>, ParentType, ContextType, RequireFields<QueryCorrectionBolusEventPaginationArgs, 'perPage'>>;
-  heightEventById?: Resolver<Maybe<ResolversTypes['height']>, ParentType, ContextType, RequireFields<QueryHeightEventByIdArgs, '_id'>>;
-  heightEventByIds?: Resolver<Array<ResolversTypes['height']>, ParentType, ContextType, RequireFields<QueryHeightEventByIdsArgs, '_ids' | 'limit'>>;
-  heightEventConnection?: Resolver<Maybe<ResolversTypes['heightConnection']>, ParentType, ContextType, RequireFields<QueryHeightEventConnectionArgs, 'sort'>>;
-  heightEventCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QueryHeightEventCountArgs>>;
-  heightEventDataLoader?: Resolver<Maybe<ResolversTypes['height']>, ParentType, ContextType, RequireFields<QueryHeightEventDataLoaderArgs, '_id'>>;
-  heightEventDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['height']>>, ParentType, ContextType, RequireFields<QueryHeightEventDataLoaderManyArgs, '_ids'>>;
-  heightEventMany?: Resolver<Array<ResolversTypes['height']>, ParentType, ContextType, RequireFields<QueryHeightEventManyArgs, 'limit'>>;
-  heightEventOne?: Resolver<Maybe<ResolversTypes['height']>, ParentType, ContextType, Partial<QueryHeightEventOneArgs>>;
-  heightEventPagination?: Resolver<Maybe<ResolversTypes['heightPagination']>, ParentType, ContextType, RequireFields<QueryHeightEventPaginationArgs, 'perPage'>>;
+export type QueryResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']
+> = {
+  basalEventById?: Resolver<
+    Maybe<ResolversTypes['basal']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBasalEventByIdArgs, '_id'>
+  >;
+  basalEventByIds?: Resolver<
+    Array<ResolversTypes['basal']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBasalEventByIdsArgs, '_ids' | 'limit'>
+  >;
+  basalEventConnection?: Resolver<
+    Maybe<ResolversTypes['basalConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBasalEventConnectionArgs, 'sort'>
+  >;
+  basalEventCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QueryBasalEventCountArgs>
+  >;
+  basalEventDataLoader?: Resolver<
+    Maybe<ResolversTypes['basal']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBasalEventDataLoaderArgs, '_id'>
+  >;
+  basalEventDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['basal']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBasalEventDataLoaderManyArgs, '_ids'>
+  >;
+  basalEventMany?: Resolver<
+    Array<ResolversTypes['basal']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBasalEventManyArgs, 'limit'>
+  >;
+  basalEventOne?: Resolver<
+    Maybe<ResolversTypes['basal']>,
+    ParentType,
+    ContextType,
+    Partial<QueryBasalEventOneArgs>
+  >;
+  basalEventPagination?: Resolver<
+    Maybe<ResolversTypes['basalPagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBasalEventPaginationArgs, 'perPage'>
+  >;
+  bloodSugarEventById?: Resolver<
+    Maybe<ResolversTypes['bloodsugar']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBloodSugarEventByIdArgs, '_id'>
+  >;
+  bloodSugarEventByIds?: Resolver<
+    Array<ResolversTypes['bloodsugar']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBloodSugarEventByIdsArgs, '_ids' | 'limit'>
+  >;
+  bloodSugarEventConnection?: Resolver<
+    Maybe<ResolversTypes['bloodsugarConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBloodSugarEventConnectionArgs, 'sort'>
+  >;
+  bloodSugarEventCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QueryBloodSugarEventCountArgs>
+  >;
+  bloodSugarEventDataLoader?: Resolver<
+    Maybe<ResolversTypes['bloodsugar']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBloodSugarEventDataLoaderArgs, '_id'>
+  >;
+  bloodSugarEventDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['bloodsugar']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBloodSugarEventDataLoaderManyArgs, '_ids'>
+  >;
+  bloodSugarEventMany?: Resolver<
+    Array<ResolversTypes['bloodsugar']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBloodSugarEventManyArgs, 'limit'>
+  >;
+  bloodSugarEventOne?: Resolver<
+    Maybe<ResolversTypes['bloodsugar']>,
+    ParentType,
+    ContextType,
+    Partial<QueryBloodSugarEventOneArgs>
+  >;
+  bloodSugarEventPagination?: Resolver<
+    Maybe<ResolversTypes['bloodsugarPagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBloodSugarEventPaginationArgs, 'perPage'>
+  >;
+  bolusEventById?: Resolver<
+    Maybe<ResolversTypes['bolus']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBolusEventByIdArgs, '_id'>
+  >;
+  bolusEventByIds?: Resolver<
+    Array<ResolversTypes['bolus']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBolusEventByIdsArgs, '_ids' | 'limit'>
+  >;
+  bolusEventConnection?: Resolver<
+    Maybe<ResolversTypes['bolusConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBolusEventConnectionArgs, 'sort'>
+  >;
+  bolusEventCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QueryBolusEventCountArgs>
+  >;
+  bolusEventDataLoader?: Resolver<
+    Maybe<ResolversTypes['bolus']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBolusEventDataLoaderArgs, '_id'>
+  >;
+  bolusEventDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['bolus']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBolusEventDataLoaderManyArgs, '_ids'>
+  >;
+  bolusEventMany?: Resolver<
+    Array<ResolversTypes['bolus']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBolusEventManyArgs, 'limit'>
+  >;
+  bolusEventOne?: Resolver<
+    Maybe<ResolversTypes['bolus']>,
+    ParentType,
+    ContextType,
+    Partial<QueryBolusEventOneArgs>
+  >;
+  bolusEventPagination?: Resolver<
+    Maybe<ResolversTypes['bolusPagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryBolusEventPaginationArgs, 'perPage'>
+  >;
+  catheterChangeEventById?: Resolver<
+    Maybe<ResolversTypes['catheterchange']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCatheterChangeEventByIdArgs, '_id'>
+  >;
+  catheterChangeEventByIds?: Resolver<
+    Array<ResolversTypes['catheterchange']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCatheterChangeEventByIdsArgs, '_ids' | 'limit'>
+  >;
+  catheterChangeEventConnection?: Resolver<
+    Maybe<ResolversTypes['catheterchangeConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCatheterChangeEventConnectionArgs, 'sort'>
+  >;
+  catheterChangeEventCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QueryCatheterChangeEventCountArgs>
+  >;
+  catheterChangeEventDataLoader?: Resolver<
+    Maybe<ResolversTypes['catheterchange']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCatheterChangeEventDataLoaderArgs, '_id'>
+  >;
+  catheterChangeEventDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['catheterchange']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCatheterChangeEventDataLoaderManyArgs, '_ids'>
+  >;
+  catheterChangeEventMany?: Resolver<
+    Array<ResolversTypes['catheterchange']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCatheterChangeEventManyArgs, 'limit'>
+  >;
+  catheterChangeEventOne?: Resolver<
+    Maybe<ResolversTypes['catheterchange']>,
+    ParentType,
+    ContextType,
+    Partial<QueryCatheterChangeEventOneArgs>
+  >;
+  catheterChangeEventPagination?: Resolver<
+    Maybe<ResolversTypes['catheterchangePagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCatheterChangeEventPaginationArgs, 'perPage'>
+  >;
+  correctionBolusEventById?: Resolver<
+    Maybe<ResolversTypes['correctionbolus']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCorrectionBolusEventByIdArgs, '_id'>
+  >;
+  correctionBolusEventByIds?: Resolver<
+    Array<ResolversTypes['correctionbolus']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCorrectionBolusEventByIdsArgs, '_ids' | 'limit'>
+  >;
+  correctionBolusEventConnection?: Resolver<
+    Maybe<ResolversTypes['correctionbolusConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCorrectionBolusEventConnectionArgs, 'sort'>
+  >;
+  correctionBolusEventCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QueryCorrectionBolusEventCountArgs>
+  >;
+  correctionBolusEventDataLoader?: Resolver<
+    Maybe<ResolversTypes['correctionbolus']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCorrectionBolusEventDataLoaderArgs, '_id'>
+  >;
+  correctionBolusEventDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['correctionbolus']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCorrectionBolusEventDataLoaderManyArgs, '_ids'>
+  >;
+  correctionBolusEventMany?: Resolver<
+    Array<ResolversTypes['correctionbolus']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCorrectionBolusEventManyArgs, 'limit'>
+  >;
+  correctionBolusEventOne?: Resolver<
+    Maybe<ResolversTypes['correctionbolus']>,
+    ParentType,
+    ContextType,
+    Partial<QueryCorrectionBolusEventOneArgs>
+  >;
+  correctionBolusEventPagination?: Resolver<
+    Maybe<ResolversTypes['correctionbolusPagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryCorrectionBolusEventPaginationArgs, 'perPage'>
+  >;
+  heightEventById?: Resolver<
+    Maybe<ResolversTypes['height']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryHeightEventByIdArgs, '_id'>
+  >;
+  heightEventByIds?: Resolver<
+    Array<ResolversTypes['height']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryHeightEventByIdsArgs, '_ids' | 'limit'>
+  >;
+  heightEventConnection?: Resolver<
+    Maybe<ResolversTypes['heightConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryHeightEventConnectionArgs, 'sort'>
+  >;
+  heightEventCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QueryHeightEventCountArgs>
+  >;
+  heightEventDataLoader?: Resolver<
+    Maybe<ResolversTypes['height']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryHeightEventDataLoaderArgs, '_id'>
+  >;
+  heightEventDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['height']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryHeightEventDataLoaderManyArgs, '_ids'>
+  >;
+  heightEventMany?: Resolver<
+    Array<ResolversTypes['height']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryHeightEventManyArgs, 'limit'>
+  >;
+  heightEventOne?: Resolver<
+    Maybe<ResolversTypes['height']>,
+    ParentType,
+    ContextType,
+    Partial<QueryHeightEventOneArgs>
+  >;
+  heightEventPagination?: Resolver<
+    Maybe<ResolversTypes['heightPagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryHeightEventPaginationArgs, 'perPage'>
+  >;
   me?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
-  pumpBatteryEventById?: Resolver<Maybe<ResolversTypes['pumpbattery']>, ParentType, ContextType, RequireFields<QueryPumpBatteryEventByIdArgs, '_id'>>;
-  pumpBatteryEventByIds?: Resolver<Array<ResolversTypes['pumpbattery']>, ParentType, ContextType, RequireFields<QueryPumpBatteryEventByIdsArgs, '_ids' | 'limit'>>;
-  pumpBatteryEventConnection?: Resolver<Maybe<ResolversTypes['pumpbatteryConnection']>, ParentType, ContextType, RequireFields<QueryPumpBatteryEventConnectionArgs, 'sort'>>;
-  pumpBatteryEventCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QueryPumpBatteryEventCountArgs>>;
-  pumpBatteryEventDataLoader?: Resolver<Maybe<ResolversTypes['pumpbattery']>, ParentType, ContextType, RequireFields<QueryPumpBatteryEventDataLoaderArgs, '_id'>>;
-  pumpBatteryEventDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['pumpbattery']>>, ParentType, ContextType, RequireFields<QueryPumpBatteryEventDataLoaderManyArgs, '_ids'>>;
-  pumpBatteryEventMany?: Resolver<Array<ResolversTypes['pumpbattery']>, ParentType, ContextType, RequireFields<QueryPumpBatteryEventManyArgs, 'limit'>>;
-  pumpBatteryEventOne?: Resolver<Maybe<ResolversTypes['pumpbattery']>, ParentType, ContextType, Partial<QueryPumpBatteryEventOneArgs>>;
-  pumpBatteryEventPagination?: Resolver<Maybe<ResolversTypes['pumpbatteryPagination']>, ParentType, ContextType, RequireFields<QueryPumpBatteryEventPaginationArgs, 'perPage'>>;
-  sensorChangeEventById?: Resolver<Maybe<ResolversTypes['sensorchange']>, ParentType, ContextType, RequireFields<QuerySensorChangeEventByIdArgs, '_id'>>;
-  sensorChangeEventByIds?: Resolver<Array<ResolversTypes['sensorchange']>, ParentType, ContextType, RequireFields<QuerySensorChangeEventByIdsArgs, '_ids' | 'limit'>>;
-  sensorChangeEventConnection?: Resolver<Maybe<ResolversTypes['sensorchangeConnection']>, ParentType, ContextType, RequireFields<QuerySensorChangeEventConnectionArgs, 'sort'>>;
-  sensorChangeEventCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QuerySensorChangeEventCountArgs>>;
-  sensorChangeEventDataLoader?: Resolver<Maybe<ResolversTypes['sensorchange']>, ParentType, ContextType, RequireFields<QuerySensorChangeEventDataLoaderArgs, '_id'>>;
-  sensorChangeEventDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['sensorchange']>>, ParentType, ContextType, RequireFields<QuerySensorChangeEventDataLoaderManyArgs, '_ids'>>;
-  sensorChangeEventMany?: Resolver<Array<ResolversTypes['sensorchange']>, ParentType, ContextType, RequireFields<QuerySensorChangeEventManyArgs, 'limit'>>;
-  sensorChangeEventOne?: Resolver<Maybe<ResolversTypes['sensorchange']>, ParentType, ContextType, Partial<QuerySensorChangeEventOneArgs>>;
-  sensorChangeEventPagination?: Resolver<Maybe<ResolversTypes['sensorchangePagination']>, ParentType, ContextType, RequireFields<QuerySensorChangeEventPaginationArgs, 'perPage'>>;
-  smartphoneBatteryEventById?: Resolver<Maybe<ResolversTypes['smartphonebattery']>, ParentType, ContextType, RequireFields<QuerySmartphoneBatteryEventByIdArgs, '_id'>>;
-  smartphoneBatteryEventByIds?: Resolver<Array<ResolversTypes['smartphonebattery']>, ParentType, ContextType, RequireFields<QuerySmartphoneBatteryEventByIdsArgs, '_ids' | 'limit'>>;
-  smartphoneBatteryEventConnection?: Resolver<Maybe<ResolversTypes['smartphonebatteryConnection']>, ParentType, ContextType, RequireFields<QuerySmartphoneBatteryEventConnectionArgs, 'sort'>>;
-  smartphoneBatteryEventCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QuerySmartphoneBatteryEventCountArgs>>;
-  smartphoneBatteryEventDataLoader?: Resolver<Maybe<ResolversTypes['smartphonebattery']>, ParentType, ContextType, RequireFields<QuerySmartphoneBatteryEventDataLoaderArgs, '_id'>>;
-  smartphoneBatteryEventDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['smartphonebattery']>>, ParentType, ContextType, RequireFields<QuerySmartphoneBatteryEventDataLoaderManyArgs, '_ids'>>;
-  smartphoneBatteryEventMany?: Resolver<Array<ResolversTypes['smartphonebattery']>, ParentType, ContextType, RequireFields<QuerySmartphoneBatteryEventManyArgs, 'limit'>>;
-  smartphoneBatteryEventOne?: Resolver<Maybe<ResolversTypes['smartphonebattery']>, ParentType, ContextType, Partial<QuerySmartphoneBatteryEventOneArgs>>;
-  smartphoneBatteryEventPagination?: Resolver<Maybe<ResolversTypes['smartphonebatteryPagination']>, ParentType, ContextType, RequireFields<QuerySmartphoneBatteryEventPaginationArgs, 'perPage'>>;
-  userById?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType, RequireFields<QueryUserByIdArgs, '_id'>>;
-  userByIdLean?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType, RequireFields<QueryUserByIdLeanArgs, '_id'>>;
-  userByIds?: Resolver<Array<ResolversTypes['user']>, ParentType, ContextType, RequireFields<QueryUserByIdsArgs, '_ids' | 'limit'>>;
-  userByIdsLean?: Resolver<Array<ResolversTypes['user']>, ParentType, ContextType, RequireFields<QueryUserByIdsLeanArgs, '_ids' | 'limit'>>;
-  userConnection?: Resolver<Maybe<ResolversTypes['userConnection']>, ParentType, ContextType, RequireFields<QueryUserConnectionArgs, 'sort'>>;
-  userCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QueryUserCountArgs>>;
-  userDataLoader?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType, RequireFields<QueryUserDataLoaderArgs, '_id'>>;
-  userDataLoaderLean?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType, RequireFields<QueryUserDataLoaderLeanArgs, '_id'>>;
-  userDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['user']>>, ParentType, ContextType, RequireFields<QueryUserDataLoaderManyArgs, '_ids'>>;
-  userDataLoaderManyLean?: Resolver<Array<Maybe<ResolversTypes['user']>>, ParentType, ContextType, RequireFields<QueryUserDataLoaderManyLeanArgs, '_ids'>>;
-  userMany?: Resolver<Array<ResolversTypes['user']>, ParentType, ContextType, RequireFields<QueryUserManyArgs, 'limit'>>;
-  userManyLean?: Resolver<Array<ResolversTypes['user']>, ParentType, ContextType, RequireFields<QueryUserManyLeanArgs, 'limit'>>;
-  userOne?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType, Partial<QueryUserOneArgs>>;
-  userOneLean?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType, Partial<QueryUserOneLeanArgs>>;
-  userPagination?: Resolver<Maybe<ResolversTypes['userPagination']>, ParentType, ContextType, RequireFields<QueryUserPaginationArgs, 'perPage'>>;
-  weightEventById?: Resolver<Maybe<ResolversTypes['weight']>, ParentType, ContextType, RequireFields<QueryWeightEventByIdArgs, '_id'>>;
-  weightEventByIds?: Resolver<Array<ResolversTypes['weight']>, ParentType, ContextType, RequireFields<QueryWeightEventByIdsArgs, '_ids' | 'limit'>>;
-  weightEventConnection?: Resolver<Maybe<ResolversTypes['weightConnection']>, ParentType, ContextType, RequireFields<QueryWeightEventConnectionArgs, 'sort'>>;
-  weightEventCount?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType, Partial<QueryWeightEventCountArgs>>;
-  weightEventDataLoader?: Resolver<Maybe<ResolversTypes['weight']>, ParentType, ContextType, RequireFields<QueryWeightEventDataLoaderArgs, '_id'>>;
-  weightEventDataLoaderMany?: Resolver<Array<Maybe<ResolversTypes['weight']>>, ParentType, ContextType, RequireFields<QueryWeightEventDataLoaderManyArgs, '_ids'>>;
-  weightEventMany?: Resolver<Array<ResolversTypes['weight']>, ParentType, ContextType, RequireFields<QueryWeightEventManyArgs, 'limit'>>;
-  weightEventOne?: Resolver<Maybe<ResolversTypes['weight']>, ParentType, ContextType, Partial<QueryWeightEventOneArgs>>;
-  weightEventPagination?: Resolver<Maybe<ResolversTypes['weightPagination']>, ParentType, ContextType, RequireFields<QueryWeightEventPaginationArgs, 'perPage'>>;
+  pumpBatteryEventById?: Resolver<
+    Maybe<ResolversTypes['pumpbattery']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryPumpBatteryEventByIdArgs, '_id'>
+  >;
+  pumpBatteryEventByIds?: Resolver<
+    Array<ResolversTypes['pumpbattery']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryPumpBatteryEventByIdsArgs, '_ids' | 'limit'>
+  >;
+  pumpBatteryEventConnection?: Resolver<
+    Maybe<ResolversTypes['pumpbatteryConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryPumpBatteryEventConnectionArgs, 'sort'>
+  >;
+  pumpBatteryEventCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QueryPumpBatteryEventCountArgs>
+  >;
+  pumpBatteryEventDataLoader?: Resolver<
+    Maybe<ResolversTypes['pumpbattery']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryPumpBatteryEventDataLoaderArgs, '_id'>
+  >;
+  pumpBatteryEventDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['pumpbattery']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryPumpBatteryEventDataLoaderManyArgs, '_ids'>
+  >;
+  pumpBatteryEventMany?: Resolver<
+    Array<ResolversTypes['pumpbattery']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryPumpBatteryEventManyArgs, 'limit'>
+  >;
+  pumpBatteryEventOne?: Resolver<
+    Maybe<ResolversTypes['pumpbattery']>,
+    ParentType,
+    ContextType,
+    Partial<QueryPumpBatteryEventOneArgs>
+  >;
+  pumpBatteryEventPagination?: Resolver<
+    Maybe<ResolversTypes['pumpbatteryPagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryPumpBatteryEventPaginationArgs, 'perPage'>
+  >;
+  sensorChangeEventById?: Resolver<
+    Maybe<ResolversTypes['sensorchange']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySensorChangeEventByIdArgs, '_id'>
+  >;
+  sensorChangeEventByIds?: Resolver<
+    Array<ResolversTypes['sensorchange']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySensorChangeEventByIdsArgs, '_ids' | 'limit'>
+  >;
+  sensorChangeEventConnection?: Resolver<
+    Maybe<ResolversTypes['sensorchangeConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySensorChangeEventConnectionArgs, 'sort'>
+  >;
+  sensorChangeEventCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QuerySensorChangeEventCountArgs>
+  >;
+  sensorChangeEventDataLoader?: Resolver<
+    Maybe<ResolversTypes['sensorchange']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySensorChangeEventDataLoaderArgs, '_id'>
+  >;
+  sensorChangeEventDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['sensorchange']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySensorChangeEventDataLoaderManyArgs, '_ids'>
+  >;
+  sensorChangeEventMany?: Resolver<
+    Array<ResolversTypes['sensorchange']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySensorChangeEventManyArgs, 'limit'>
+  >;
+  sensorChangeEventOne?: Resolver<
+    Maybe<ResolversTypes['sensorchange']>,
+    ParentType,
+    ContextType,
+    Partial<QuerySensorChangeEventOneArgs>
+  >;
+  sensorChangeEventPagination?: Resolver<
+    Maybe<ResolversTypes['sensorchangePagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySensorChangeEventPaginationArgs, 'perPage'>
+  >;
+  smartphoneBatteryEventById?: Resolver<
+    Maybe<ResolversTypes['smartphonebattery']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySmartphoneBatteryEventByIdArgs, '_id'>
+  >;
+  smartphoneBatteryEventByIds?: Resolver<
+    Array<ResolversTypes['smartphonebattery']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySmartphoneBatteryEventByIdsArgs, '_ids' | 'limit'>
+  >;
+  smartphoneBatteryEventConnection?: Resolver<
+    Maybe<ResolversTypes['smartphonebatteryConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySmartphoneBatteryEventConnectionArgs, 'sort'>
+  >;
+  smartphoneBatteryEventCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QuerySmartphoneBatteryEventCountArgs>
+  >;
+  smartphoneBatteryEventDataLoader?: Resolver<
+    Maybe<ResolversTypes['smartphonebattery']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySmartphoneBatteryEventDataLoaderArgs, '_id'>
+  >;
+  smartphoneBatteryEventDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['smartphonebattery']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySmartphoneBatteryEventDataLoaderManyArgs, '_ids'>
+  >;
+  smartphoneBatteryEventMany?: Resolver<
+    Array<ResolversTypes['smartphonebattery']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySmartphoneBatteryEventManyArgs, 'limit'>
+  >;
+  smartphoneBatteryEventOne?: Resolver<
+    Maybe<ResolversTypes['smartphonebattery']>,
+    ParentType,
+    ContextType,
+    Partial<QuerySmartphoneBatteryEventOneArgs>
+  >;
+  smartphoneBatteryEventPagination?: Resolver<
+    Maybe<ResolversTypes['smartphonebatteryPagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QuerySmartphoneBatteryEventPaginationArgs, 'perPage'>
+  >;
+  userById?: Resolver<
+    Maybe<ResolversTypes['user']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserByIdArgs, '_id'>
+  >;
+  userByIdLean?: Resolver<
+    Maybe<ResolversTypes['user']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserByIdLeanArgs, '_id'>
+  >;
+  userByIds?: Resolver<
+    Array<ResolversTypes['user']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserByIdsArgs, '_ids' | 'limit'>
+  >;
+  userByIdsLean?: Resolver<
+    Array<ResolversTypes['user']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserByIdsLeanArgs, '_ids' | 'limit'>
+  >;
+  userConnection?: Resolver<
+    Maybe<ResolversTypes['userConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserConnectionArgs, 'sort'>
+  >;
+  userCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QueryUserCountArgs>
+  >;
+  userDataLoader?: Resolver<
+    Maybe<ResolversTypes['user']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserDataLoaderArgs, '_id'>
+  >;
+  userDataLoaderLean?: Resolver<
+    Maybe<ResolversTypes['user']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserDataLoaderLeanArgs, '_id'>
+  >;
+  userDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['user']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserDataLoaderManyArgs, '_ids'>
+  >;
+  userDataLoaderManyLean?: Resolver<
+    Array<Maybe<ResolversTypes['user']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserDataLoaderManyLeanArgs, '_ids'>
+  >;
+  userMany?: Resolver<
+    Array<ResolversTypes['user']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserManyArgs, 'limit'>
+  >;
+  userManyLean?: Resolver<
+    Array<ResolversTypes['user']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserManyLeanArgs, 'limit'>
+  >;
+  userOne?: Resolver<
+    Maybe<ResolversTypes['user']>,
+    ParentType,
+    ContextType,
+    Partial<QueryUserOneArgs>
+  >;
+  userOneLean?: Resolver<
+    Maybe<ResolversTypes['user']>,
+    ParentType,
+    ContextType,
+    Partial<QueryUserOneLeanArgs>
+  >;
+  userPagination?: Resolver<
+    Maybe<ResolversTypes['userPagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryUserPaginationArgs, 'perPage'>
+  >;
+  weightEventById?: Resolver<
+    Maybe<ResolversTypes['weight']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryWeightEventByIdArgs, '_id'>
+  >;
+  weightEventByIds?: Resolver<
+    Array<ResolversTypes['weight']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryWeightEventByIdsArgs, '_ids' | 'limit'>
+  >;
+  weightEventConnection?: Resolver<
+    Maybe<ResolversTypes['weightConnection']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryWeightEventConnectionArgs, 'sort'>
+  >;
+  weightEventCount?: Resolver<
+    Maybe<ResolversTypes['Int']>,
+    ParentType,
+    ContextType,
+    Partial<QueryWeightEventCountArgs>
+  >;
+  weightEventDataLoader?: Resolver<
+    Maybe<ResolversTypes['weight']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryWeightEventDataLoaderArgs, '_id'>
+  >;
+  weightEventDataLoaderMany?: Resolver<
+    Array<Maybe<ResolversTypes['weight']>>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryWeightEventDataLoaderManyArgs, '_ids'>
+  >;
+  weightEventMany?: Resolver<
+    Array<ResolversTypes['weight']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryWeightEventManyArgs, 'limit'>
+  >;
+  weightEventOne?: Resolver<
+    Maybe<ResolversTypes['weight']>,
+    ParentType,
+    ContextType,
+    Partial<QueryWeightEventOneArgs>
+  >;
+  weightEventPagination?: Resolver<
+    Maybe<ResolversTypes['weightPagination']>,
+    ParentType,
+    ContextType,
+    RequireFields<QueryWeightEventPaginationArgs, 'perPage'>
+  >;
 };
 
-export type RemoveByIdbasalPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIdbasalPayload'] = ResolversParentTypes['RemoveByIdbasalPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveByIdbasalPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIdbasalPayload'] = ResolversParentTypes['RemoveByIdbasalPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['basal']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveByIdbloodsugarPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIdbloodsugarPayload'] = ResolversParentTypes['RemoveByIdbloodsugarPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['bloodsugar']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveByIdbloodsugarPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIdbloodsugarPayload'] = ResolversParentTypes['RemoveByIdbloodsugarPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['bloodsugar']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveByIdbolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIdbolusPayload'] = ResolversParentTypes['RemoveByIdbolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveByIdbolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIdbolusPayload'] = ResolversParentTypes['RemoveByIdbolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['bolus']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveByIdcatheterchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIdcatheterchangePayload'] = ResolversParentTypes['RemoveByIdcatheterchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['catheterchange']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveByIdcatheterchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIdcatheterchangePayload'] = ResolversParentTypes['RemoveByIdcatheterchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['catheterchange']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveByIdcorrectionbolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIdcorrectionbolusPayload'] = ResolversParentTypes['RemoveByIdcorrectionbolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['correctionbolus']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveByIdcorrectionbolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIdcorrectionbolusPayload'] = ResolversParentTypes['RemoveByIdcorrectionbolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['correctionbolus']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveByIdheightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIdheightPayload'] = ResolversParentTypes['RemoveByIdheightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveByIdheightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIdheightPayload'] = ResolversParentTypes['RemoveByIdheightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['height']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveByIdpumpbatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIdpumpbatteryPayload'] = ResolversParentTypes['RemoveByIdpumpbatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['pumpbattery']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveByIdpumpbatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIdpumpbatteryPayload'] = ResolversParentTypes['RemoveByIdpumpbatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['pumpbattery']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveByIdsensorchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIdsensorchangePayload'] = ResolversParentTypes['RemoveByIdsensorchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['sensorchange']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveByIdsensorchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIdsensorchangePayload'] = ResolversParentTypes['RemoveByIdsensorchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['sensorchange']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveByIdsmartphonebatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIdsmartphonebatteryPayload'] = ResolversParentTypes['RemoveByIdsmartphonebatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['smartphonebattery']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveByIdsmartphonebatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIdsmartphonebatteryPayload'] = ResolversParentTypes['RemoveByIdsmartphonebatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['smartphonebattery']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveByIduserPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIduserPayload'] = ResolversParentTypes['RemoveByIduserPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveByIduserPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIduserPayload'] = ResolversParentTypes['RemoveByIduserPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveByIdweightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveByIdweightPayload'] = ResolversParentTypes['RemoveByIdweightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveByIdweightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveByIdweightPayload'] = ResolversParentTypes['RemoveByIdweightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['weight']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManybasalPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManybasalPayload'] = ResolversParentTypes['RemoveManybasalPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManybasalPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManybasalPayload'] = ResolversParentTypes['RemoveManybasalPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManybloodsugarPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManybloodsugarPayload'] = ResolversParentTypes['RemoveManybloodsugarPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManybloodsugarPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManybloodsugarPayload'] = ResolversParentTypes['RemoveManybloodsugarPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManybolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManybolusPayload'] = ResolversParentTypes['RemoveManybolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManybolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManybolusPayload'] = ResolversParentTypes['RemoveManybolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManycatheterchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManycatheterchangePayload'] = ResolversParentTypes['RemoveManycatheterchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManycatheterchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManycatheterchangePayload'] = ResolversParentTypes['RemoveManycatheterchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManycorrectionbolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManycorrectionbolusPayload'] = ResolversParentTypes['RemoveManycorrectionbolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManycorrectionbolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManycorrectionbolusPayload'] = ResolversParentTypes['RemoveManycorrectionbolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManyheightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManyheightPayload'] = ResolversParentTypes['RemoveManyheightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManyheightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManyheightPayload'] = ResolversParentTypes['RemoveManyheightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManypumpbatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManypumpbatteryPayload'] = ResolversParentTypes['RemoveManypumpbatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManypumpbatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManypumpbatteryPayload'] = ResolversParentTypes['RemoveManypumpbatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManysensorchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManysensorchangePayload'] = ResolversParentTypes['RemoveManysensorchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManysensorchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManysensorchangePayload'] = ResolversParentTypes['RemoveManysensorchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManysmartphonebatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManysmartphonebatteryPayload'] = ResolversParentTypes['RemoveManysmartphonebatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManysmartphonebatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManysmartphonebatteryPayload'] = ResolversParentTypes['RemoveManysmartphonebatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManyuserPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManyuserPayload'] = ResolversParentTypes['RemoveManyuserPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManyuserPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManyuserPayload'] = ResolversParentTypes['RemoveManyuserPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveManyweightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveManyweightPayload'] = ResolversParentTypes['RemoveManyweightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveManyweightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveManyweightPayload'] = ResolversParentTypes['RemoveManyweightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOnebasalPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOnebasalPayload'] = ResolversParentTypes['RemoveOnebasalPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveOnebasalPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOnebasalPayload'] = ResolversParentTypes['RemoveOnebasalPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['basal']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOnebloodsugarPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOnebloodsugarPayload'] = ResolversParentTypes['RemoveOnebloodsugarPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['bloodsugar']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveOnebloodsugarPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOnebloodsugarPayload'] = ResolversParentTypes['RemoveOnebloodsugarPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['bloodsugar']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOnebolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOnebolusPayload'] = ResolversParentTypes['RemoveOnebolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveOnebolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOnebolusPayload'] = ResolversParentTypes['RemoveOnebolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['bolus']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOnecatheterchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOnecatheterchangePayload'] = ResolversParentTypes['RemoveOnecatheterchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['catheterchange']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveOnecatheterchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOnecatheterchangePayload'] = ResolversParentTypes['RemoveOnecatheterchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['catheterchange']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOnecorrectionbolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOnecorrectionbolusPayload'] = ResolversParentTypes['RemoveOnecorrectionbolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['correctionbolus']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveOnecorrectionbolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOnecorrectionbolusPayload'] = ResolversParentTypes['RemoveOnecorrectionbolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['correctionbolus']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOneheightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOneheightPayload'] = ResolversParentTypes['RemoveOneheightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveOneheightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOneheightPayload'] = ResolversParentTypes['RemoveOneheightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['height']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOnepumpbatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOnepumpbatteryPayload'] = ResolversParentTypes['RemoveOnepumpbatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['pumpbattery']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveOnepumpbatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOnepumpbatteryPayload'] = ResolversParentTypes['RemoveOnepumpbatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['pumpbattery']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOnesensorchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOnesensorchangePayload'] = ResolversParentTypes['RemoveOnesensorchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['sensorchange']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveOnesensorchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOnesensorchangePayload'] = ResolversParentTypes['RemoveOnesensorchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['sensorchange']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOnesmartphonebatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOnesmartphonebatteryPayload'] = ResolversParentTypes['RemoveOnesmartphonebatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['smartphonebattery']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type RemoveOnesmartphonebatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOnesmartphonebatteryPayload'] = ResolversParentTypes['RemoveOnesmartphonebatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['smartphonebattery']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOneuserPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOneuserPayload'] = ResolversParentTypes['RemoveOneuserPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveOneuserPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOneuserPayload'] = ResolversParentTypes['RemoveOneuserPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RemoveOneweightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['RemoveOneweightPayload'] = ResolversParentTypes['RemoveOneweightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type RemoveOneweightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RemoveOneweightPayload'] = ResolversParentTypes['RemoveOneweightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['weight']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type RuntimeErrorResolvers<ContextType = any, ParentType extends ResolversParentTypes['RuntimeError'] = ResolversParentTypes['RuntimeError']> = {
+export type RuntimeErrorResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['RuntimeError'] = ResolversParentTypes['RuntimeError']
+> = {
   message?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIdbasalPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIdbasalPayload'] = ResolversParentTypes['UpdateByIdbasalPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateByIdbasalPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIdbasalPayload'] = ResolversParentTypes['UpdateByIdbasalPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['basal']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIdbloodsugarPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIdbloodsugarPayload'] = ResolversParentTypes['UpdateByIdbloodsugarPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['bloodsugar']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateByIdbloodsugarPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIdbloodsugarPayload'] = ResolversParentTypes['UpdateByIdbloodsugarPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['bloodsugar']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIdbolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIdbolusPayload'] = ResolversParentTypes['UpdateByIdbolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateByIdbolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIdbolusPayload'] = ResolversParentTypes['UpdateByIdbolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['bolus']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIdcatheterchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIdcatheterchangePayload'] = ResolversParentTypes['UpdateByIdcatheterchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['catheterchange']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateByIdcatheterchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIdcatheterchangePayload'] = ResolversParentTypes['UpdateByIdcatheterchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['catheterchange']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIdcorrectionbolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIdcorrectionbolusPayload'] = ResolversParentTypes['UpdateByIdcorrectionbolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['correctionbolus']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateByIdcorrectionbolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIdcorrectionbolusPayload'] = ResolversParentTypes['UpdateByIdcorrectionbolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['correctionbolus']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIdheightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIdheightPayload'] = ResolversParentTypes['UpdateByIdheightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateByIdheightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIdheightPayload'] = ResolversParentTypes['UpdateByIdheightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['height']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIdpumpbatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIdpumpbatteryPayload'] = ResolversParentTypes['UpdateByIdpumpbatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['pumpbattery']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateByIdpumpbatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIdpumpbatteryPayload'] = ResolversParentTypes['UpdateByIdpumpbatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['pumpbattery']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIdsensorchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIdsensorchangePayload'] = ResolversParentTypes['UpdateByIdsensorchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['sensorchange']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateByIdsensorchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIdsensorchangePayload'] = ResolversParentTypes['UpdateByIdsensorchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['sensorchange']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIdsmartphonebatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIdsmartphonebatteryPayload'] = ResolversParentTypes['UpdateByIdsmartphonebatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['smartphonebattery']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateByIdsmartphonebatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIdsmartphonebatteryPayload'] = ResolversParentTypes['UpdateByIdsmartphonebatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['smartphonebattery']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIduserPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIduserPayload'] = ResolversParentTypes['UpdateByIduserPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateByIduserPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIduserPayload'] = ResolversParentTypes['UpdateByIduserPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateByIdweightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateByIdweightPayload'] = ResolversParentTypes['UpdateByIdweightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateByIdweightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateByIdweightPayload'] = ResolversParentTypes['UpdateByIdweightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['weight']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManybasalPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManybasalPayload'] = ResolversParentTypes['UpdateManybasalPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManybasalPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManybasalPayload'] = ResolversParentTypes['UpdateManybasalPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManybloodsugarPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManybloodsugarPayload'] = ResolversParentTypes['UpdateManybloodsugarPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManybloodsugarPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManybloodsugarPayload'] = ResolversParentTypes['UpdateManybloodsugarPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManybolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManybolusPayload'] = ResolversParentTypes['UpdateManybolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManybolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManybolusPayload'] = ResolversParentTypes['UpdateManybolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManycatheterchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManycatheterchangePayload'] = ResolversParentTypes['UpdateManycatheterchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManycatheterchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManycatheterchangePayload'] = ResolversParentTypes['UpdateManycatheterchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManycorrectionbolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManycorrectionbolusPayload'] = ResolversParentTypes['UpdateManycorrectionbolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManycorrectionbolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManycorrectionbolusPayload'] = ResolversParentTypes['UpdateManycorrectionbolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManyheightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManyheightPayload'] = ResolversParentTypes['UpdateManyheightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManyheightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManyheightPayload'] = ResolversParentTypes['UpdateManyheightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManypumpbatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManypumpbatteryPayload'] = ResolversParentTypes['UpdateManypumpbatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManypumpbatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManypumpbatteryPayload'] = ResolversParentTypes['UpdateManypumpbatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManysensorchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManysensorchangePayload'] = ResolversParentTypes['UpdateManysensorchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManysensorchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManysensorchangePayload'] = ResolversParentTypes['UpdateManysensorchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManysmartphonebatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManysmartphonebatteryPayload'] = ResolversParentTypes['UpdateManysmartphonebatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManysmartphonebatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManysmartphonebatteryPayload'] = ResolversParentTypes['UpdateManysmartphonebatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManyuserPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManyuserPayload'] = ResolversParentTypes['UpdateManyuserPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManyuserPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManyuserPayload'] = ResolversParentTypes['UpdateManyuserPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateManyweightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateManyweightPayload'] = ResolversParentTypes['UpdateManyweightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateManyweightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateManyweightPayload'] = ResolversParentTypes['UpdateManyweightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   numAffected?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOnebasalPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOnebasalPayload'] = ResolversParentTypes['UpdateOnebasalPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateOnebasalPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOnebasalPayload'] = ResolversParentTypes['UpdateOnebasalPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['basal']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOnebloodsugarPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOnebloodsugarPayload'] = ResolversParentTypes['UpdateOnebloodsugarPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['bloodsugar']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateOnebloodsugarPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOnebloodsugarPayload'] = ResolversParentTypes['UpdateOnebloodsugarPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['bloodsugar']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOnebolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOnebolusPayload'] = ResolversParentTypes['UpdateOnebolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateOnebolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOnebolusPayload'] = ResolversParentTypes['UpdateOnebolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['bolus']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOnecatheterchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOnecatheterchangePayload'] = ResolversParentTypes['UpdateOnecatheterchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['catheterchange']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateOnecatheterchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOnecatheterchangePayload'] = ResolversParentTypes['UpdateOnecatheterchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['catheterchange']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOnecorrectionbolusPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOnecorrectionbolusPayload'] = ResolversParentTypes['UpdateOnecorrectionbolusPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['correctionbolus']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateOnecorrectionbolusPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOnecorrectionbolusPayload'] = ResolversParentTypes['UpdateOnecorrectionbolusPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['correctionbolus']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOneheightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOneheightPayload'] = ResolversParentTypes['UpdateOneheightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateOneheightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOneheightPayload'] = ResolversParentTypes['UpdateOneheightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['height']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOnepumpbatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOnepumpbatteryPayload'] = ResolversParentTypes['UpdateOnepumpbatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['pumpbattery']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateOnepumpbatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOnepumpbatteryPayload'] = ResolversParentTypes['UpdateOnepumpbatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['pumpbattery']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOnesensorchangePayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOnesensorchangePayload'] = ResolversParentTypes['UpdateOnesensorchangePayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['sensorchange']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateOnesensorchangePayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOnesensorchangePayload'] = ResolversParentTypes['UpdateOnesensorchangePayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['sensorchange']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOnesmartphonebatteryPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOnesmartphonebatteryPayload'] = ResolversParentTypes['UpdateOnesmartphonebatteryPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
-  record?: Resolver<Maybe<ResolversTypes['smartphonebattery']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+export type UpdateOnesmartphonebatteryPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOnesmartphonebatteryPayload'] = ResolversParentTypes['UpdateOnesmartphonebatteryPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
+  record?: Resolver<
+    Maybe<ResolversTypes['smartphonebattery']>,
+    ParentType,
+    ContextType
+  >;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOneuserPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOneuserPayload'] = ResolversParentTypes['UpdateOneuserPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateOneuserPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOneuserPayload'] = ResolversParentTypes['UpdateOneuserPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UpdateOneweightPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['UpdateOneweightPayload'] = ResolversParentTypes['UpdateOneweightPayload']> = {
-  error?: Resolver<Maybe<ResolversTypes['ErrorInterface']>, ParentType, ContextType>;
+export type UpdateOneweightPayloadResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['UpdateOneweightPayload'] = ResolversParentTypes['UpdateOneweightPayload']
+> = {
+  error?: Resolver<
+    Maybe<ResolversTypes['ErrorInterface']>,
+    ParentType,
+    ContextType
+  >;
   record?: Resolver<Maybe<ResolversTypes['weight']>, ParentType, ContextType>;
-  recordId?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
+  recordId?: Resolver<
+    Maybe<ResolversTypes['MongoID']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type ValidationErrorResolvers<ContextType = any, ParentType extends ResolversParentTypes['ValidationError'] = ResolversParentTypes['ValidationError']> = {
-  errors?: Resolver<Maybe<Array<ResolversTypes['ValidatorError']>>, ParentType, ContextType>;
+export type ValidationErrorResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ValidationError'] = ResolversParentTypes['ValidationError']
+> = {
+  errors?: Resolver<
+    Maybe<Array<ResolversTypes['ValidatorError']>>,
+    ParentType,
+    ContextType
+  >;
   message?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type ValidatorErrorResolvers<ContextType = any, ParentType extends ResolversParentTypes['ValidatorError'] = ResolversParentTypes['ValidatorError']> = {
+export type ValidatorErrorResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['ValidatorError'] = ResolversParentTypes['ValidatorError']
+> = {
   idx?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   message?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   path?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -7875,7 +9854,10 @@ export type ValidatorErrorResolvers<ContextType = any, ParentType extends Resolv
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BasalResolvers<ContextType = any, ParentType extends ResolversParentTypes['basal'] = ResolversParentTypes['basal']> = {
+export type BasalResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['basal'] = ResolversParentTypes['basal']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
@@ -7907,31 +9889,55 @@ export type BasalResolvers<ContextType = any, ParentType extends ResolversParent
   t_21?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   t_22?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   t_23?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BasalConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['basalConnection'] = ResolversParentTypes['basalConnection']> = {
+export type BasalConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['basalConnection'] = ResolversParentTypes['basalConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   edges?: Resolver<Array<ResolversTypes['basalEdge']>, ParentType, ContextType>;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BasalEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['basalEdge'] = ResolversParentTypes['basalEdge']> = {
+export type BasalEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['basalEdge'] = ResolversParentTypes['basalEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['basal'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BasalPaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['basalPagination'] = ResolversParentTypes['basalPagination']> = {
+export type BasalPaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['basalPagination'] = ResolversParentTypes['basalPagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['basal']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['basal']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BloodsugarResolvers<ContextType = any, ParentType extends ResolversParentTypes['bloodsugar'] = ResolversParentTypes['bloodsugar']> = {
+export type BloodsugarResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['bloodsugar'] = ResolversParentTypes['bloodsugar']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
@@ -7939,121 +9945,235 @@ export type BloodsugarResolvers<ContextType = any, ParentType extends ResolversP
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  tendency?: Resolver<ResolversTypes['EnumbloodsugarTendency'], ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  tendency?: Resolver<
+    ResolversTypes['EnumbloodsugarTendency'],
+    ParentType,
+    ContextType
+  >;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
   value?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BloodsugarConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['bloodsugarConnection'] = ResolversParentTypes['bloodsugarConnection']> = {
+export type BloodsugarConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['bloodsugarConnection'] = ResolversParentTypes['bloodsugarConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  edges?: Resolver<Array<ResolversTypes['bloodsugarEdge']>, ParentType, ContextType>;
+  edges?: Resolver<
+    Array<ResolversTypes['bloodsugarEdge']>,
+    ParentType,
+    ContextType
+  >;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BloodsugarEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['bloodsugarEdge'] = ResolversParentTypes['bloodsugarEdge']> = {
+export type BloodsugarEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['bloodsugarEdge'] = ResolversParentTypes['bloodsugarEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['bloodsugar'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BloodsugarPaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['bloodsugarPagination'] = ResolversParentTypes['bloodsugarPagination']> = {
+export type BloodsugarPaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['bloodsugarPagination'] = ResolversParentTypes['bloodsugarPagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['bloodsugar']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['bloodsugar']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BolusResolvers<ContextType = any, ParentType extends ResolversParentTypes['bolus'] = ResolversParentTypes['bolus']> = {
+export type BolusResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['bolus'] = ResolversParentTypes['bolus']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
-  calculated?: Resolver<Maybe<ResolversTypes['bolusCalculated']>, ParentType, ContextType>;
+  calculated?: Resolver<
+    Maybe<ResolversTypes['bolusCalculated']>,
+    ParentType,
+    ContextType
+  >;
   carbonHydrates?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
   factor?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   id?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
-  mode?: Resolver<Maybe<ResolversTypes['EnumbolusMode']>, ParentType, ContextType>;
+  mode?: Resolver<
+    Maybe<ResolversTypes['EnumbolusMode']>,
+    ParentType,
+    ContextType
+  >;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
-  units?: Resolver<Array<Maybe<ResolversTypes['bolusUnits']>>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
+  units?: Resolver<
+    Array<Maybe<ResolversTypes['bolusUnits']>>,
+    ParentType,
+    ContextType
+  >;
   value?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BolusCalculatedResolvers<ContextType = any, ParentType extends ResolversParentTypes['bolusCalculated'] = ResolversParentTypes['bolusCalculated']> = {
+export type BolusCalculatedResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['bolusCalculated'] = ResolversParentTypes['bolusCalculated']
+> = {
   _id?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
   bolus?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   factor?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BolusConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['bolusConnection'] = ResolversParentTypes['bolusConnection']> = {
+export type BolusConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['bolusConnection'] = ResolversParentTypes['bolusConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   edges?: Resolver<Array<ResolversTypes['bolusEdge']>, ParentType, ContextType>;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BolusEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['bolusEdge'] = ResolversParentTypes['bolusEdge']> = {
+export type BolusEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['bolusEdge'] = ResolversParentTypes['bolusEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['bolus'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BolusPaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['bolusPagination'] = ResolversParentTypes['bolusPagination']> = {
+export type BolusPaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['bolusPagination'] = ResolversParentTypes['bolusPagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['bolus']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['bolus']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type BolusUnitsResolvers<ContextType = any, ParentType extends ResolversParentTypes['bolusUnits'] = ResolversParentTypes['bolusUnits']> = {
+export type BolusUnitsResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['bolusUnits'] = ResolversParentTypes['bolusUnits']
+> = {
   _id?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
   carbs?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   title?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  type?: Resolver<ResolversTypes['EnumbolusUnitsType'], ParentType, ContextType>;
+  type?: Resolver<
+    ResolversTypes['EnumbolusUnitsType'],
+    ParentType,
+    ContextType
+  >;
   weight?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CatheterchangeResolvers<ContextType = any, ParentType extends ResolversParentTypes['catheterchange'] = ResolversParentTypes['catheterchange']> = {
+export type CatheterchangeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['catheterchange'] = ResolversParentTypes['catheterchange']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
   id?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  placement?: Resolver<Maybe<ResolversTypes['EnumcatheterchangePlacement']>, ParentType, ContextType>;
-  side?: Resolver<Maybe<ResolversTypes['EnumcatheterchangeSide']>, ParentType, ContextType>;
+  placement?: Resolver<
+    Maybe<ResolversTypes['EnumcatheterchangePlacement']>,
+    ParentType,
+    ContextType
+  >;
+  side?: Resolver<
+    Maybe<ResolversTypes['EnumcatheterchangeSide']>,
+    ParentType,
+    ContextType
+  >;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CatheterchangeConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['catheterchangeConnection'] = ResolversParentTypes['catheterchangeConnection']> = {
+export type CatheterchangeConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['catheterchangeConnection'] = ResolversParentTypes['catheterchangeConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  edges?: Resolver<Array<ResolversTypes['catheterchangeEdge']>, ParentType, ContextType>;
+  edges?: Resolver<
+    Array<ResolversTypes['catheterchangeEdge']>,
+    ParentType,
+    ContextType
+  >;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CatheterchangeEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['catheterchangeEdge'] = ResolversParentTypes['catheterchangeEdge']> = {
+export type CatheterchangeEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['catheterchangeEdge'] = ResolversParentTypes['catheterchangeEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['catheterchange'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CatheterchangePaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['catheterchangePagination'] = ResolversParentTypes['catheterchangePagination']> = {
+export type CatheterchangePaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['catheterchangePagination'] = ResolversParentTypes['catheterchangePagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['catheterchange']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['catheterchange']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CorrectionbolusResolvers<ContextType = any, ParentType extends ResolversParentTypes['correctionbolus'] = ResolversParentTypes['correctionbolus']> = {
+export type CorrectionbolusResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['correctionbolus'] = ResolversParentTypes['correctionbolus']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   calculation?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
@@ -8062,32 +10182,60 @@ export type CorrectionbolusResolvers<ContextType = any, ParentType extends Resol
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
   value?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CorrectionbolusConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['correctionbolusConnection'] = ResolversParentTypes['correctionbolusConnection']> = {
+export type CorrectionbolusConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['correctionbolusConnection'] = ResolversParentTypes['correctionbolusConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  edges?: Resolver<Array<ResolversTypes['correctionbolusEdge']>, ParentType, ContextType>;
+  edges?: Resolver<
+    Array<ResolversTypes['correctionbolusEdge']>,
+    ParentType,
+    ContextType
+  >;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CorrectionbolusEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['correctionbolusEdge'] = ResolversParentTypes['correctionbolusEdge']> = {
+export type CorrectionbolusEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['correctionbolusEdge'] = ResolversParentTypes['correctionbolusEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['correctionbolus'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type CorrectionbolusPaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['correctionbolusPagination'] = ResolversParentTypes['correctionbolusPagination']> = {
+export type CorrectionbolusPaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['correctionbolusPagination'] = ResolversParentTypes['correctionbolusPagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['correctionbolus']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['correctionbolus']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type EventResolvers<ContextType = any, ParentType extends ResolversParentTypes['event'] = ResolversParentTypes['event']> = {
+export type EventResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['event'] = ResolversParentTypes['event']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
@@ -8095,12 +10243,33 @@ export type EventResolvers<ContextType = any, ParentType extends ResolversParent
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type EventInterfaceResolvers<ContextType = any, ParentType extends ResolversParentTypes['eventInterface'] = ResolversParentTypes['eventInterface']> = {
-  __resolveType: TypeResolveFn<'basal' | 'bloodsugar' | 'bolus' | 'catheterchange' | 'correctionbolus' | 'event' | 'height' | 'pumpbattery' | 'sensorchange' | 'smartphonebattery' | 'weight', ParentType, ContextType>;
+export type EventInterfaceResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['eventInterface'] = ResolversParentTypes['eventInterface']
+> = {
+  __resolveType: TypeResolveFn<
+    | 'basal'
+    | 'bloodsugar'
+    | 'bolus'
+    | 'catheterchange'
+    | 'correctionbolus'
+    | 'event'
+    | 'height'
+    | 'pumpbattery'
+    | 'sensorchange'
+    | 'smartphonebattery'
+    | 'weight',
+    ParentType,
+    ContextType
+  >;
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
@@ -8108,10 +10277,17 @@ export type EventInterfaceResolvers<ContextType = any, ParentType extends Resolv
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
 };
 
-export type HeightResolvers<ContextType = any, ParentType extends ResolversParentTypes['height'] = ResolversParentTypes['height']> = {
+export type HeightResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['height'] = ResolversParentTypes['height']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
@@ -8119,32 +10295,60 @@ export type HeightResolvers<ContextType = any, ParentType extends ResolversParen
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
   value?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type HeightConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['heightConnection'] = ResolversParentTypes['heightConnection']> = {
+export type HeightConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['heightConnection'] = ResolversParentTypes['heightConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  edges?: Resolver<Array<ResolversTypes['heightEdge']>, ParentType, ContextType>;
+  edges?: Resolver<
+    Array<ResolversTypes['heightEdge']>,
+    ParentType,
+    ContextType
+  >;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type HeightEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['heightEdge'] = ResolversParentTypes['heightEdge']> = {
+export type HeightEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['heightEdge'] = ResolversParentTypes['heightEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['height'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type HeightPaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['heightPagination'] = ResolversParentTypes['heightPagination']> = {
+export type HeightPaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['heightPagination'] = ResolversParentTypes['heightPagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['height']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['height']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type PumpbatteryResolvers<ContextType = any, ParentType extends ResolversParentTypes['pumpbattery'] = ResolversParentTypes['pumpbattery']> = {
+export type PumpbatteryResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['pumpbattery'] = ResolversParentTypes['pumpbattery']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
@@ -8152,67 +10356,131 @@ export type PumpbatteryResolvers<ContextType = any, ParentType extends Resolvers
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
   value?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type PumpbatteryConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['pumpbatteryConnection'] = ResolversParentTypes['pumpbatteryConnection']> = {
+export type PumpbatteryConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['pumpbatteryConnection'] = ResolversParentTypes['pumpbatteryConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  edges?: Resolver<Array<ResolversTypes['pumpbatteryEdge']>, ParentType, ContextType>;
+  edges?: Resolver<
+    Array<ResolversTypes['pumpbatteryEdge']>,
+    ParentType,
+    ContextType
+  >;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type PumpbatteryEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['pumpbatteryEdge'] = ResolversParentTypes['pumpbatteryEdge']> = {
+export type PumpbatteryEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['pumpbatteryEdge'] = ResolversParentTypes['pumpbatteryEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['pumpbattery'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type PumpbatteryPaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['pumpbatteryPagination'] = ResolversParentTypes['pumpbatteryPagination']> = {
+export type PumpbatteryPaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['pumpbatteryPagination'] = ResolversParentTypes['pumpbatteryPagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['pumpbattery']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['pumpbattery']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type SensorchangeResolvers<ContextType = any, ParentType extends ResolversParentTypes['sensorchange'] = ResolversParentTypes['sensorchange']> = {
+export type SensorchangeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['sensorchange'] = ResolversParentTypes['sensorchange']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
   id?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  placement?: Resolver<Maybe<ResolversTypes['EnumsensorchangePlacement']>, ParentType, ContextType>;
+  placement?: Resolver<
+    Maybe<ResolversTypes['EnumsensorchangePlacement']>,
+    ParentType,
+    ContextType
+  >;
   serialNumber?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
-  side?: Resolver<Maybe<ResolversTypes['EnumsensorchangeSide']>, ParentType, ContextType>;
+  side?: Resolver<
+    Maybe<ResolversTypes['EnumsensorchangeSide']>,
+    ParentType,
+    ContextType
+  >;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type SensorchangeConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['sensorchangeConnection'] = ResolversParentTypes['sensorchangeConnection']> = {
+export type SensorchangeConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['sensorchangeConnection'] = ResolversParentTypes['sensorchangeConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  edges?: Resolver<Array<ResolversTypes['sensorchangeEdge']>, ParentType, ContextType>;
+  edges?: Resolver<
+    Array<ResolversTypes['sensorchangeEdge']>,
+    ParentType,
+    ContextType
+  >;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type SensorchangeEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['sensorchangeEdge'] = ResolversParentTypes['sensorchangeEdge']> = {
+export type SensorchangeEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['sensorchangeEdge'] = ResolversParentTypes['sensorchangeEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['sensorchange'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type SensorchangePaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['sensorchangePagination'] = ResolversParentTypes['sensorchangePagination']> = {
+export type SensorchangePaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['sensorchangePagination'] = ResolversParentTypes['sensorchangePagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['sensorchange']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['sensorchange']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type SmartphonebatteryResolvers<ContextType = any, ParentType extends ResolversParentTypes['smartphonebattery'] = ResolversParentTypes['smartphonebattery']> = {
+export type SmartphonebatteryResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['smartphonebattery'] = ResolversParentTypes['smartphonebattery']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
@@ -8220,71 +10488,130 @@ export type SmartphonebatteryResolvers<ContextType = any, ParentType extends Res
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
   value?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type SmartphonebatteryConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['smartphonebatteryConnection'] = ResolversParentTypes['smartphonebatteryConnection']> = {
+export type SmartphonebatteryConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['smartphonebatteryConnection'] = ResolversParentTypes['smartphonebatteryConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  edges?: Resolver<Array<ResolversTypes['smartphonebatteryEdge']>, ParentType, ContextType>;
+  edges?: Resolver<
+    Array<ResolversTypes['smartphonebatteryEdge']>,
+    ParentType,
+    ContextType
+  >;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type SmartphonebatteryEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['smartphonebatteryEdge'] = ResolversParentTypes['smartphonebatteryEdge']> = {
+export type SmartphonebatteryEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['smartphonebatteryEdge'] = ResolversParentTypes['smartphonebatteryEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['smartphonebattery'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type SmartphonebatteryPaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['smartphonebatteryPagination'] = ResolversParentTypes['smartphonebatteryPagination']> = {
+export type SmartphonebatteryPaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['smartphonebatteryPagination'] = ResolversParentTypes['smartphonebatteryPagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['smartphonebattery']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['smartphonebattery']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['user'] = ResolversParentTypes['user']> = {
+export type UserResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['user'] = ResolversParentTypes['user']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
-  apiTokens?: Resolver<Maybe<Array<Maybe<ResolversTypes['userApiTokens']>>>, ParentType, ContextType>;
+  apiTokens?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['userApiTokens']>>>,
+    ParentType,
+    ContextType
+  >;
   email?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   lastLogin?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   password?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  roles?: Resolver<Maybe<Array<Maybe<ResolversTypes['EnumuserRoles']>>>, ParentType, ContextType>;
+  roles?: Resolver<
+    Maybe<Array<Maybe<ResolversTypes['EnumuserRoles']>>>,
+    ParentType,
+    ContextType
+  >;
   username?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UserApiTokensResolvers<ContextType = any, ParentType extends ResolversParentTypes['userApiTokens'] = ResolversParentTypes['userApiTokens']> = {
+export type UserApiTokensResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['userApiTokens'] = ResolversParentTypes['userApiTokens']
+> = {
   _id?: Resolver<Maybe<ResolversTypes['MongoID']>, ParentType, ContextType>;
   appName?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   token?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UserConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['userConnection'] = ResolversParentTypes['userConnection']> = {
+export type UserConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['userConnection'] = ResolversParentTypes['userConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   edges?: Resolver<Array<ResolversTypes['userEdge']>, ParentType, ContextType>;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UserEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['userEdge'] = ResolversParentTypes['userEdge']> = {
+export type UserEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['userEdge'] = ResolversParentTypes['userEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['user'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UserPaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['userPagination'] = ResolversParentTypes['userPagination']> = {
+export type UserPaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['userPagination'] = ResolversParentTypes['userPagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['user']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['user']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type WeightResolvers<ContextType = any, ParentType extends ResolversParentTypes['weight'] = ResolversParentTypes['weight']> = {
+export type WeightResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['weight'] = ResolversParentTypes['weight']
+> = {
   _id?: Resolver<ResolversTypes['MongoID'], ParentType, ContextType>;
   created?: Resolver<Maybe<ResolversTypes['Date']>, ParentType, ContextType>;
   creator?: Resolver<Maybe<ResolversTypes['user']>, ParentType, ContextType>;
@@ -8292,28 +10619,53 @@ export type WeightResolvers<ContextType = any, ParentType extends ResolversParen
   meta?: Resolver<Maybe<ResolversTypes['JSON']>, ParentType, ContextType>;
   note?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   source?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  type?: Resolver<Maybe<ResolversTypes['EnumDKeyeventType']>, ParentType, ContextType>;
+  type?: Resolver<
+    Maybe<ResolversTypes['EnumDKeyeventType']>,
+    ParentType,
+    ContextType
+  >;
   value?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type WeightConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['weightConnection'] = ResolversParentTypes['weightConnection']> = {
+export type WeightConnectionResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['weightConnection'] = ResolversParentTypes['weightConnection']
+> = {
   count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  edges?: Resolver<Array<ResolversTypes['weightEdge']>, ParentType, ContextType>;
+  edges?: Resolver<
+    Array<ResolversTypes['weightEdge']>,
+    ParentType,
+    ContextType
+  >;
   pageInfo?: Resolver<ResolversTypes['PageInfo'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type WeightEdgeResolvers<ContextType = any, ParentType extends ResolversParentTypes['weightEdge'] = ResolversParentTypes['weightEdge']> = {
+export type WeightEdgeResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['weightEdge'] = ResolversParentTypes['weightEdge']
+> = {
   cursor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   node?: Resolver<ResolversTypes['weight'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type WeightPaginationResolvers<ContextType = any, ParentType extends ResolversParentTypes['weightPagination'] = ResolversParentTypes['weightPagination']> = {
+export type WeightPaginationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['weightPagination'] = ResolversParentTypes['weightPagination']
+> = {
   count?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  items?: Resolver<Maybe<Array<ResolversTypes['weight']>>, ParentType, ContextType>;
-  pageInfo?: Resolver<ResolversTypes['PaginationInfo'], ParentType, ContextType>;
+  items?: Resolver<
+    Maybe<Array<ResolversTypes['weight']>>,
+    ParentType,
+    ContextType
+  >;
+  pageInfo?: Resolver<
+    ResolversTypes['PaginationInfo'],
+    ParentType,
+    ContextType
+  >;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -8469,4 +10821,3 @@ export type Resolvers<ContextType = any> = {
   weightEdge?: WeightEdgeResolvers<ContextType>;
   weightPagination?: WeightPaginationResolvers<ContextType>;
 };
-
