@@ -1,6 +1,6 @@
 
 
-### [0.0.3](https://github.com/DiaKEM/api-bindings/compare/0.0.2...0.0.3) (2022-03-23)
+### [0.0.4](https://github.com/DiaKEM/api-bindings/compare/0.0.3...0.0.4) (2022-04-02)### [0.0.3](https://github.com/DiaKEM/api-bindings/compare/0.0.2...0.0.3) (2022-03-23)
 
 
 ### Bug Fixes
