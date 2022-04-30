@@ -34,8 +34,15 @@ export type AuthToken = {
   username: Scalars['String'];
 };
 
+export type BloodsugarTc = {
+  __typename?: 'BloodsugarTC';
+  value: Scalars['Float'];
+};
+
 export type CreateManybasalInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -79,10 +86,12 @@ export type CreateManybasalPayload = {
 
 export type CreateManybloodsugarInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency: EnumbloodsugarTendency;
+  trend: EnumbloodsugarTrend;
   value: Scalars['Float'];
 };
 
@@ -102,7 +111,9 @@ export type CreateManybolusInput = {
   calculated?: InputMaybe<BolusCalculatedInput>;
   carbonHydrates: Scalars['Float'];
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
   factor: Scalars['Float'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -125,6 +136,8 @@ export type CreateManybolusPayload = {
 
 export type CreateManycatheterchangeInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -147,6 +160,8 @@ export type CreateManycatheterchangePayload = {
 export type CreateManycorrectionbolusInput = {
   calculation: Scalars['Float'];
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -167,6 +182,8 @@ export type CreateManycorrectionbolusPayload = {
 
 export type CreateManyheightInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -187,6 +204,8 @@ export type CreateManyheightPayload = {
 
 export type CreateManypumpbatteryInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -207,6 +226,8 @@ export type CreateManypumpbatteryPayload = {
 
 export type CreateManysensorchangeInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -229,6 +250,8 @@ export type CreateManysensorchangePayload = {
 
 export type CreateManysmartphonebatteryInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -278,6 +301,8 @@ export type CreateManyuserPayload = {
 
 export type CreateManyweightInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -298,6 +323,8 @@ export type CreateManyweightPayload = {
 
 export type CreateOnebasalInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -339,10 +366,12 @@ export type CreateOnebasalPayload = {
 
 export type CreateOnebloodsugarInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency: EnumbloodsugarTendency;
+  trend: EnumbloodsugarTrend;
   value: Scalars['Float'];
 };
 
@@ -360,7 +389,9 @@ export type CreateOnebolusInput = {
   calculated?: InputMaybe<BolusCalculatedInput>;
   carbonHydrates: Scalars['Float'];
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
   factor: Scalars['Float'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -381,6 +412,8 @@ export type CreateOnebolusPayload = {
 
 export type CreateOnecatheterchangeInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -401,6 +434,8 @@ export type CreateOnecatheterchangePayload = {
 export type CreateOnecorrectionbolusInput = {
   calculation: Scalars['Float'];
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -419,6 +454,8 @@ export type CreateOnecorrectionbolusPayload = {
 
 export type CreateOneheightInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -437,6 +474,8 @@ export type CreateOneheightPayload = {
 
 export type CreateOnepumpbatteryInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -455,6 +494,8 @@ export type CreateOnepumpbatteryPayload = {
 
 export type CreateOnesensorchangeInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -475,6 +516,8 @@ export type CreateOnesensorchangePayload = {
 
 export type CreateOnesmartphonebatteryInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -520,6 +563,8 @@ export type CreateOneuserPayload = {
 
 export type CreateOneweightInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date: Scalars['Date'];
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -549,16 +594,21 @@ export enum EnumDKeyeventType {
   Weight = 'weight',
 }
 
-export enum EnumbloodsugarTendency {
-  Falling = 'FALLING',
-  FallingQuickly = 'FALLING_QUICKLY',
-  FallingSlightly = 'FALLING_SLIGHTLY',
-  NotAvailable = 'NOT_AVAILABLE',
-  NotIdentifiable = 'NOT_IDENTIFIABLE',
-  Rising = 'RISING',
-  RisingQuickly = 'RISING_QUICKLY',
-  RisingSlightly = 'RISING_SLIGHTLY',
-  Steady = 'STEADY',
+export enum EnumDKeysettingType {
+  BloodSugar = 'bloodSugar',
+  Cgm = 'cgm',
+  UserSpecific = 'userSpecific',
+}
+
+export enum EnumbloodsugarTrend {
+  DoubleDown = 'DoubleDown',
+  DoubleUp = 'DoubleUp',
+  Flat = 'Flat',
+  FortyFiveDown = 'FortyFiveDown',
+  FortyFiveUp = 'FortyFiveUp',
+  NotComputable = 'NotComputable',
+  SingleDown = 'SingleDown',
+  SingleUp = 'SingleUp',
 }
 
 export enum EnumbolusMode {
@@ -583,6 +633,11 @@ export enum EnumcatheterchangeSide {
   Right = 'right',
 }
 
+export enum EnumcgmRegion {
+  Eu = 'EU',
+  Us = 'US',
+}
+
 export enum EnumsensorchangePlacement {
   Arm = 'arm',
   Buttocks = 'buttocks',
@@ -601,6 +656,11 @@ export enum EnumuserRoles {
   Writer = 'writer',
 }
 
+export enum EnumuserSpecificLanguage {
+  De = 'DE',
+  En = 'EN',
+}
+
 export type ErrorInterface = {
   /** Generic error message */
   message?: Maybe<Scalars['String']>;
@@ -613,7 +673,9 @@ export type FilterCountbasalInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterCounteventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -650,11 +712,13 @@ export type FilterCountbloodsugarInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterCounteventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency?: InputMaybe<EnumbloodsugarTendency>;
+  trend?: InputMaybe<EnumbloodsugarTrend>;
   value?: InputMaybe<Scalars['Float']>;
 };
 
@@ -673,8 +737,10 @@ export type FilterCountbolusInput = {
   calculated?: InputMaybe<FilterCountbolusCalculatedInput>;
   carbonHydrates?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   factor?: InputMaybe<Scalars['Float']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -698,7 +764,9 @@ export type FilterCountcatheterchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterCounteventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -714,7 +782,9 @@ export type FilterCountcorrectionbolusInput = {
   _operators?: InputMaybe<FilterCounteventOperatorsInput>;
   calculation?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -728,7 +798,9 @@ export type FilterCounteventInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterCounteventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -758,7 +830,9 @@ export type FilterCountheightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterCounteventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -772,7 +846,9 @@ export type FilterCountpumpbatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterCounteventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -786,7 +862,9 @@ export type FilterCountsensorchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterCounteventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -802,7 +880,9 @@ export type FilterCountsmartphonebatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterCounteventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -860,7 +940,9 @@ export type FilterCountweightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterCounteventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -874,7 +956,9 @@ export type FilterFindManybasalInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -911,11 +995,13 @@ export type FilterFindManybloodsugarInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency?: InputMaybe<EnumbloodsugarTendency>;
+  trend?: InputMaybe<EnumbloodsugarTrend>;
   value?: InputMaybe<Scalars['Float']>;
 };
 
@@ -934,8 +1020,10 @@ export type FilterFindManybolusInput = {
   calculated?: InputMaybe<FilterFindManybolusCalculatedInput>;
   carbonHydrates?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   factor?: InputMaybe<Scalars['Float']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -959,7 +1047,9 @@ export type FilterFindManycatheterchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -975,7 +1065,9 @@ export type FilterFindManycorrectionbolusInput = {
   _operators?: InputMaybe<FilterFindManyeventOperatorsInput>;
   calculation?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -989,7 +1081,9 @@ export type FilterFindManyeventInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1019,7 +1113,9 @@ export type FilterFindManyheightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1033,7 +1129,9 @@ export type FilterFindManypumpbatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1047,7 +1145,9 @@ export type FilterFindManysensorchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -1063,7 +1163,9 @@ export type FilterFindManysmartphonebatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1121,7 +1223,9 @@ export type FilterFindManyweightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1135,7 +1239,9 @@ export type FilterFindOnebasalInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1172,11 +1278,13 @@ export type FilterFindOnebloodsugarInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency?: InputMaybe<EnumbloodsugarTendency>;
+  trend?: InputMaybe<EnumbloodsugarTrend>;
   value?: InputMaybe<Scalars['Float']>;
 };
 
@@ -1195,8 +1303,10 @@ export type FilterFindOnebolusInput = {
   calculated?: InputMaybe<FilterFindOnebolusCalculatedInput>;
   carbonHydrates?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   factor?: InputMaybe<Scalars['Float']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -1220,7 +1330,9 @@ export type FilterFindOnecatheterchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -1236,7 +1348,9 @@ export type FilterFindOnecorrectionbolusInput = {
   _operators?: InputMaybe<FilterFindOneeventOperatorsInput>;
   calculation?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1250,7 +1364,9 @@ export type FilterFindOneeventInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1280,7 +1396,9 @@ export type FilterFindOneheightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1294,7 +1412,9 @@ export type FilterFindOnepumpbatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1308,7 +1428,9 @@ export type FilterFindOnesensorchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -1324,7 +1446,9 @@ export type FilterFindOnesmartphonebatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1382,7 +1506,9 @@ export type FilterFindOneweightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterFindOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1396,7 +1522,9 @@ export type FilterRemoveManybasalInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1433,11 +1561,13 @@ export type FilterRemoveManybloodsugarInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency?: InputMaybe<EnumbloodsugarTendency>;
+  trend?: InputMaybe<EnumbloodsugarTrend>;
   value?: InputMaybe<Scalars['Float']>;
 };
 
@@ -1456,8 +1586,10 @@ export type FilterRemoveManybolusInput = {
   calculated?: InputMaybe<FilterRemoveManybolusCalculatedInput>;
   carbonHydrates?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   factor?: InputMaybe<Scalars['Float']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -1481,7 +1613,9 @@ export type FilterRemoveManycatheterchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -1497,7 +1631,9 @@ export type FilterRemoveManycorrectionbolusInput = {
   _operators?: InputMaybe<FilterRemoveManyeventOperatorsInput>;
   calculation?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1511,7 +1647,9 @@ export type FilterRemoveManyeventInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1541,7 +1679,9 @@ export type FilterRemoveManyheightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1555,7 +1695,9 @@ export type FilterRemoveManypumpbatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1569,7 +1711,9 @@ export type FilterRemoveManysensorchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -1585,7 +1729,9 @@ export type FilterRemoveManysmartphonebatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1643,7 +1789,9 @@ export type FilterRemoveManyweightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1657,7 +1805,9 @@ export type FilterRemoveOnebasalInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1694,11 +1844,13 @@ export type FilterRemoveOnebloodsugarInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency?: InputMaybe<EnumbloodsugarTendency>;
+  trend?: InputMaybe<EnumbloodsugarTrend>;
   value?: InputMaybe<Scalars['Float']>;
 };
 
@@ -1717,8 +1869,10 @@ export type FilterRemoveOnebolusInput = {
   calculated?: InputMaybe<FilterRemoveOnebolusCalculatedInput>;
   carbonHydrates?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   factor?: InputMaybe<Scalars['Float']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -1742,7 +1896,9 @@ export type FilterRemoveOnecatheterchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -1758,7 +1914,9 @@ export type FilterRemoveOnecorrectionbolusInput = {
   _operators?: InputMaybe<FilterRemoveOneeventOperatorsInput>;
   calculation?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1772,7 +1930,9 @@ export type FilterRemoveOneeventInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1802,7 +1962,9 @@ export type FilterRemoveOneheightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1816,7 +1978,9 @@ export type FilterRemoveOnepumpbatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1830,7 +1994,9 @@ export type FilterRemoveOnesensorchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -1846,7 +2012,9 @@ export type FilterRemoveOnesmartphonebatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1904,7 +2072,9 @@ export type FilterRemoveOneweightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterRemoveOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1918,7 +2088,9 @@ export type FilterUpdateManybasalInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -1955,11 +2127,13 @@ export type FilterUpdateManybloodsugarInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency?: InputMaybe<EnumbloodsugarTendency>;
+  trend?: InputMaybe<EnumbloodsugarTrend>;
   value?: InputMaybe<Scalars['Float']>;
 };
 
@@ -1978,8 +2152,10 @@ export type FilterUpdateManybolusInput = {
   calculated?: InputMaybe<FilterUpdateManybolusCalculatedInput>;
   carbonHydrates?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   factor?: InputMaybe<Scalars['Float']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -2003,7 +2179,9 @@ export type FilterUpdateManycatheterchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -2019,7 +2197,9 @@ export type FilterUpdateManycorrectionbolusInput = {
   _operators?: InputMaybe<FilterUpdateManyeventOperatorsInput>;
   calculation?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2033,7 +2213,9 @@ export type FilterUpdateManyeventInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2063,7 +2245,9 @@ export type FilterUpdateManyheightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2077,7 +2261,9 @@ export type FilterUpdateManypumpbatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2091,7 +2277,9 @@ export type FilterUpdateManysensorchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -2107,7 +2295,9 @@ export type FilterUpdateManysmartphonebatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2165,7 +2355,9 @@ export type FilterUpdateManyweightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateManyeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2179,7 +2371,9 @@ export type FilterUpdateOnebasalInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2216,11 +2410,13 @@ export type FilterUpdateOnebloodsugarInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency?: InputMaybe<EnumbloodsugarTendency>;
+  trend?: InputMaybe<EnumbloodsugarTrend>;
   value?: InputMaybe<Scalars['Float']>;
 };
 
@@ -2239,8 +2435,10 @@ export type FilterUpdateOnebolusInput = {
   calculated?: InputMaybe<FilterUpdateOnebolusCalculatedInput>;
   carbonHydrates?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   factor?: InputMaybe<Scalars['Float']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -2264,7 +2462,9 @@ export type FilterUpdateOnecatheterchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -2280,7 +2480,9 @@ export type FilterUpdateOnecorrectionbolusInput = {
   _operators?: InputMaybe<FilterUpdateOneeventOperatorsInput>;
   calculation?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2294,7 +2496,9 @@ export type FilterUpdateOneeventInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2324,7 +2528,9 @@ export type FilterUpdateOneheightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2338,7 +2544,9 @@ export type FilterUpdateOnepumpbatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2352,7 +2560,9 @@ export type FilterUpdateOnesensorchangeInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -2368,7 +2578,9 @@ export type FilterUpdateOnesmartphonebatteryInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2426,7 +2638,9 @@ export type FilterUpdateOneweightInput = {
   /** List of *indexed* fields that can be filtered via operators. */
   _operators?: InputMaybe<FilterUpdateOneeventOperatorsInput>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   id?: InputMaybe<Scalars['String']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -2459,6 +2673,7 @@ export type Mutation = {
   basalEventUpdateMany?: Maybe<UpdateManybasalPayload>;
   /** Update one basalEvent identified by conditions */
   basalEventUpdateOne?: Maybe<UpdateOnebasalPayload>;
+  bloodSugarEventByIdentifier?: Maybe<Bloodsugar>;
   /** Create many bloodSugarEvent's */
   bloodSugarEventCreateMany?: Maybe<CreateManybloodsugarPayload>;
   /** Create one bloodSugarEvent */
@@ -2475,6 +2690,8 @@ export type Mutation = {
   bloodSugarEventUpdateMany?: Maybe<UpdateManybloodsugarPayload>;
   /** Update one bloodSugarEvent identified by conditions */
   bloodSugarEventUpdateOne?: Maybe<UpdateOnebloodsugarPayload>;
+  /** Set setting data for bloodSugar */
+  bloodSugarSettingSet?: Maybe<BloodSugar>;
   /** Create many bolusEvent's */
   bolusEventCreateMany?: Maybe<CreateManybolusPayload>;
   /** Create one bolusEvent */
@@ -2507,6 +2724,8 @@ export type Mutation = {
   catheterChangeEventUpdateMany?: Maybe<UpdateManycatheterchangePayload>;
   /** Update one catheterChangeEvent identified by conditions */
   catheterChangeEventUpdateOne?: Maybe<UpdateOnecatheterchangePayload>;
+  /** Set setting data for cgm */
+  cgmSettingSet?: Maybe<Cgm>;
   /** Create many correctionBolusEvent's */
   correctionBolusEventCreateMany?: Maybe<CreateManycorrectionbolusPayload>;
   /** Create one correctionBolusEvent */
@@ -2599,6 +2818,8 @@ export type Mutation = {
   userRemoveMany?: Maybe<RemoveManyuserPayload>;
   /** Remove a single user identified by conditions */
   userRemoveOne?: Maybe<RemoveOneuserPayload>;
+  /** Set setting data for user */
+  userSettingSet?: Maybe<UserSpecific>;
   /** Update one user identified by its id */
   userUpdateById?: Maybe<UpdateByIduserPayload>;
   /** Update many user's identified by its ids */
@@ -2665,6 +2886,10 @@ export type MutationBasalEventUpdateOneArgs = {
   sort?: InputMaybe<SortUpdateOnebasalInput>;
 };
 
+export type MutationBloodSugarEventByIdentifierArgs = {
+  record: CreateOnebloodsugarInput;
+};
+
 export type MutationBloodSugarEventCreateManyArgs = {
   records: Array<CreateManybloodsugarInput>;
 };
@@ -2705,6 +2930,10 @@ export type MutationBloodSugarEventUpdateOneArgs = {
   record: UpdateOnebloodsugarInput;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortUpdateOnebloodsugarInput>;
+};
+
+export type MutationBloodSugarSettingSetArgs = {
+  record: UpdateOnebloodSugarInput;
 };
 
 export type MutationBolusEventCreateManyArgs = {
@@ -2789,6 +3018,10 @@ export type MutationCatheterChangeEventUpdateOneArgs = {
   record: UpdateOnecatheterchangeInput;
   skip?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<SortUpdateOnecatheterchangeInput>;
+};
+
+export type MutationCgmSettingSetArgs = {
+  record: UpdateOnecgmInput;
 };
 
 export type MutationCorrectionBolusEventCreateManyArgs = {
@@ -3028,6 +3261,10 @@ export type MutationUserRemoveOneArgs = {
   sort?: InputMaybe<SortRemoveOneuserInput>;
 };
 
+export type MutationUserSettingSetArgs = {
+  record: UpdateOneuserSpecificInput;
+};
+
 export type MutationUserUpdateByIdArgs = {
   _id: Scalars['MongoID'];
   record: UpdateByIduserInput;
@@ -3143,6 +3380,8 @@ export type Query = {
   /** Find a single bloodSugarEvent by conditions */
   bloodSugarEventOne?: Maybe<Bloodsugar>;
   bloodSugarEventPagination?: Maybe<BloodsugarPagination>;
+  /** Get setting data for bloodSugar */
+  bloodSugarSetting?: Maybe<BloodSugar>;
   /** Find a single bolusEvent by its id */
   bolusEventById?: Maybe<Bolus>;
   /** Find many bolusEvent's by ids */
@@ -3171,6 +3410,8 @@ export type Query = {
   /** Find a single catheterChangeEvent by conditions */
   catheterChangeEventOne?: Maybe<Catheterchange>;
   catheterChangeEventPagination?: Maybe<CatheterchangePagination>;
+  /** Get setting data for cgm */
+  cgmSetting?: Maybe<Cgm>;
   /** Find a single correctionBolusEvent by its id */
   correctionBolusEventById?: Maybe<Correctionbolus>;
   /** Find many correctionBolusEvent's by ids */
@@ -3243,6 +3484,8 @@ export type Query = {
   /** Find a single smartphoneBatteryEvent by conditions */
   smartphoneBatteryEventOne?: Maybe<Smartphonebattery>;
   smartphoneBatteryEventPagination?: Maybe<SmartphonebatteryPagination>;
+  /** Get average bloodsugar */
+  statisticBloodSugarAverage?: Maybe<BloodsugarTc>;
   /** Find a single user by its id */
   userById?: Maybe<User>;
   /** Find a single user by its id */
@@ -3267,6 +3510,8 @@ export type Query = {
   /** Find a single user by conditions */
   userOneLean?: Maybe<User>;
   userPagination?: Maybe<UserPagination>;
+  /** Get setting data for user */
+  userSetting?: Maybe<UserSpecific>;
   /** Find a single weightEvent by its id */
   weightEventById?: Maybe<Weight>;
   /** Find many weightEvent's by ids */
@@ -4576,6 +4821,8 @@ export enum SortUpdateOneweightInput {
 
 export type UpdateByIdbasalInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -4617,10 +4864,12 @@ export type UpdateByIdbasalPayload = {
 
 export type UpdateByIdbloodsugarInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency?: InputMaybe<EnumbloodsugarTendency>;
+  trend?: InputMaybe<EnumbloodsugarTrend>;
   value?: InputMaybe<Scalars['Float']>;
 };
 
@@ -4644,7 +4893,9 @@ export type UpdateByIdbolusInput = {
   calculated?: InputMaybe<UpdateByIdbolusCalculatedInput>;
   carbonHydrates?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   factor?: InputMaybe<Scalars['Float']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -4673,6 +4924,8 @@ export type UpdateByIdbolusUnitsInput = {
 
 export type UpdateByIdcatheterchangeInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -4693,6 +4946,8 @@ export type UpdateByIdcatheterchangePayload = {
 export type UpdateByIdcorrectionbolusInput = {
   calculation?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -4711,6 +4966,8 @@ export type UpdateByIdcorrectionbolusPayload = {
 
 export type UpdateByIdheightInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -4729,6 +4986,8 @@ export type UpdateByIdheightPayload = {
 
 export type UpdateByIdpumpbatteryInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -4747,6 +5006,8 @@ export type UpdateByIdpumpbatteryPayload = {
 
 export type UpdateByIdsensorchangeInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -4767,6 +5028,8 @@ export type UpdateByIdsensorchangePayload = {
 
 export type UpdateByIdsmartphonebatteryInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -4818,6 +5081,8 @@ export type UpdateByIduserPayload = {
 
 export type UpdateByIdweightInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -4836,6 +5101,8 @@ export type UpdateByIdweightPayload = {
 
 export type UpdateManybasalInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -4875,10 +5142,12 @@ export type UpdateManybasalPayload = {
 
 export type UpdateManybloodsugarInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency?: InputMaybe<EnumbloodsugarTendency>;
+  trend?: InputMaybe<EnumbloodsugarTrend>;
   value?: InputMaybe<Scalars['Float']>;
 };
 
@@ -4900,7 +5169,9 @@ export type UpdateManybolusInput = {
   calculated?: InputMaybe<UpdateManybolusCalculatedInput>;
   carbonHydrates?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   factor?: InputMaybe<Scalars['Float']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -4927,6 +5198,8 @@ export type UpdateManybolusUnitsInput = {
 
 export type UpdateManycatheterchangeInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -4945,6 +5218,8 @@ export type UpdateManycatheterchangePayload = {
 export type UpdateManycorrectionbolusInput = {
   calculation?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -4961,6 +5236,8 @@ export type UpdateManycorrectionbolusPayload = {
 
 export type UpdateManyheightInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -4977,6 +5254,8 @@ export type UpdateManyheightPayload = {
 
 export type UpdateManypumpbatteryInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -4993,6 +5272,8 @@ export type UpdateManypumpbatteryPayload = {
 
 export type UpdateManysensorchangeInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -5011,6 +5292,8 @@ export type UpdateManysensorchangePayload = {
 
 export type UpdateManysmartphonebatteryInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -5058,6 +5341,8 @@ export type UpdateManyuserPayload = {
 
 export type UpdateManyweightInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -5074,6 +5359,8 @@ export type UpdateManyweightPayload = {
 
 export type UpdateOnebasalInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -5113,12 +5400,22 @@ export type UpdateOnebasalPayload = {
   recordId?: Maybe<Scalars['MongoID']>;
 };
 
+export type UpdateOnebloodSugarInput = {
+  created?: InputMaybe<Scalars['Date']>;
+  high?: InputMaybe<Scalars['Float']>;
+  low?: InputMaybe<Scalars['Float']>;
+  veryHigh?: InputMaybe<Scalars['Float']>;
+  veryLow?: InputMaybe<Scalars['Float']>;
+};
+
 export type UpdateOnebloodsugarInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
-  tendency?: InputMaybe<EnumbloodsugarTendency>;
+  trend?: InputMaybe<EnumbloodsugarTrend>;
   value?: InputMaybe<Scalars['Float']>;
 };
 
@@ -5142,7 +5439,9 @@ export type UpdateOnebolusInput = {
   calculated?: InputMaybe<UpdateOnebolusCalculatedInput>;
   carbonHydrates?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
   factor?: InputMaybe<Scalars['Float']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   mode?: InputMaybe<EnumbolusMode>;
   note?: InputMaybe<Scalars['String']>;
@@ -5171,6 +5470,8 @@ export type UpdateOnebolusUnitsInput = {
 
 export type UpdateOnecatheterchangeInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumcatheterchangePlacement>;
@@ -5188,9 +5489,18 @@ export type UpdateOnecatheterchangePayload = {
   recordId?: Maybe<Scalars['MongoID']>;
 };
 
+export type UpdateOnecgmInput = {
+  created?: InputMaybe<Scalars['Date']>;
+  password?: InputMaybe<Scalars['String']>;
+  region?: InputMaybe<EnumcgmRegion>;
+  username?: InputMaybe<Scalars['String']>;
+};
+
 export type UpdateOnecorrectionbolusInput = {
   calculation?: InputMaybe<Scalars['Float']>;
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -5209,6 +5519,8 @@ export type UpdateOnecorrectionbolusPayload = {
 
 export type UpdateOneheightInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -5227,6 +5539,8 @@ export type UpdateOneheightPayload = {
 
 export type UpdateOnepumpbatteryInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -5245,6 +5559,8 @@ export type UpdateOnepumpbatteryPayload = {
 
 export type UpdateOnesensorchangeInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   placement?: InputMaybe<EnumsensorchangePlacement>;
@@ -5265,6 +5581,8 @@ export type UpdateOnesensorchangePayload = {
 
 export type UpdateOnesmartphonebatteryInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -5314,8 +5632,15 @@ export type UpdateOneuserPayload = {
   recordId?: Maybe<Scalars['MongoID']>;
 };
 
+export type UpdateOneuserSpecificInput = {
+  created?: InputMaybe<Scalars['Date']>;
+  language?: InputMaybe<EnumuserSpecificLanguage>;
+};
+
 export type UpdateOneweightInput = {
   created?: InputMaybe<Scalars['Date']>;
+  date?: InputMaybe<Scalars['Date']>;
+  identifier?: InputMaybe<Scalars['String']>;
   meta?: InputMaybe<Scalars['JSON']>;
   note?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
@@ -5357,7 +5682,9 @@ export type Basal = EventInterface & {
   _id: Scalars['MongoID'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   source?: Maybe<Scalars['String']>;
@@ -5419,16 +5746,31 @@ export type BasalPagination = {
   pageInfo: PaginationInfo;
 };
 
+export type BloodSugar = SettingInterface & {
+  __typename?: 'bloodSugar';
+  _id: Scalars['MongoID'];
+  created?: Maybe<Scalars['Date']>;
+  creator?: Maybe<User>;
+  high: Scalars['Float'];
+  id?: Maybe<Scalars['String']>;
+  low: Scalars['Float'];
+  type?: Maybe<EnumDKeysettingType>;
+  veryHigh: Scalars['Float'];
+  veryLow: Scalars['Float'];
+};
+
 export type Bloodsugar = EventInterface & {
   __typename?: 'bloodsugar';
   _id: Scalars['MongoID'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   source?: Maybe<Scalars['String']>;
-  tendency: EnumbloodsugarTendency;
+  trend: EnumbloodsugarTrend;
   type?: Maybe<EnumDKeyeventType>;
   value: Scalars['Float'];
 };
@@ -5471,8 +5813,10 @@ export type Bolus = EventInterface & {
   carbonHydrates: Scalars['Float'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   factor: Scalars['Float'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   mode?: Maybe<EnumbolusMode>;
   note?: Maybe<Scalars['String']>;
@@ -5548,7 +5892,9 @@ export type Catheterchange = EventInterface & {
   _id: Scalars['MongoID'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   placement?: Maybe<EnumcatheterchangePlacement>;
@@ -5588,13 +5934,27 @@ export type CatheterchangePagination = {
   pageInfo: PaginationInfo;
 };
 
+export type Cgm = SettingInterface & {
+  __typename?: 'cgm';
+  _id: Scalars['MongoID'];
+  created?: Maybe<Scalars['Date']>;
+  creator?: Maybe<User>;
+  id?: Maybe<Scalars['String']>;
+  password: Scalars['String'];
+  region: EnumcgmRegion;
+  type?: Maybe<EnumDKeysettingType>;
+  username: Scalars['String'];
+};
+
 export type Correctionbolus = EventInterface & {
   __typename?: 'correctionbolus';
   _id: Scalars['MongoID'];
   calculation: Scalars['Float'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   source?: Maybe<Scalars['String']>;
@@ -5638,7 +5998,9 @@ export type Event = EventInterface & {
   _id: Scalars['MongoID'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   source?: Maybe<Scalars['String']>;
@@ -5649,7 +6011,9 @@ export type EventInterface = {
   _id: Scalars['MongoID'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   source?: Maybe<Scalars['String']>;
@@ -5661,7 +6025,9 @@ export type Height = EventInterface & {
   _id: Scalars['MongoID'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   source?: Maybe<Scalars['String']>;
@@ -5705,7 +6071,9 @@ export type Pumpbattery = EventInterface & {
   _id: Scalars['MongoID'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   source?: Maybe<Scalars['String']>;
@@ -5749,7 +6117,9 @@ export type Sensorchange = EventInterface & {
   _id: Scalars['MongoID'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   placement?: Maybe<EnumsensorchangePlacement>;
@@ -5790,12 +6160,31 @@ export type SensorchangePagination = {
   pageInfo: PaginationInfo;
 };
 
+export type Setting = SettingInterface & {
+  __typename?: 'setting';
+  _id: Scalars['MongoID'];
+  created?: Maybe<Scalars['Date']>;
+  creator?: Maybe<User>;
+  id?: Maybe<Scalars['String']>;
+  type?: Maybe<EnumDKeysettingType>;
+};
+
+export type SettingInterface = {
+  _id: Scalars['MongoID'];
+  created?: Maybe<Scalars['Date']>;
+  creator?: Maybe<User>;
+  id?: Maybe<Scalars['String']>;
+  type?: Maybe<EnumDKeysettingType>;
+};
+
 export type Smartphonebattery = EventInterface & {
   __typename?: 'smartphonebattery';
   _id: Scalars['MongoID'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   source?: Maybe<Scalars['String']>;
@@ -5897,12 +6286,24 @@ export type UserPagination = {
   pageInfo: PaginationInfo;
 };
 
+export type UserSpecific = SettingInterface & {
+  __typename?: 'userSpecific';
+  _id: Scalars['MongoID'];
+  created?: Maybe<Scalars['Date']>;
+  creator?: Maybe<User>;
+  id?: Maybe<Scalars['String']>;
+  language: EnumuserSpecificLanguage;
+  type?: Maybe<EnumDKeysettingType>;
+};
+
 export type Weight = EventInterface & {
   __typename?: 'weight';
   _id: Scalars['MongoID'];
   created?: Maybe<Scalars['Date']>;
   creator?: Maybe<User>;
+  date: Scalars['Date'];
   id?: Maybe<Scalars['String']>;
+  identifier?: Maybe<Scalars['String']>;
   meta?: Maybe<Scalars['JSON']>;
   note?: Maybe<Scalars['String']>;
   source?: Maybe<Scalars['String']>;
